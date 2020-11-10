@@ -1,0 +1,134 @@
+/* mediaQuery_03.css */
+/* pc -> 960px */
+
+/* 공통영역 */
+html, body {width: 100%; height: 100%;}
+#wrap {width: 100%; height: auto; min-height: 50rem;}
+
+#headBox {
+    width: 100%; height: 60px; margin: auto; z-index: 1000;
+    position: fixed; top: 0; left: 0; right: 0; 
+    background-color: #333;
+}
+.head_wrap {
+    width: auto; min-width: 320px; max-width: 960px; height: 100%; margin: auto;
+    padding: 7px 15px; box-sizing: border-box;
+}
+h1 {
+    float: left; width: 250px; height: 46px; background-color: #33b88f;
+}
+.user_float {float: right; width: 480px; height: 100%; margin-top: 8px;}
+.user_interface {
+    float: left; width: 30px; height: 30px; background-color: #33b88f;}
+.nav_btn {display: none; float: right; width: 30px; height: 30px; background-color: #33b88f;}
+.head_wrap ul {float: right; width: 430px; height: 30px; }
+
+.head_wrap ul li {
+    float: left; width: 100px; height: 100%; margin-right: 10px; background-color: #33b88f;
+}
+.head_wrap ul li:nth-child(4) {margin-right: 0;}
+
+
+/* ===================== */
+
+#viewBox {
+    position: relative;
+    width: 100%; height: 450px; margin: auto;}
+.view_area {width: 100%; height: 100%; background-color: #fa0;}
+.view_area ul {width: 400%; height: 100%;}
+.view_area ul li {
+    float: left; width: 25%; height: 100%; 
+    background-color: #ba7; overflow-x: hidden;}
+.view_button {
+    position: absolute; top: 105px; left: 50%; transform: translate(-50%);
+    width: 90%; max-width: 900px; height: 205px;}
+.next_btn {
+     float: right; width: 60px; height: 100%; background-color: #3bb88f;
+}
+.prv_btn {
+    float: left; width: 60px; height: 100%; background-color: #3bb88f;
+}
+
+/* ===================== */
+
+#contentBox {
+    width: auto; max-width: 960px; height: 210px; margin: auto; 
+    padding: 30px 35px; box-sizing: border-box;
+    background-color: #547d77;
+}
+#contentBox ul {width: 100%; height: 100%;}
+#contentBox ul li {
+    float: left; width: 170px; height: 100%; 
+    margin-right: 70px; background-color: #fff;}
+#contentBox ul li:nth-child(4) {margin-right: 0;}
+
+/* ===================== */
+#infoBox {
+    width: auto; max-width: 960px; height: 540px; margin: auto; background-color: #123;
+}
+
+
+/* ===================== */
+#footBox {
+    width: 100%; height: 120px; margin: auto; background-color: #333;
+}
+
+
+
+
+
+
+
+/* mob_v */
+@media screen and (max-width:479px) {
+    #wrap {background-color: #fa0;}
+    #headBox {height: 40px;}
+    h1 {width: 200px; height: 26px;}
+    .user_float {width: 50px; height: 20px; margin-top: 5px}
+    .user_interface,.nav_btn  {width: 20px; height: 20px;}
+    .user_float ul {display: none;}
+    #viewBox {height: 480px;}
+    .nav_btn {display: block;}
+    .view_button {display: none;}
+    .view_area {padding: 140px 15px 40px; box-sizing: border-box;}
+    .view_area ul {width: 100%; height: 300px; margin: auto; }
+    .view_area ul li {
+        width: 100%; height: 60px; margin-bottom: 20px;} 
+    .view_area ul li:nth-child(4) {margin-bottom: 0;}
+}/*========================================*/
+
+
+/* mob_h */
+@media screen and (min-width:30rem) and (max-width:47.937rem) {
+    #wrap {background-color: #acf;}
+    .user_float {width: 80px;}
+    .user_float ul {display: none;}
+    .nav_btn {display: block;}
+    #viewBox {height: 720px;}
+    .view_button {display: none;}
+    .view_area {padding: 200px 15px 70px; box-sizing: border-box;}
+    .view_area ul {width: 100%; height: 450px; margin: auto; }
+    .view_area ul li {
+        width: 100%; height: 90px; margin-bottom: 30px;} 
+    .view_area ul li:nth-child(4) {margin-bottom: 0;}
+}/*========================================*/
+
+/* tab */
+@media screen and (min-width:48rem) and (max-width:959px) {
+    #wrap {background-color: #afa;}
+    .user_float {width: 80px;}
+    .user_float ul {display: none;}
+    .nav_btn {display: block;}
+    #contentBox {width: 100%; height: 180px; padding: 3.125vw 4.557vw;}
+    #contentBox ul li {
+    width: 17.708vw; margin-right:6.25vw;}
+    #contentBox ul li:last-child{ margin-right: 0;}
+}
+/*========================================*/
+
+/* pc */
+@media screen and (min-width:60rem) {
+    #wrap {background-color: #caf;}
+
+}/*========================================*/
+

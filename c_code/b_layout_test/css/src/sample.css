@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* sample.css */
+
+html,body {margin: 0;}
+h1,h2,h3,h4,h5,h6,p,div {margin: 0; padding: 0;}
+ul,ol,dl,li,dt,dd {margin: 0; padding: 0; list-style: none;}
+
+.box {
+  width: 936px; height: 468px;
+  padding: 3px; box-sizing: border-box;
+  background-color: #8ab;
+}
+
+.title_wrap {
+  float: left;
+  width: 306px; height: 306px;
+  padding: 50px 30px; box-sizing: border-box;
+  text-align: center;
+  margin-right: 3px; margin-bottom: 3px;
+  background-color: #fca;
+}
+
+.box > ul { 
+  float: left;
+  width: 930px; height: 462px;
+}
+
+.box li {
+  float: left;
+  margin: 3px; padding: 50px 0; box-sizing: border-box;
+  width: 150px; height: 150px;
+  background-color: #fca;
+  text-align: center; font-size: 1.2rem;
+}
+
+
+.box li:nth-child(4) {
+    float: right;
+    height: 306px;
+  }
+
+.box li:nth-child(1), 
+.box li:nth-child(2), 
+.box li:nth-child(3), 
+.box li:nth-child(4) {margin-top: 0;}
+
+.box li:nth-child(8) {margin-left: 0;}
+
+.box li:nth-child(4), 
+.box li:nth-child(13) {margin-right: 0;} 
+
+.box li:nth-child(8), 
+.box li:nth-child(9), 
+.box li:nth-child(10), 
+.box li:nth-child(11),
+.box li:nth-child(12),
+.box li:nth-child(13) {margin-bottom: 0;}
+
+.box div::after,.box div:after {
+  content: " "; display: block; clear: both;
+}
+
+.box ul::after,.box ul:after {
+  content: " "; display: block; clear: both;
+}
+
+/* ------------------------------------------------ */
+
+.wrap {
+  position: relative;
+  width: 800px; height: 600px;
+  background-color: #ff00aa;
+  margin: auto; margin-top: 500px; margin-bottom: 500px;
+}
+.side_indicator {
+  position: absolute; top: 0; bottom: 0; right: 30px;
+  margin: auto; padding: 40px 0; box-sizing: border-box;
+  width: 50px; height: 350px;
+  background-color: #00aaff;
+}
+.side_indicator > ul {
+  width: 50px; height: 350px;
+}
+.side_indicator li {
+  width: 30px; height: 30px;
+  margin: auto; margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.side_indicator li:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.side_indicator a {
+  position: relative;
+  display: block; width: 100%; height: 100%;
+  background-color: #fff;
+}
+
+.side_indicator a:hover > span ,
+.side_indicator a:focus > span { 
+  position: absolute;
+  width: 200px; height: 40px; 
+  z-index: 10; top: 0; bottom: 0; right: 50px;
+  margin: auto;
+  background-color: #0066cc;}
+
+  /* ------------------------------------------------ */
+
+.wrap2 {
+   position: relative;
+   width: 800px; height: 600px;
+   margin: auto; z-index: 1;
+   background-color: #ff00aa;
+}
+.title_box {
+  float: left;
+  position: absolute;
+  width: 450px; height: 200px;
+  z-index: 4; top: 30%; left: 20px;
+  background-color: rgba(129, 0, 180, 0.7);
+}
+  h1{
+    font-size: 1.5rem; color: #fff;
+  }
+  .title_box p {font-size: 1rem; color: #fff;}
+
+.img1 {
+  float: left; bottom: 0; right: 220px;
+  position: absolute;
+  width: 250px; height: 400px;
+  z-index: 3; bottom: 0;
+  background-color: #5bb;
+}
+.img2 {
+  float: left;
+  position: absolute; bottom: 0; right: 20px;
+  width: 250px; height: 500px;
+  z-index: 2;
+  background-color: #798;
+}
+.wrap2::after,.wrap2:after {
+  content: " "; display: block; clear: both;
+}
+
+  /* ------------------------------------------------ */
+  #warp3 {
+    margin: auto; padding: 10px;
+    width: 600px; height: 600px; background: #cccccc;
+    margin-bottom: 500px;
+  }
+  .mini {
+    margin-top: 420px; float: left;
+    width: 180px;height: 180px;background: #7777ff;
+  }
+  .long {
+    margin-left: 30px; float: left;
+    width: 180px;height: 600px;background: #ffaaaa;
+  }
+  /* ------------------------------------------------ */
+
+  body {background: #ffffff;}
+  .hidden,h2 {
+    position: relative; z-index: -100;
+    margin: 0; padding: 0; width: 0; height: 0;
+  }
+
+  #wrap5 {
+    padding: 10px; margin: auto; width: 800px;height: auto;
+    background: #cccccc;
+  }
+
+#headBox {
+  margin: 0; width: 100%; height: 100%;
+}
+h1 {
+  margin: 0; float: left;
+  width: 100px; height: 100px; background: #fff;
+}
+
+#navBox {box-sizing: border-box; padding: 5px; float: right;
+width: 500px;height: 100px;background: #ffaaaa;}
+.unb {margin-bottom: 10px; float: right;
+width: 400px;height: 40px;background: #ffffff;}
+.gnb {float: right; width: 100%;height: 40px;background: #ffffff;}
+
+#adBox {margin-bottom: 10px; width: 100%;height: 200px;background: #aaffcc;}
+#contentBox {margin-bottom: 10px; width: 100%;height: 200px;background: #3cf;}
+#footBox {width: 100%;height: 100px;background: #555555;}

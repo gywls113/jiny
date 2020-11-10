@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- login_02.html -->
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../font/noto_sans/noto_sans.css">
+    
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/src/login_02.css">
+    
+    <title>login_02</title>
+        <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+        <link rel="apple-touch-icon" href="../img/incon_01.png">
+</head>
+<body>
+<!-- latout -->
+<div id="wrap">
+    <h1><a href="https://www.coupang.com/"><span class="hidden_context">로고</span></a></h1>
+    <form action="#" method="post">
+        <fieldset class="user_login">
+            <legend class="hidden_context">유저로그인</legend>
+            <div class="user_sign clearfix">
+                <label for="userId"><span class="hidden_context">사용자 아이디 또는 이메일을 입력하세요.</span></label>
+                <input type="text" id="userId" name="userId" value="" placeholder="아이디(이메일)" />
+                
+                <label for="userPw"><span class="hidden_context">사용자 계정에 따른 비밀번호를 입력하세요.</span></label>
+                <input type="password" id="userPw" name="userPw" value="" placeholder="비밀번호" />
+                
+                <input type="checkbox" name="viewPw" id="viewPw" value="password" class="hidden_context" />
+                <label for="viewPw">
+                <i class="fas fa-eye"></i>
+                <span class="hidden_context">비밀번호 보이기</span></label>
+            </div>
+        </fieldset>
+        
+        <fieldset class="login_option">
+            <legend class="hidden_context">로그인옵션</legend>
+            <div class="login_option_area">
+                <input type="checkbox" name="auto_login" id="auto_login" value="auto_login" />
+                <label for="auto_login">자동로그인</label>
+                
+                <a href="#">아이디(이메일)/비밀번호 찾기
+                <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </fieldset>
+        
+        <fieldset class="login_join">
+            <legend class="hidden_context">로그인/회원가입</legend>
+            <div class="login_join_area">
+                <button type="button"><a href="#">로그인</a></button>
+                <button type="button"><a href="#">회원가입</a></button>
+            </div>
+        </fieldset>
+    </form>
+    <p class="copyright">©Coupang Corp. All rights reserved.</p>
+</div>
+<!-- script-->
+    <script></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* layout_test_teacher-localNavBox */
+
+/* 1. 광고 영역을 같은곳에 배치하여, 처리 */
+/* .view_area {width: 100%; height: 100%;}
+.view_area > div {
+  position: absolute; top: 0; left: 0;
+  width: inherit; height: inherit;
+  font-size: 3rem; color: #fff;
+}
+  .view_01 {z-index: 6; background-color: #458450;}
+  .view_02 {z-index: 5; background-color: #EA7487;}
+  .view_03 {z-index: 4; background-color: #17A3E0;}
+  .view_04 {z-index: 3; background-color: #ADCD00;}
+  .view_05 {z-index: 2; background-color: #37CB64;}
+  .view_06 {z-index: 1; background-color: #197808;} */
+
+
+  /* 2. 가로형 슬라이드 배너*/
+/* #localNavBox========== */
+.view_area {
+  position: relative; left: 0; top: 0;
+  width: 600%; height: 100%;
+} 
+.view_btn {
+  position: absolute; top: 300px; left: 0; right: 0; z-index: 50;
+  width: 1400px; height: 0; 
+  margin: auto; margin-top: -20px;
+}
+  .view_btn button{
+    width: 40px; height: 40px; 
+    font-size: 2.5rem; color: #fff; text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+  }
+  .next_view {float: right;}
+  .prev_view {float: left;}
+.view_area > div {
+  float: left;
+  width: calc(100% / 6); height: 100%;
+  color: #fff; font-size: 3rem;
+}
+.view_area::after,.view_area::after{
+  content: " "; display: block; clear: both;
+}
+  .view_01 {z-index: 6; background-color: #458450;}
+  .view_02 {z-index: 5; background-color: #EA7487;}
+  .view_03 {z-index: 4; background-color: #17A3E0;}
+  .view_04 {z-index: 3; background-color: #ADCD00;}
+  .view_05 {z-index: 2; background-color: #37CB64;}
+  .view_06 {z-index: 1; background-color: #197808;}
+
+#localNavBox {
+  position: relative; left: 0; top: 0;
+  height: auto; 
+  margin-bottom: 50px; padding: 20px 0 30px; box-sizing: border-box;
+  background-color: #aaa;
+}
+.local_btn {
+  position: absolute; top: 200px; left: 0; right: 0; z-index: 50;
+  width: 1400px; height: 0; 
+  margin: auto; margin-top: -100px;
+}
+  .local_btn button{
+    width: 40px; height: 40px; 
+    font-size: 2.5rem; color: #fff; text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+  }
+  .local_nav_outer {
+    width: 1500px; height: auto;
+    margin: auto; padding: 0 60px; box-sizing: border-box;
+    background-color:var(--step2-color);
+  }
+  .local_nav_outer ul {
+    width: 100%; height: auto;
+  }
+  .local_nav_outer li {
+    float: left;
+    width: 200px; height: 150px;
+    margin: 25px 15px;
+    background-color: #fc7;
+  }

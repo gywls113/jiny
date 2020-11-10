@@ -1,0 +1,25 @@
+/* jq_indicator_sample_02.css */
+
+#miniProduct {width: 600px; height: 500px; margin: auto; background-color: #ddd; padding-top: 100px; box-sizing: border-box;}
+
+.indicator {
+    position: absolute; top: 200px; left: 50%; 
+    transform: translate(-50%); z-index: 100;
+    width: 500px; height:0; }
+.next {
+    float: right; width: 100px; height: 100px; 
+    background-color: rgba(0,0,0,0.4); border-radius: 100%;
+}
+.prev {
+    float: left; width: 100px; height: 100px; 
+    background-color: rgba(0,0,0,0.4); border-radius: 100%;
+}
+.next:hover,.prev:hover {background-color: rgba(0,0,0,0.8);}
+.product_wrap {overflow: hidden;
+    width: 400px; height: 300px; margin: auto;}
+.product {position: relative; width: 500%; height: 100%;}
+.product li {float: left; width: 400px; height: 300px; background-color: #aa7;}
+.product li:nth-child(2) {background-color: #cae;}
+.product li:nth-child(3) {background-color: #fce;}
+.product li:nth-child(4) {background-color: #ce7;}
+.product li:nth-child(5) {background-color: #d78;}

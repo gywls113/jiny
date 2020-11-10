@@ -1,0 +1,32 @@
+/* jq_indicator_sample.css */
+
+#miniProduct {
+    position: relative;
+    width: 600px; height: 500px; margin: auto; padding-top: 50px;
+    padding-bottom: 50px; box-sizing: border-box;
+    background-color: #ddd;
+}
+/* ========================== */
+.indicator { 
+    position: absolute; top: 400px; left: 50%; 
+    transform: translateX(-50%);
+    width: 250px; height: 50px;}
+.indicator > ul {width: 100%; height: 100%;}
+.indicator li {
+    float: left; width: 50px; height: 100%; margin-right: 50px;
+    background-color: #777; border-radius: 100%;}
+.indicator .action {background-color: #333;}
+.indicator li:nth-child(3) {margin-right: 0;}
+
+/* ========================== */
+.product {
+    overflow: hidden; margin: auto; 
+    width: 500px; height: 300px;
+    background-color: #777;
+}
+.product > ul {position: relative; width: 300%; height: 100%;}
+.product li {float: left; width: 500px; height: 100%;
+    background-color: #acc;}
+.product li:nth-child(2) {background-color: #ffa;}
+.product li:nth-child(3) {background-color: #cfa;}
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- 'layout_test_teacher'.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base/layout_test_teacher_variable.css">
+
+  <link rel="stylesheet" href="../css/src/layout_test_teacher.css">
+
+  <!-- <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-wrap.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-headbox.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-adViewBox.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-localNavBox.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-content_area.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-miniAdBox.css">
+  <link rel="stylesheet" href="../css/src/latyout_text/layout_test_teacher-footer.css"> -->
+  
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <![endif]-->
+  <title>Document</title>
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+</head>
+<body>
+<!-- layout -->
+<div id="wrap">
+  <div id="headBox">
+    <h1 class="main_heading">site name</h1>
+    <div class="navigation">
+      <!-- navigation -->
+      <ul class="clearfix">
+        <li>navi_01</li>
+        <li>navi_02</li>
+        <li>navi_03</li>
+        <li>navi_04</li>
+        <li>navi_05</li>
+      </ul>
+    </div>
+    <div class="member"></div>
+  </div><!-- // #headBox ========== -->
+  
+  <div id="adViewBox">
+    <!-- 광고영역 -->
+    <div class="view_btn">
+      <button type="button" class="next_view">
+      <i class="fas fa-arrow-circle-right"></i>
+      <span class="hidden_context">다음 광고 내용 보기</span>
+      </button>
+      <button type="button" class="prev_view">
+      <i class="fas fa-arrow-circle-left"></i>
+      <span class="hidden_context">이전 광고 내용 보기</span>
+      </button>
+    </div>
+    <div class="view_indicator">
+      <!-- 광고순서확인 -->
+      <ol class="clearfix">
+        <li><a href="#" class="action"><span class="hidden_context">광고 1의 간단한 설명</span></a></li>
+        <li><a href="#"><span class="hidden_context">광고 2의 간단한 설명</span></a></li>
+        <li><a href="#"><span class="hidden_context">광고 3의 간단한 설명</span></a></li>
+        <li><a href="#"><span class="hidden_context">광고 4의 간단한 설명</span></a></li>
+        <li><a href="#"><span class="hidden_context">광고 5의 간단한 설명</span></a></li>
+        <li><a href="#"><span class="hidden_context">광고 6의 간단한 설명</span></a></li>
+      </ol>
+    </div>  
+    <div class="view_outer">
+      <!-- 광고내용 -->
+      <div class="view_area">
+        <div class="view_01">광고 01</div>
+        <div class="view_02">광고 02</div>
+        <div class="view_03">광고 03</div>
+        <div class="view_04">광고 04</div>
+        <div class="view_05">광고 05</div>
+        <div class="view_06">광고 06</div>
+      </div>
+    </div>
+  </div><!-- // #adViewBox ========== -->
+ 
+  <div id="localNavBox">
+    <div class="local_btn">
+      <button type="button" class="next_view">
+      <i class="fas fa-arrow-circle-right"></i>
+      <span class="hidden_context">다음 광고 내용 보기</span>
+      </button>
+      <button type="button" class="prev_view">
+      <i class="fas fa-arrow-circle-left"></i>
+      <span class="hidden_context">이전 광고 내용 보기</span>
+      </button>
+    </div>
+    <div class="local_nav_outer">
+      <!-- local navigation -->
+      <ul class="clearfix">
+        <li>loca_navi_01</li>
+        <li>loca_navi_02</li>
+        <li>loca_navi_03</li>
+        <li>loca_navi_04</li>
+        <li>loca_navi_05</li>
+        <li>loca_navi_06</li>
+      </ul>
+    </div>
+  </div><!-- // #localNavBox ========== -->
+
+  <div class="content_area">
+    <!-- contnet -->
+    <div id="popularContentBox">
+      <h3>인기내용</h3>
+      <div class="con_area pop_con_area clearfix">
+        <div class="pop_card">
+          <div class="img_context">img</div>
+          <div class="narr_context">narr</div>
+        </div>
+        <div class="pop_card">
+          <div class="img_context">img</div>
+          <div class="narr_context">narr</div>
+        </div>
+        <div class="pop_card">
+          <div class="img_context">img</div>
+          <div class="narr_context">narr</div>
+        </div>
+      </div>
+    </div><!-- // #populaContentBox ========== -->
+    <div id="newContentBox">
+      <h3>최신내용</h3>
+      <div class="con_area new_con_area clearfix">
+        <div class="new_con_title_area">
+          <div class="new_con_title_img"></div>
+          <div class="new_con_title_text">
+            <div class="new_con_text_title"></div>
+            <div class="new_con_text_content"></div>
+          </div>
+        </div>
+        <div class="new_con_more_area">
+          <div class="new_con_more_01 clearfix">
+            <div class="new_con_more_img"></div>
+            <div class="new_con_more_text"></div>
+          </div>
+          <div class="new_con_more_02">
+            <div class="new_con_more_img"></div>
+            <div class="new_con_more_text"></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- // #newContentBox ========== -->
+    <div id="recommendeContentBox">
+      <h3>추천내용</h3>
+      <div class="con_area recom_con_area clearfix">
+        <div class="re_con_part_area">
+          <div class="re_con_part_img"></div>
+          <div class="re_con_part_text"></div>
+        </div>
+        <div class="re_con_part_area">
+          <div class="re_con_part_img"></div>
+          <div class="re_con_part_text"></div>
+        </div>
+        <div class="re_con_part_area">
+          <div class="re_con_part_img"></div>
+          <div class="re_con_part_text"></div>
+        </div>
+        <div class="re_con_part_area">
+          <div class="re_con_part_img"></div>
+          <div class="re_con_part_text"></div>
+        </div>
+      </div>
+    </div><!-- // #recommendedContentBox ========== -->
+    <div id="communityBox">
+      <h3>community</h3>
+      <div class="con_area community_con_area">
+        <ul class="clearfix">
+          <li>
+            <div class="community_con_img"></div>
+            <dl>
+              <dt></dt>
+              <dd></dd>
+            </dl>
+          </li>
+          <li>
+            <div class="community_con_img"></div>
+            <dl>
+              <dt></dt>
+              <dd></dd>
+            </dl>
+          </li>
+          <li>
+            <div class="community_con_img"></div>
+            <dl>
+              <dt></dt>
+              <dd></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div><!-- // #communityBoxx ========== -->
+  </div>
+
+
+  <div id="miniAdBox">
+    <div class="mini_ad_outer clearfix">
+      <div class="mini_area mini_area_01">mini_area_01</div>
+      <div class="mini_area mini_area_02">mini_area_02</div>
+      <div class="mini_area mini_area_03">mini_area_03</div>
+    </div>
+  </div><!-- // #miniAdBox ========== -->
+
+  <div id="footBox">
+    <div class="foot_outer clearfix">
+      <div class="foot_area_01">foot_area_01</div>
+      <div class="foot_area_02">foot_area_02</div>
+    </div>
+  </div><!-- // #footBox ========== -->
+</div>
+  <!-- script -->
+  <script src="파일이름.js"></script>
+</body>
+</html>

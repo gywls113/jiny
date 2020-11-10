@@ -1,0 +1,44 @@
+/* jq_indicator_sample_03.css */
+/* 좌우 버튼 + 인디케이터 */
+
+#miniProduct {width: 600px; height: 500px; margin: auto; background-color: #ddd; padding-top: 100px; box-sizing: border-box;}
+
+
+/* ========================== */
+.slide_btn {
+    position: absolute; top: 200px; left: 50%; 
+    transform: translate(-50%); z-index: 100;
+    width: 500px; height:0; }
+.next {
+    float: right; width: 100px; height: 100px; 
+    background-color: rgba(0,0,0,0.4); border-radius: 100%;
+}
+.prev {
+    float: left; width: 100px; height: 100px; 
+    background-color: rgba(0,0,0,0.4); border-radius: 100%;
+}
+.next:hover,.prev:hover {background-color: rgba(0,0,0,0.8);}
+
+/* ========================== */
+.product_wrap {overflow: hidden;
+    width: 400px; height: 300px; margin: auto;}
+.product {position: relative; width: 500%; height: 100%;}
+.product li {float: left; width: 400px; height: 300px; background-color: #aa7;}
+.product li:nth-child(2) {background-color: #cae;}
+.product li:nth-child(3) {background-color: #fce;}
+.product li:nth-child(4) {background-color: #ce7;}
+.product li:nth-child(5) {background-color: #d78;}
+
+/* ========================== */
+.indicator { 
+    position: absolute; top: 430px; left: 50%; 
+    transform: translateX(-50%);
+    width: 450px; height: 50px;}
+.indicator > ul {width: 100%; height: 100%;}
+.indicator li {
+    float: left; width: 50px; height: 100%; margin-right: 50px;
+    background-color: #777; border-radius: 100%;}
+.indicator .action {background-color: #333;}
+.indicator li:nth-child(5) {margin-right: 0;}
+
+

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root {
+  
+  --color-white:#fff;
+  --color-black:#333;
+  --color-primary:#f06;
+  --color-font1:#333;
+  --color-point:#f70;
+
+  --size-title1:40px;
+  --size-title2:36px;
+  --size-title3:24px;
+
+  --border-line1:1px solid #333;
+    
+  --color-monfee-primary: #a30;
+  --color-monfee-primary-opacity: rgba(164,51,0,0.7);
+  --color-monfee-red: #c00;
+  --color-monfee-yellow: #ffaf00;
+  --color-monfee-mint: #3dd;
+  --color-monfee-mint-opacity: rgba(10,160,160,0.8);
+  --color-monfee-black: #171717;
+  --color-monfee-deep-gray: #656565;
+  --color-monfee-light-gray: #ddd;
+  --color-monfee-white: #fff;
+    
+}
+
+p {background-color: var(--color1);}

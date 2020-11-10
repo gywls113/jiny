@@ -1,0 +1,47 @@
+/* layout_sdf_teacher.css */
+
+/* #newsSearBox ==========================================*/
+#newsSearchBox {
+    width: 100%; height: auto; padding-top: 63px; padding-bottom: 70px;
+    background-color: #aaa; 
+}
+.news_area {width: 505px; height: 120px; margin: auto;}
+#newsSearchBox h2 {
+    width: 100%; height: 40px; margin-bottom: 27px; line-height: 120%;
+    text-align: center; font-size: 24px; color: #fff; font-weight: 700;
+}
+.search_part {
+    width: 100%; height: 54px; padding: 2px; box-sizing: border-box;
+}
+.search_part form,.search_part fieldset {width: 100%; height: 100%;}
+#myEmail {
+    float: left; width: 384px; height: 100%; text-indent: 1.2rem;
+    border: 1px solid #777; border-right: 0; box-sizing: border-box;
+    background-color: #373737; cursor: text; color: #fff;
+    border-top-left-radius: 25px; border-bottom-left-radius: 25px;
+    border: 2px solid #777; border-right: 0; box-sizing: border-box;
+}
+#myEmail::placeholder {color: #aaa;}
+
+.search_part input[type="submit"]{
+    float: right; width: 116px; height: 100%; font-weight: bold; 
+    background-color: #e50112; color: #fff; cursor: pointer;
+    border-top-right-radius: 25px; border-bottom-right-radius: 25px;
+    border: 2px solid #777; border-left: 0; box-sizing: border-box;
+}
+
+/* #footBox ==========================================*/
+#footBox {
+    width: 100%; height: 405px; background-color: #e50112;
+    padding: 34px; padding-bottom: 50px; box-sizing: border-box;
+}
+.info_area {
+    float: left; width: 240px; height: 100%; margin-right: 36px; 
+    background-color: #faf; 
+}
+.adress_otherLink_area {
+    float: left; width: 510px; height: 100%; background-color: #faf;
+}
+.individual_area {
+    float: right; width: 290px; height: 100%; background-color: #faf;
+}

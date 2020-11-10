@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* layout_test.css */
+
+body {margin: 0; padding: 0;}
+
+#wrap {
+  margin: auto;
+  width: 700px; height: 745px; 
+  background-color: #444;
+}
+
+/* ---------------------------- */
+
+#headbox {
+  width: 700px; height: 80px;
+  background-color: #0dd;
+  padding: 15px; box-sizing: border-box;
+}
+h1 {
+  float: left;
+  width: 100px; height: 50px;
+  background-color: #fff;
+  margin: 0;
+}
+#navibox {
+  float: right; margin-top: 20px;
+  width: 450px; height: 30px;
+}
+#navibox ul {margin: 0; padding: 0;}
+
+#navibox ul li {
+  float: left; margin-left: 10px;
+  width: 100px; height: 30px;
+  background-color: #fff;
+  list-style: none;
+}
+#navibox ul li:nth-child(1) {margin-left: 0;}
+
+#navibox::after,#navibox:after {
+  content: " "; display: block; clear: both;
+}
+/* ---------------------------- */
+
+#bannerbox {
+  width: 700px; height: 250px;
+  background-color: #dbb;
+}
+
+/* ---------------------------- */
+
+#aisdebox {
+  width: 700px; height: 35px;
+  background-color: #566;
+}
+
+/* ---------------------------- */
+
+#articlebox {
+  width: 700px; height: 300px;
+  background-color: #595;
+}
+.article_01 {
+  float: left;
+  width: 350px; height: 300px;
+  background-color: #d85;
+}
+.article_02 {
+  float: left;
+  width: 350px; height: 300px;
+  background-color: #df8;
+  padding: 10px; box-sizing: border-box;
+}
+#articlebox::after,#articlebox:after {
+  content: " "; display: block; clear: both;
+}
+.article_01 ul {
+  width: 290px; height: 250px;
+  list-style: none; padding:0; margin: auto; 
+  margin-top: 25px;
+}
+.article_01 ul li {
+  float: left;
+  width: 140px; height: 120px;
+  background-color: #fff;
+  margin: auto; margin-left: 10px; margin-top: 10px;
+}
+.article_01 ul li:nth-child(1) {margin-left: 0; margin-top: 0;}
+.article_01 ul li:nth-child(2) {margin-top: 0;}
+.article_01 ul li:nth-child(3) {margin-left: 0;}
+
+.article_01 ul li::after,.article_01 ul li:after {
+  content: " "; display: block; clear: both;
+}
+
+.article_02 ul {
+  width: 258px; height: 800px;
+  list-style: none; padding: 0; margin: auto; 
+} 
+
+.article_02 ul li {
+  width: 100%; height: 50px;
+  background-color: #fff;
+  margin: auto; margin-top: 30px; padding: 0;  
+}
+/* ---------------------------- */
+
+#footbox {
+  width: 700px; height: 80px;
+  background-color: #d23;
+}

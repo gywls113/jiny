@@ -1,0 +1,34 @@
+/* layout_sdf_teacher.css */
+
+/* #viewBox ==========================================*/
+#viewBox {
+    width: 100%; height: 775px; background-color: #777;
+}
+
+/* #festivalBox ==========================================*/
+#festivalBox {
+    width: 100%; min-width: 1200px; max-width: 1600px; 
+    height: auto; min-height: 300px; 
+    margin: auto; padding: 90px 34px 65px; box-sizing: border-box; 
+}
+
+.festival_summary_area {
+    float: right; width: 65%; min-width: 780px; height: 360px; background-color: #fa0;
+}
+.festival_attach_area {
+    float:left; width: 22.5%; min-width: 270px; height: 360px; background-color: #fcf;
+}
+
+/* #cardImageBox ==========================================*/
+#cardImageBox {
+    position: relative; width: 100%; height: auto; min-height: 300px; 
+    background-color: #dddd; overflow-x: hidden;
+}
+
+.card_indicator_area {
+    position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);
+    width: 275px; height: 20px; background-color: #fff;
+}
+.card_image_area {
+    width: 300%; height: 154px; background-color: #f7a;
+}

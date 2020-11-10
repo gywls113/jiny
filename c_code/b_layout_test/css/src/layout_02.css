@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* layout_02.css */
+
+body {margin: 0;}
+
+#wrap {
+  width: 960px; height: 1200px;
+  background-color: #3cf;
+  margin: auto;
+}
+
+/* ---------------- */
+
+#headbox {
+  width: 100%; height: 120px;
+  background-color: #f4f;
+  padding: 10px; box-sizing: border-box;
+}
+h1 {
+  float: left; margin: 0;
+  width: 150px; height: 100px;
+  background-color: #fff;
+}
+h1 a {
+  display: block; width: 100%; height: 100%;
+  color: #000; text-align : center;
+}
+.group {
+  float: right; 
+  width: 500px; height: 100%;}
+
+#unb {
+  float: right;
+  width: 220px; height: 40px;
+  background-color: #fff;
+}
+#gnb { 
+  float: right;
+  margin-top: 10px;
+  width: 500px; height: 50px;
+  background-color: #fff;
+}
+
+.group::after,
+.group:after {content: " "; display: block; clear: both;}
+
+
+/* ------------------------ */
+
+#viewbox {
+  width: 960px; height: 450px;
+  background-color: #f80;
+}
+
+/* ------------------------ */
+
+#contentbox {
+  width: 960px; height: 500px;
+  background-color: #2ae;
+}
+
+/* ------------------------ */
+
+#footer {
+  width: 960px; height: 130px;
+  background-color: #777;
+}

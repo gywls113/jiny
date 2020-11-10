@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* layout_test_teacher */
+
+/* design */
+
+@import url("./latyout_text/layout_test_teacher-wrap.css");
+@import url("./latyout_text/layout_test_teacher-headbox.css");
+@import url("./latyout_text/layout_test_teacher-adViewBox.css");
+@import url("./latyout_text/layout_test_teacher-localNavBox.css");
+@import url("./latyout_text/layout_test_teacher-content_area.css");
+@import url("./latyout_text/layout_test_teacher-miniAdBox.css");
+@import url("./latyout_text/layout_test_teacher-footer.css");
+/* @import url() : css에서 또다른 css를 불러오는 표현기법
+                  #,.같은게 위에 있으면 에러난다. 무조건 import를 맨위에 쓰기 */

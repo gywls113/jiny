@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* layout_test_teacher-adViewBox */
+
+#adViewBox {
+  position: relative;
+  height: auto; min-height: 750px; 
+  padding: 28px 0; box-sizing: border-box;
+  background-color: #bbb;
+}
+  .view_btn {
+    position: absolute; top: 300px; left: 0; right: 0; z-index: 50;
+    width: 1400px; height: 0; 
+    margin: auto; margin-top: -20px;
+  }
+    .view_btn button{
+      width: 40px; height: 40px; 
+      font-size: 2.5rem; color: #fff; text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+    }
+      .next_view {float: right;}
+      .prev_view {float: left;}
+
+  .view_indicator {
+    position: absolute; bottom: 28px; left: 0; right: 0;
+    width: 840px; height: auto;
+    margin: auto;
+    background-color: var(--step2-color);
+  }
+    .view_indicator > ol {
+      width: 100%; height: auto;
+    }
+    /* float을 정리하기 위해서는 마지막에 clear:both를 사용해야한다.
+    li의 마지막에는 다른 요소가 들어갈 수 없으므로, 가상의 존재를 생성한다.
+    가상의 존재는 ::after형태를 취하고, after은 반드시 content를 가지고 있어야한다. */
+    .view_indicator li {
+      float: left;
+      width: 120px; height: 40px;
+      margin: 10px;
+    }
+      .view_indicator a {
+        position: relative;
+        display: block; width: 100%; height: 100%;
+        background-color: #fff;
+        border-radius: 40px;
+      }
+      .view_indicator a:hover,
+      .view_indicator a:focus {
+        background-color: #ccc; outline: 2px solid #f07;
+      }
+
+      .view_indicator a:hover > span ,
+      .view_indicator a:focus > span { /* display:block; position:absolute; z-index: -1; */
+        width: 160px; height: auto; 
+        z-index: 10; bottom: 45px; left: 50%; transform: translate(-50%);
+        border-radius: 10px;
+        padding: 5px; background-color: #fc7;}
+
+    .view_outer {
+      overflow: hidden;
+      position: relative;
+      width: 1300px; height: 600px;
+      margin: auto; 
+      background-color: var(--step2-color);
+    }
+

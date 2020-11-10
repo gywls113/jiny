@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* selector_01.css */
+
+body {background-color: #fafafa;}
+
+/* * {color: #f07; margin: 0; padding: 0;} */
+/* 아스타(*)는 전체를 뜻한다.
+아스타를 사용하면 전체가 다 변하지만 기능성 저하로 요새는 사용하지 않는다. */
+
+h1 {width: 400px; height: 40px; background-color: #cca;}
+ul > li {border-width: 1px; border-style:solid; border-color:#f7a;}
+ol > li {background-image: linear-gradient( #cfa, #ca7);}
+
+li a {color: #ffa;}
+a {background-color: #333; color: #fff;}
+div > a {color: #afa;}
+
+div.wrap {width: 80%; background-color: #ccc; border: 2px solid #f7a;}
+.wrap {background-color: #ad7;}
+#outer {background-color: #ff8;}
+
+/* css선택자는 기본적으로 나중에 작성한 내용을 기준으로 처리한다.
+하지만, 기본 타입선택자보다는 class선택자가 우선이고, class선택자보다 id선택자가 우선이며 자식 또는 자손 선택자가 가장 우선이다.
+기본 타입 선택자 < class선택자 < id 선택자 < 자식 또는 자손 선택자가 우선 < inline 선택자(js를 통한)
+ */
+
+ .nth {width: 100px; height: auto;}
+ .nth > li:nth-child(2n-1) {background-color: #ccc;}

@@ -1,0 +1,87 @@
+@charset "UFT-8";
+/* join.css */
+
+#wrap {
+    width: 580px; height: auto; min-height: 300px;
+    margin: auto; padding-top: 42px;
+    font-family: notoSansKR, sans-serif;
+}
+
+/* #headBox =======================================*/
+#headBox {
+    width: 100%; height: 54px; margin-bottom: 10px;
+}
+h1 {
+    width: 202px; height: 100%; margin: auto;
+}
+h1 > a {
+    background-image: url("../../img/logo_coupang.png");
+    background-position: 50% 50%; background-size: 99% auto;
+}
+
+/* #article =======================================*/
+#joinBox {
+    width: 460px; height: auto; min-height: 200px;
+    margin: auto; margin-bottom: 15px;
+}
+
+form {width: 100%; height: auto;}
+
+fieldset{
+    width: 100%; height: auto; min-height: 20px;
+    margin-bottom: 30px;
+ }
+fieldset:last-of-type {margin-bottom: 0;}
+
+.join_info ul {width: 100%; height: auto;}
+.join_info ul>li {width: 100%; height: auto; margin-bottom: 15px;}
+.join_info ul>li:last-of-type {margin-bottom: 0;}
+
+.input_wrap {width: 100%; height:auto; border:1px solid #777; box-sizing:border-box;}
+
+.join_info label:first-of-type{
+    float:left; width:45px; height:48px; 
+    border-right: 1px solid #777; background-color: #ddd;
+    text-align: center; line-height: 50px; color: #555; font-size: 1.2rem;
+}
+
+.join_info input:first-of-type {float:left; width: 412px; height:48px; border:0;}
+
+/*오류났을때 글씨*/
+.data_narr {
+    display: none;
+    width: 100%; height: auto; margin-top: 10px; 
+    font-size: 0.85rem; font-weight: 300; text-indent: 0.5rem;}
+.error {border-bottom: 3px solid #f00;}
+.error ~ .data_narr {display: block; color: #f22;}
+
+/*join_enter*/
+.join_enter {width: 100%; height: auto;}
+.join_enter > input {    
+    width: 100%; height: 53px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0 2px 0 #005599; background-color: #0074e9;
+    color: #fff; font-weight: 900; font-size: 1.125rem;}
+.join_enter > p {
+    width: 100%; height: auto;
+    line-height: 13px;
+    font-size: 13px; color: #333;
+}
+.join_enter a {text-decoration: underline;}
+
+/*이용약관*/
+.acces_text {
+    display: none;
+    width: 100%; height: auto; margin-top: 10px; 
+    font-size: 0.125rem; font-weight: 300; text-indent: 0.5rem;}
+.acces_text_view {border-bottom: 3px solid #f00;}
+.acces_text_view + .acces_text {display: block; overflow: scroll; overflow-x: 0;}
+
+/* #footBox =======================================*/
+#footBox {
+    width: 100%; height: auto; min-height: 50px;
+}
+#footBox > p {
+    width: 100%; height: auto; text-align: center;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- form_02.html -->
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/src/form_02.css">
+    <title>Document</title>
+        <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+        <link rel="apple-touch-icon" href="../img/incon_01.png">
+</head>
+<body>
+<!-- latout -->
+<div id="wrap">
+    <h1><a href="./contents.html">웹기초</a></h1>
+    <hr />
+    <div class="form_area">
+        <form action="#" method="POST">
+        <!-- fieldset*7>legend{$$.} -->
+       <fieldset>
+           <legend>01. 입력의 기본형</legend>
+           <ul>
+               <li>
+                   <label for="userID">ID입력</label>
+                   <input type="text" name="userID" id="userID" 
+                   maxlength="7" placeholder="ID" value="" required />
+               </li>
+               <li>
+                   <label for="usePw">비밀번호</label>
+                   <input type="text" name="usePw" id="usePw" 
+                    placeholder="비밀번호" maxlength="12" value="" required />
+               </li>
+               <li>
+                   <label for="searchBar">검색할 내용을 입력하세요.</label>
+                   <input type="search" name="searchBar" id="searchBar"
+                   placeholder="검색" value="" />
+               </li>
+               <li>
+                   <label for="inputTel">사용자의 연락처를 입력하세요.</label>
+                   <input type="tel" name="inputTel" id="inputTel" 
+                   placeholder="연락처" value="" />
+               </li>
+               <li>
+                   <label for="userMail">이메일 주소를 입력하세요.</label>
+                   <input type="email" name="userMail" id="userMail" 
+                   placeholder="이메일" value="" required />
+               </li>
+               <li>
+                   <label for="linkPage">웹페이지 주소를 입력하세요.</label>
+                   <input type="url" name="linkPage" id="linkPage" 
+                   placeholder="웹주소" value="" required />
+               </li>
+               <li>
+                   <label for="countNum">구입할 수량을 입력하세요.</label>
+                   <input type="number" name="countNum" id="countNum" 
+                   min="1" max="20" step="2"
+                   placeholder="수량" value="" />
+               </li>
+           </ul>
+       </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>02. 입력의 기본형2 - 구형브라우저에서 제한</legend>
+           <ul>
+               <li>
+                   <label for="date"></label>
+                   <input type="date" name="date" id="date" value="" />
+               </li>
+               <li>
+                   <label for="time"></label>
+                   <input type="time" name="time" id="time" value="" />
+               </li>
+               <li>
+                   <label for="week"></label>
+                   <input type="week" name="week" id="week" value="" />
+               </li>
+           </ul>
+       </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>03. 체크</legend>
+           <h3>선택입력사항</h3>
+           <p>다음중 집에 갈 수 있는 교통수단은?</p>
+           <ul>
+               <li>
+                   <input type="checkbox" name="movingType" id="movingType" value="workig" />
+                   <label for="movingType">도보</label>
+               </li>
+               <li>
+                  <input type="checkbox" name="movingType" id="movingType2" value="bycle" />
+                   <label for="movingType2">자전거</label> 
+               </li>
+               <li>
+                   <input type="checkbox" name="movingType" id="movingType3" value="metro" />
+                   <label for="movingType3">지하철</label>
+               </li>
+               <li>
+                   <input type="checkbox" name="movingType" id="movingType4" value="bus" />
+                   <label for="movingType4">버스</label>
+               </li>
+           </ul>
+           
+           <h3>선택 입력 중 하나만 선택되는 사항</h3>
+           <p>다음중 자신이 알고 있는 가장 괜찮은 사람은?</p>
+           <ul>
+             <li>
+               <input type="radio" id="radioSel_01" name="selectPeople" value="xido" checked="checked" />
+               <label for="radioSel_01">현재 보고있는 앞의 사람(남자)</label>
+             </li>
+
+             <li>
+              <input type="radio" id="radioSel_02" name="selectPeople" value="xido" />
+              <label for="radioSel_02">xido</label>
+            </li>
+
+            <li>
+              <input type="radio" id="radioSel_03" name="selectPeople" value="xido" />
+              <label for="radioSel_03">현재 하루중에 가장 오래보는 남자</label>
+            </li>
+
+            <li>
+              <input type="radio" id="radioSel_04" name="selectPeople" value="xido" />
+              <label for="radioSel_04">현재 공간에서 가장 연장자</label>
+            </li>
+           </ul>
+      
+        </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>04. 약간의 제한이 있는 체크</legend>
+           <div>
+             <label for="selectColor">원하는 색상을 선택하세요.</label>
+             <input type="color" id="seletColor" name="selectColor" value="" >
+           </div>
+
+           <div >
+               <label for="lighting">밝기조절</label>
+               <input type="range" id="lighting" name="lighting" value="" min="1" max="12" step="1" />
+           </div>
+       </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>05. 버튼의 기능</legend>
+           <p>input요소에 해당하는 버튼의 기능은 label을 작성할 수 없다.</p>
+           <input type="submit" name="ok" value="확인 및 동의"/>
+           <input type="image" src="../img/icon_01.png" alt="동의용 이미지첨부" name="imgOk" value="이미지로 동의"/>
+           <input type="reset" name="cancel" value="취소"/><br />
+           <input type="button" name="mail" id="postmail" value="우편번호검색"/>
+           <label for="postMail">우편번호검색</label><br />
+           <input type="file" name="dataFile" value=""/>
+           <label for="dataFile">담을 파일 선택</label>
+       </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>06. 멀티기능을 가진 형태 및 기타</legend>
+           <div class="input_data">
+               <label for="chat"></label>
+               <textarea name="chat" id="chat" cols="30" rows="10" readonly>
+               시승신청서
+               ........
+               </textarea>
+           </div>
+           <div class="select_data">
+               <h3>여러요소를 서랍형식으로 처리하여 만드는 요소</h3>
+               <label for="juice">음료선택</label>
+               <select name="juice" id="juice">
+                   <option>선택하세요.</option>
+                   <optgroup label="coffee">
+                   <option value="americano">아메리카노</option>
+                   <option value="latte">라떼</option>
+                   <option value="vanila">바닐라라떼</option>
+                   </optgroup>
+                   <optgroup label="other">
+                   <option value="hot choco">핫초코</option>
+                   <option value="에이드">에이드</option>
+                   <option value="요거트">요거트</option>
+                   </optgroup>
+                   <optgroup label="juice">
+                   <option value="juice_01">포도주스</option>
+                   <option value="juice_02">사과주스</option>
+                   <option value="juice_03">오렌지주스</option>
+                   <option value="juice_04">키위주스</option>
+                   </optgroup>
+               </select>
+           </div>
+           <div class="btn_data">
+              <h3>버튼의 간편한 형식</h3>
+               <button>속성을 사용하지 않으면 submit기능</button>
+               <button type="submit">확인 및 전송</button>
+               <button type="reset">취소</button>
+               <button type="button">기능</button>
+           </div>
+           
+       </fieldset>
+       <!-- =============================== -->
+       
+       <fieldset>
+           <legend>07. datalist</legend>
+           <p>메세지를 선택해주세요</p>
+           <label for="selects2">내용선택</label>
+           <input type="text" list="selects2" id="mySelect" name="mySelect" />
+           <datalist id="selects2">
+               <option value="경비실에 맡겨주세요."></option>
+               <option value="미리 연락주세요."></option>
+               <option value="노크후 문앞에 두세요."></option>
+           </datalist>
+       </fieldset>
+       <!-- =============================== -->
+        </form>
+    </div>
+</div>
+<!-- script-->
+    <script></script>
+
+</body>
+</html>

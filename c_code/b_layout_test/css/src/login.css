@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* login.css */
+
+#wrap {
+    width: 640px; height: 378px; margin: auto; 
+    padding: 63px 35px 35px; box-sizing: border-box;
+    background-color: #ddd;
+}
+
+.form_area {
+    width: 255px; height: 282px; background-color: #fff;
+}
+
+form {
+    position: relative;
+    width: 100%; height: auto; min-height: 110px; background-color: #fff;
+    padding: 15px 8px 48px; box-sizing: border-box;}
+
+fieldset {
+    position: absolute;
+    height: auto; min-height: 110px; 
+    border: 0;
+    padding: 10px; box-sizing: border-box;
+    background-color: #fff;}
+
+input[type="image"] {width: 42px; height: auto;}
+
+/* ---------------------------------------- */
+
+.social_login {left: 40px;}
+.social_login > ul {width: 146px; height: 42px; margin: auto;}
+.social_login > ul > p {text-align: center; margin-bottom: 15px}
+.social_login > ul > li{
+    float: left; width: 42px; height: 42px; margin: auto; margin-right: 8px;}
+.social_login > ul > li:nth-child(3) {margin-right: 0}
+
+/* ---------------------------------------- */
+
+.login_area {top: 117px;}
+login_area > .userid {float: left;}
+.userid > input, .pw > input {width: 170px; height: 35px;}

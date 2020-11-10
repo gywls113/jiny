@@ -1,0 +1,156 @@
+/* monffee.css */
+
+#wrap {width: 1024px; height: auto; min-height: 500px; margin: auto; background-color: #ccc; }
+
+/* #headBox =============================== */
+#headBox {width: 100%; height: 120px; background-color: #aaa;}
+
+h1 {float: left; margin-left: 40px;
+    width: 220px; height: 100%; background-color: #b62900;}
+
+.head_fix {width: 1024px; height: 100%; margin: auto;}
+
+#navBox {float: right; margin-right: 40px; width: 620px; height: 100%;}
+#navBox ul {width: 100%; height: 100%;}
+#navBox li {float: left; width: 140px; height: 100%; 
+    margin-right: 20px; background-color: #fff;}
+#navBox li:nth-child(4) {margin-right: 0;}
+
+/* #adBanner =============================== */
+#adBanner {position: relative; width: 100%; height: 1080px; background-color: #777;}
+
+.img_area {width: 100%; height: 100%; background-color: #58331c;}
+
+.text_area {position: absolute; top:0; left: 0; width: 50%; height: 100%; 
+    background-color: rgba(165,50,0,0.5);}
+
+.text_content {position: absolute; top:31.944444%; right: 3.703703%;
+    width: 37.109375vw; min-width: 380px; height: 44.433593vw; min-height: 455px;}
+.text_content dd {width: 100%; height: 27.472527%; margin-bottom: 8.791208%; background-color: #fff;}
+.text_content dt {width: 100%; height: 63.736263%; background-color: #fff;}
+
+.button_area {position: absolute; top:450px; left: 50%; 
+    transform: translateX(-50%); z-index: 100; 
+    width: 95%; height: 180px;}
+.next_button {float: right;
+    width: 80px; height: 100%; background-color: #49b9af;}
+.prev_button {float: left;
+    width: 80px; height: 100%; background-color: #49b9af;
+}
+
+.indicator_area {position: absolute; top: 925px; left:47.851562vw;
+    width: 475px; height: 140px;}
+.mouse {float: left; width: 9.4736842%; height: 100%; background-color: #fff;}
+.indicator {float: right; width: 75.789473%; height: 28.5714286%; margin-top: 100px;}
+.indicator li {float: left; width: 45px; height: 100%; background-color: #fff; margin-right: 60px;}
+.indicator li:nth-child(4) {margin-right: 0;}
+
+/* #bestNews =============================== */
+#bestNews {width: 100%; height: 1080px; background-color: #aaa;}
+
+.best_area {width: 940px; height: 100%; margin: auto; 
+    padding-top: 55px; padding-bottom: 80px; box-sizing: border-box;}
+.title_box {width: 260px; height: 50px; margin-bottom: 35px;  background-color: #222;}
+.menu_list {width: 940px; height: 860px; }
+.menu_list li {float: left; width: 220px; height: 400px; 
+    margin-right: 20px; margin-bottom: 20px; }
+.menu_list li:nth-child(4) {margin-right: 0;}
+.menu_list li:nth-child(5) {margin-bottom: 0;}
+.menu_list li:nth-child(6) {margin-bottom: 0;}
+.menu_list li:nth-child(7) {margin-bottom: 0;}
+.menu_list li:nth-child(8) {margin-right: 0; margin-bottom: 0;}
+
+.menu_list li a {display: block; width: 100%; height: 100%;}
+.menu_list li div {width: 100%; height: 260px; margin-bottom: 20px; background-color: #222;}
+.menu_list li .menu_img_08 {height: 100%; margin-bottom: 0;}
+.menu_list li dl {width: 100%; height: 120px;}
+.menu_list li dt {width: 100%; height: 25px; background-color: #222;}
+.menu_list li dd {width: 100%; height: 95px; background-color: #222;}
+
+/* .issue_text =============================== */
+.issue_text {width: 100%; height: 860px; 
+    padding: 265px 9.765625vw 75px;
+    box-sizing: border-box; background-color: #777;}
+.isuus_text_box {width: 100%; height: 100%; 
+    padding: 60px 4.3945312vw 70px; box-sizing: border-box;
+    background-color: rgba(73,185,375,0.7);}
+.issue_title {width: 260px; height: 50px; margin-bottom: 20px; background-color: #333;}
+.issue_content {width: 100%; height: 325px; background-color: #333;}
+
+/* .issue_icon =============================== */
+.issue_icon { position: relative; width: 100%; height: 480px; 
+    background-color: #aaa;}
+.icon_area {position: absolute; top: 25%; left: 50%; 
+    transform: translate(-50%);
+    width: 90.332031vw; min-width: 960px; 
+    height: 25.390625vw; min-height: 260px; max-height: 300px;}
+.icon_area li {float: left; width: 300px; min-width: 300px;
+    height: 100%; background-color: #acf;}
+
+.icon_area li:first-child {float: left;}
+.icon_area li:nth-child(2) {position: absolute; left: 50%; transform: translate(-50%);}
+.icon_area li:nth-child(3) {float: right;}
+
+/* .content_text =============================== */
+.content_text {width: 100%; height: 600px; padding-top: 155px; 
+    box-sizing: border-box; background-color: #777;}
+.content_text_area {width: 76.171875vw; min-width: 780px; 
+    height: 32.714843vw; min-height: 335px; margin: auto;}
+.content_title {width: 100%; height: 65px; margin-bottom: 60px; background-color: #222;
+}
+.content_context {width: 100%; height: auto; min-height: 165px; background-color: #222;
+}
+
+/* .material_icon =============================== */
+.material_icon {width: 100%; height: 200px; background-color: #aaa;}
+.material_area {position: relative; width: 91.796875vw; height: 100%; margin: auto; background-color: #fff; overflow: hidden;}
+
+.material_button {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;}
+.material_next_btn {float: right; width: 60px; height: 100%; background-color: #222;}
+.material_prev_btn {float: left; width: 60px; height: 100%;
+background-color: #222;}
+
+.mater_wrap {width: 76.171875vw; max-width: 1420px; height: 100%; 
+    margin: auto; overflow: hidden;}
+.mater_icon_area {width: 500%; height: 100%; margin: auto;}
+.mater_icon_area li {float: left; width: 140px; height: 100%; 
+    margin-right: 1.953125vw;  background-color: #faa;}
+.mater_icon_area li:last-child {margin-right: 0;}
+
+/* #location =============================== */
+#location {width: 100%; height: 1180px; background-color: #777;}
+
+/* #footBox =============================== */
+#footBox {width: 100%; height: 400px; background-color: #aaa;}
+
+
+
+/* =========================================== */
+/* pc_full */
+@media screen and (min-width:1025px) {
+    #wrap {width: 100%; background-color: #fac;}
+    /* =============================== */
+    .text_area {width: 40%; min-width: 520px;}
+    .text_content {max-width: 450px; max-height: 520px;
+    top:31.481481%; right: 8.536585%;}
+    .text_content dd {height: 26.923076%; margin-bottom: 5.7692307%;}
+    .text_content dt {width: 100%; height: 67.307692%; background-color: #fff;}
+    .mouse {width: 13.157894%;}
+    .indicator {width: 71.052631%; height: 22.222222%;}
+    .indicator li {width: 30px; margin-right: 50px;}
+    /* =============================== */
+    .icon_area {top: 20%; left: 50%; transform: translate(-50%);
+    width: 65.625vw; height: 15.625vw;}
+    .content_text_area {width: 48.958333vw; height: 290px;}
+    /* =============================== */
+    .material_area {width: 73.958333vw; min-width: 940px;}
+    .mater_wrap {width: 57.291666vw;}
+    .mater_wrap {min-width: 780px;}
+    .mater_icon_area li {margin-right:5.208333vw;}
+}
+
+/* small */
+@media screen and (max-width:1024px) {
+    .indicator_area {left: 490px;}
+    .icon_area {top: 120px;}
+}

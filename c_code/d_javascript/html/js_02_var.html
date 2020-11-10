@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="Ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 2020;
+        var b = '2020';
+        var c = parseInt(b);
+        
+        // console.log(a + 1);
+        // console.log(b + 1);
+        // console.log(c + 1);
+        
+        // console.log( typeof(a), a );
+        // console.log( typeof(b), b );
+        // console.log( typeof(c), c );
+        
+        // partsInt()는 강제로 숫자로 변환하는 기능
+        // 숫자처리가 가능한 부분만 변환을 한다.
+        // 처음부터 숫자로 변환이 되지 않으면 값이 도출되지 않는다.
+        // 값ㅇ르 도출할 수 없는 숫자가 생성 ( NaN )
+        
+        var d = String(a);
+        var typeD = typeof(d);
+        // console.log( typeD,d );
+        
+        // -----------------------------------------------------
+        var t = !false;
+        // console.log( typeof(t), t);
+        
+        var n = 1;
+        // console.log( !n );
+        
+        var nn = typeof(n) == 'number';
+        // console.log( nn );
+        
+        // !는 반대를 의미, true앞에 !를 사용하면 ㄴfalse
+        // 숫자는 0은 false, 1은 true를 의미하기도 한다.
+        // ==은 같다를 의미하며 비교할 때 사용하는 형태
+        
+        // ------------------------------------------------------
+        var myName;
+        // console.log( myName ); // 값이 정해진 것이 없으므로 미정의 되었다.
+        // console.log( typeof(myName) ); // 형타입 자체가 undefinded
+        
+        myName = 100;
+        // console.log( myName );
+        // console.log( typeof(myName) );
+        
+        myName = '문자로 변경하여 대체'
+        // console.log ( myName );
+        // console.log ( typeof(myName) );
+        
+        myName = null;
+        // console.log( myName );
+        // console.log( typeof(myName) );
+        
+        // 새로 짓는것 (완전한 신축) : undefined
+        // 기존의 아파트를 싹 뜯어 고치는것 (리모델링): null
+        
+        // ------------------------------------------------------
+        var arr = ['포도','사과','키위'];
+        arr[3] = '딸기';
+        arr[0] = '바나나';
+        // console.log( arr[2] );
+        
+        var arr2 = [
+            ['귤','달래','포도'],
+            ['오렌지','키위','거봉'],
+            1,100,null,false,['배고파!']
+            ];
+        // console.log( arr2[1][1] );
+        
+        // ------------------------------------------------------
+        var obj = {'귤':'주황색','키위':'녹색','포도':'보라색','my Color':'#fa0','lunch':'13:20'};
+        // console.log( obj['귤'] );
+        // console.log( obj['my Color'] );
+        // console.log( obj.lunch );
+        // object형태는 순서가 존재하지 않는다.
+        
+        // ------------------------------------------------------
+        // 함수는 형태를 먼저 만들고, 이를 호출하며 호출방법은 같다
+        var myFn = function(){}; //함수 표현식
+        function myFn2(){}; //함수 선언식
+        
+        var FnTest = function(){
+            var n3 = 7;        
+            return n3; // 결과를 도출(반환)하는 명령어
+        };
+        var nResult = FnTest();
+        // console.log( n3 );
+        
+        var F2 = function(){
+            return (7 + 10 + 8) *2;
+        };
+        
+        console.log( F2() );
+        
+        var sum = function(a1, b1){
+          return a1 + b1;  
+        };
+        console.log( sum(5, 10) )
+        
+    </script>
+</body>
+</html>

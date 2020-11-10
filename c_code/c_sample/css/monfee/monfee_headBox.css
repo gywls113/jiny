@@ -1,0 +1,59 @@
+/* monfee_headBox.css */
+
+/* --------------------------- */
+.els_wrap {
+    width: 100%; height: auto; 
+    background-color: var(--color-monfee-white);}
+.headBox_wrap {
+    position: fixed; top: 0; left: 0; z-index: 1000; height: 120px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+#headBox {
+    position: relative; width: 940px; height: auto; min-height: 120px; margin: auto;}
+#headBox::before {
+    content:" "; display: block; position: absolute; 
+    width: 100%; height: 120px; top: 0; left: 0; z-index: -1; background-color: var(--color-monfee-white);}
+
+h1 {float: left; position: relative; z-index: 100; width: 220px; height: 120px;}
+h1 a {
+    background-image: url('../../../img/monkey/h1_logo.png');
+    background-position: 50% 50%; 
+    background-color: var(--color-monfee-primary);}
+
+#navBox {float: right; width: 620px; height: auto;}
+#navBox::before {
+    content: " "; display: block; width: 100%; height: 100%; background-color:rgba(164,51,0,0.5); 
+    position: absolute; bottom: 0; right: 0; z-index: -2;}
+#navBox > ul {width: 100%; height: auto;}
+#navBox ul::before {
+    content: " "; display: block; position: absolute;
+    bottom: 25px; left: 20px; width: 180px; height: 150px;
+    background-image: url("../../img/monkey/character.svg");
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain;}
+#navBox li {float: left; width: 25%; height: auto;}
+#navBox dl {width: 100%; height: auto;}
+#navBox dt {position: relative; width: 100%; height: 120px;}
+#navBox dt>a::after {
+    content: " "; display: block; position: absolute;
+    margin-top: 16px; top: 50%; left: 50%; transform: translate(-50%);
+    width: 0; height: 3px; transition: width 300ms ease;
+    background-color: var(--color-monfee-primary);}
+#navBox dt>a:hover::after {width: 80%;}
+#navBox dt>a {
+    font-size: 1.8rem; text-transform: uppercase; display: block; width: 100%; height: 100%; text-align: center; line-height: 120px;}
+#navBox dd {
+    width: 100%; height: auto; color:var(--color-monfee-white);
+    padding: 16px 0; text-align: left; text-indent: 32px;}
+#navBox dd>a {
+    display: block; width: 100%; height: auto; 
+    padding: 5px; margin-bottom: 5px;}
+
+/*
+li : float, 높이는 마우스 이벤트에 의해 변경
+ul : 이미 clear:both 처리
+    li의 높이에 의해 배경색이 추가로 처리 (::before)
+nav : 내부에 캐릭터 위치하므로 이미지(디스플레이로 처리) (::before)
+#headBox : nav로 인해 배경색이 변경되므로 별도의 색을 처리 (::before)
+*/
+
+/* --------------------------- */
