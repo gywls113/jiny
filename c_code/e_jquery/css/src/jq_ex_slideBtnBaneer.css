@@ -1,10 +1,10 @@
-
 /* jq_ex_slideBtnBaneer.css */
 
 #wrap {width: 60rem; height: auto; min-height: 500px; 
-    margin: auto; background-color: #dfdfdf;}
+    margin: auto; margin-bottom: 2000px; background-color: #dfdfdf;}
 
 .part {position: relative; width: 400px; height: auto; margin: auto; 
+    margin-bottom: 2rem;
     padding: 0.5rem; background-color: #fac;}
 
 .slide_btn {position: absolute; top: 50%; left: 50%;
@@ -17,13 +17,15 @@
 
 .slide_wrap {overflow: hidden;
     width: 400px; height: 300px; border: 1px solid #333;}
-.slide_wrap ul {width: 500%; height: 100%;}
-.slide_wrap li {float: left; width: 20%; height: 100%;
+.slide_wrap li{ height: 100%;
     padding-top: 250px; box-sizing: border-box;
     background-repeat: no-repeat; background-position: 50% 20%;
     background-size: 50% auto; background-color: #fff;
     border-right: 1px solid #333; 
     text-align: center;}
+
+.horizontal_slide ul {width: 500%; height: 100%;}
+.horizontal_slide li {float: left; width: 20%;}
 .slide_wrap a {padding: 0.3rem 1.5rem; background-color: #f07;
     color: #fff; border-radius: 2rem;
     text-shadow: 0.05rem 0.05rem 0 #333;}
@@ -32,4 +34,42 @@
 .cake_03 {background-image:url("../../img/cake/tj_cake_039.jpg");}
 .cake_04 {background-image:url("../../img/cake/tj_cake_012.jpg");}
 .cake_05 {background-image:url("../../img/cake/tj_cake_031.jpg");}
+
+/* ======================================= */
+.slide_02{background-color: #0ac;}
+.slide_02 h2{color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;
+    padding-left: 1rem;}
+.slide_02 .slide_wrap {border-radius: 1rem; overflow: hidden; border: 0;
+    box-shadow: 0 0 0.5rem #333;}
+.slide_wrap li {border-right: none;}
+.slide_02 .slide_btn {top: 2.5rem; left: auto; right: 1.5rem; width: 80px;
+    transform: translate(0);}
+.slide_02 button {width: 2.2rem; height: 2.2rem; color: #fff; 
+    font-size: 2.2rem;}
+
+.index_slide ul {position: relative; 
+    width: 100%; height: 100%; z-index: 50;}
+.index_slide li {position: absolute; top:0; left: 0; width: 100%;}
+.index_slide li.action {z-index: 100;}
+
+/* ======================================= */
+.indicator_horizontal_slide {position: relative; padding-bottom: 2.5rem;}
+.indicator {position: absolute; bottom: 0.5rem; left: 50%; 
+    transform: translate(-50%); width: 100%; height: 1.5rem;
+    background-color: #acf; text-align: center;
+}
+.indicator li {display: inline-block; width: 1.5rem; height: 1.5rem; 
+    margin: 0 0.5rem;}
+.indicator li a {display: block; width: 100%; height: 100%;
+    border-radius: 100%; background-color: #fff;}
+.indicator li.action a {background-color: #f52;}
+
+.indicator_horizontal_slide .slide_wrap ul {width: 500%; height: 100%;}
+.indicator_horizontal_slide .slide_wrap li {float: left; width: 20%;}
+
+
+
+
+
+
 
