@@ -39,7 +39,7 @@
     
     //indicator클릭시 ul이동 -> a에 focus처리로 변경하고, 실제 배너에 a는 별도로 foucs 처리
 
-    indiLi.children('a').on('focus',function(e){
+    indiLi.children('a').on('mouseenter focus click',function(e){
         e.preventDefault();
         
         typeTest(e);
@@ -47,15 +47,33 @@
         var it = $(this);
         slideN = it.parent('li').index();
         
-        slideUl.stop().css({'marginLeft':slideN * -100 + '%'});
+        
         indiLi.eq(slideN).addClass('action');
         indiLi.eq(slideN).siblings().removeClass('action');
         
         //console.log(slideN);
+        
+        if(e.type === 'focus'){
+            slideUl.stop().animate({'marginLeft':slideN * -100 + '%'},timed);
+        }else if(e.type === 'click'){
+            setTimeout(function(){
+                var thatLink = it.attr('href');
+                $(thatLink).attr({'tabIndex':0});
+                //$(thatLink).parent('li').siblings().children('a').attr({'tabIndex':-1});
+                slideLi.eq(slideN).siblings().children('a').attr({'tabIndex':-1});
+                $(thatLink).focus();
+            },timed + 10);
+        }
 
     });
     
+    slideLi.find('a').on('blur', function(){
+        $(this).attr({'tabIndex':-1});
+    });
+    
+    
     //클릭기능은 포커스처리로 변경했기에 잠깐 보류
+    /*
     indiLi.on('click',function(e){
         e.preventDefault();
         
@@ -74,5 +92,8 @@
         thatPosition.attr({'tabIndex':'0'});
         thatPosition.focus();
     });
-
+    */
 })(jQuery);
+
+
+
