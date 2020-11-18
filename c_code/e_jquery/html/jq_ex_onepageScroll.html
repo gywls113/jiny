@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- jq_ex_onepageScroll.html -->
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/src/jq_ex_onepageScroll.css">
+    <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+    <title></title>
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+    <link rel="apple-touch-icon" href="../img/incon_01.png">
+    <style></style>
+</head>
+<body>
+<!-- latout -->
+<div id="wrap">
+       <div class="popup_dp">
+        <h2>팝업창 만들기</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ratione sequi quod quo est excepturi quis debitis nesciunt, ad impedit dolores ea quibusdam quasi obcaecati, cupiditate quas aliquid, molestiae repellat.</p>
+        <div class="close"><button type="button">닫기</button></div>
+    </div>
+    
+    <header id="headBox">
+        <h1><a href="./">jquery</a></h1>
+        <nav id="navBox">
+            <h2>navigation</h2>
+            <ul>
+                <li><a href="#headBox">home</a></li>
+                <li><a href="#viewBox">광고영역</a></li>
+                <li><a href="#conBox_01">본문영역1</a></li>
+                <li><a href="#conBox_02">본문영역2</a></li>
+                <li><a href="#footBox">회사정보</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="viewBox">
+        <h2>광고영역</h2>
+    </section>
+    
+    <article id="conBox_01">
+        <h2>본문영역1</h2>
+        <div class="tab_li">
+            <ul>
+                <li class="action"><a href="#">tab_01</a></li>
+                <li><a href="#">tab_02</a></li>
+                <li><a href="#">tab_03</a></li>
+                <li><a href="#">tab_04</a></li>
+            </ul>
+        </div>
+        
+        <div class="tab_content">
+            <div class="tab_con01">
+                <h3>tab_01
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eos quisquam officiis consequatur iste nam eum distinctio, error, suscipit architecto saepe a nesciunt eligendi ut, totam ratione sequi blanditiis. Sapiente.</p>
+                </h3>
+            </div>
+            <div class="tab_con02">
+                <h3>tab_02
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit excepturi placeat quasi possimus repudiandae vel temporibus, molestiae praesentium odio eos. Nostrum quam minus rem expedita, ex saepe, eius doloremque consequuntur!</p>
+                </h3>
+            </div>
+            <div class="tab_con03">
+                <h3>tab_03
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit esse ab, consequuntur sapiente, harum deserunt! Rem non quisquam, nesciunt possimus vero, expedita quaerat optio, odio dolorum impedit adipisci nobis, maxime!</p>
+                </h3>
+            </div>
+            <div class="tab_con04">
+                <h3>tab_04
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita itaque, cum earum aliquam doloremque quasi in ducimus molestiae consequuntur corporis, minus, officia beatae eius qui fuga odio deserunt voluptatum incidunt.</p>
+                </h3>
+            </div>
+        </div>
+    </article>
+    
+        <article id="conBox_02">
+        <h2>본문영역2</h2>
+        <div class="title_tab_style">
+          <!-- dl>(dt>a[href="#"]{tab_title_$$}^dd{lorem$0})*4 -->
+          
+          <dl>
+            <dt><a href="#">tab_title_01</a></dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, voluptas.</dd>
+            <dt><a href="#">tab_title_02</a></dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet rerum voluptates necessitatibus officiis sunt ut animi laboriosam asperiores quidem!</dd>
+            <dt><a href="#">tab_title_03</a></dt>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, deleniti vero! Sequi suscipit accusamus sunt dolor fugit omnis minima laudantium consequuntur beatae et modi ducimus repudiandae, enim doloremque voluptas? Placeat.</dd>
+            <dt><a href="#">tab_title_04</a></dt>
+            <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ullam ad voluptates dolore beatae dolor eaque magni. Quod unde, eos sunt nostrum tempora explicabo exercitationem! Fugiat, necessitatibus odio. Aut velit voluptas iste reiciendis vero impedit exercitationem iure aliquid earum voluptate.</dd>
+          </dl>
+        </div>
+        
+  </article>
+    
+    <div class="top_move_btn">
+        <a href="#wrap">상단으로 이동</a>
+    </div>
+    
+    <footer id="footBox">
+        <h2>회사정보</h2>
+    </footer>
+</div>
+<!-- script-->
+<script src="../js/base/jquery-3.5.1.js"></script>
+<script src="../js/base/jquery-ui.js"></script>
+<script src="../js/src/jq_ex_onepageScroll.js"></script>
+
+</body>
+</html>

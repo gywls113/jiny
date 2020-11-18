@@ -1,0 +1,103 @@
+/* jq_ex_onepageScroll.css */
+
+body {overflow-x:hidden;}
+
+#wrap {width: 90%; min-width: 60rem; height: auto; min-height: 62.5rem; 
+    margin: auto; background-color: #dfdfdf;}
+
+/* ============================================== */
+
+.popup_dp {position: relative; width: 100vw; min-width: 60rem; 
+    left: 50%; height: auto; padding: 1rem; padding-right: 5rem; 
+    transform: translateX(-50%); box-sizing: border-box; 
+    background-color: #ddd;}
+.popup_dp .close {position: absolute; top:50%; right: 2rem; 
+    width: 50px; height: 50px; transform: translateY(-50%); 
+    background-color: #fff;}
+.close button {width: 100%; height: 100%;}
+
+/* ============================================== */
+
+#headBox {position: relative; left: 50%; transform: translate(-50%);
+    width: 100vw; min-width: inherit; height: 7.5rem; 
+    padding: 10px 20px; box-sizing: border-box; background-color: #fa7;}
+h1 {width: 100px; height: 100px; float: left; background-color: #07a;
+    color: #fff; font-size: 1.5rem;}
+#navBox {float: right; width: 40rem; height: 3rem; margin-top: 3rem;}
+#navBox>h2 {width: 0; height: 0; overflow: hidden; position: absolute;}
+#navBox ul {width: 100%; height: 100%;}
+#navBox li {float: left; height: 100%; margin-right: 3rem; line-height: 1.2;}
+#navBox li:last-child {margin-right: 0;}
+#navBox li a {display: block; padding: 0.8rem; background: #fff;}
+
+/* ============================================== */
+
+#viewBox {width: 100%; height: 800px; border-bottom:1px solid #07a; 
+    background-color: #479; color: #fff; font-size: 4rem}
+
+/* ============================================== */
+
+#conBox_01 h2 {text-align: width: 90%; text-align: center; 
+    margin: auto; margin-bottom: 2rem; border-bottom: 1px solid #fff; }
+
+#conBox_01 {width: 100%; height: 1600px; border-bottom:1px solid #07a; 
+    background-color: #fff; padding-top: 10rem;
+    background-image: linear-gradient(60deg, #fa0, #acf, #fac);}
+.tab_li {width: 80%; height: 40px; margin: auto; background-color: #fff;}
+.tab_li ul {width: 100%; height: 100%; text-align: center;}
+.tab_li ul li {position: relative; display: inline-block; margin: 0 2rem; 
+    width: auto; height: 100%;}
+.tab_li ul li:after {content: " "; display: block; position: absolute;
+    right: -2rem; top: 10%; width: 1px; height: 80%; background-color: #333;}
+.tab_li ul li:last-child:after {display: none;}
+.tab_li a {display: block; width: 120px; height: 100%; 
+    line-height: 40px; box-sizing: border-box;}
+.tab_content{width: 90%; height: 500px; margin: auto; margin-top: 2rem; padding: 1rem;
+    box-sizing: border-box; background-color: #fff;}
+.tab_content div {display: none; width: 100%; height: 100%; padding: 1rem;
+    box-sizing: border-box; background-color: #fff;}
+.tab_content p {padding-top: 1rem; color: #077;}
+.tab_content .tab_con01 {display: block;}
+
+/* ============================================== */
+
+#conBox_02{
+  width:100%; height:1200px; 
+  padding-top:10rem; border-bottom:1px solid #07a; 
+  background-color: #faa; margin-top: 2rem;}
+
+.title_tab_style{
+  width: 80%; height:700px; margin:auto; box-sizing: border-box;
+  border:1px solid #333; padding:1rem;}
+
+.title_tab_style dl {position: relative;
+  width: 100%; height: 100%; min-width: 60rem; background-color:rgba(255,255,255,0.7);}
+.title_tab_style dt { 
+  float:left; width:250px; height:40px; margin-left:0.1rem;
+  line-height:40px; text-transform:uppercase; text-indent:1rem; background-color: #ccc;}
+.title_tab_style dt:first-of-type{margin-left: 0;}
+.title_tab_style dt.action{background-color: #039; color:#fff; font-weight: bold;}
+.title_tab_style dt > a {display: block; width: 100%; height: 100%; font-size:1.3rem;}
+
+.title_tab_style dd { 
+  display: none; position: absolute; top:50px; left: 0;
+  width: 100%; height:auto; min-height:400px; background-color: #fdc; }
+.title_tab_style dd:nth-of-type(1) { display: block;}
+
+.top_move_btn { 
+  position: fixed; right: 1rem; bottom: 3rem;
+  width: 7rem; height: 3.125rem; text-align: center; line-height: 3.125rem;
+  background-color: #333; color:#fff}
+.top_move_btn a{display: block; width: 100%; height: 100%;}
+
+/* ============================================== */
+
+.top_move_btn {position: fixed; right: 1rem; bottom: 3rem;
+    width: 7rem; height: 3.125rem; background-color: #333; 
+    text-align: center; line-height: 3.125rem; color: #fff;}
+.top_move_btn a {display: block; width: 100%; height: 100%;}
+
+/* ============================================== */
+
+#footBox {width: 100%; height: 300px; padding: 2rem; box-sizing: border-box;
+    background-color: #333; color: #fff;}
