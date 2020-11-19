@@ -84,12 +84,7 @@ h1 {width: 100px; height: 100px; float: left; background-color: #07a;
   width: 100%; height:auto; min-height:400px; background-color: #fdc; }
 .title_tab_style dd:nth-of-type(1) { display: block;}
 
-.top_move_btn { 
-  position: fixed; right: 1rem; bottom: 3rem;
-  width: 7rem; height: 3.125rem; text-align: center; line-height: 3.125rem;
-  background-color: #333; color:#fff}
-.top_move_btn a{display: block; width: 100%; height: 100%;}
-
+ 
 /* ============================================== */
 
 .top_move_btn {position: fixed; right: 1rem; bottom: 3rem;

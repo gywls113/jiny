@@ -124,7 +124,7 @@
     var titleTabDt = titleTabDl.children('dt');
     var titleTabDd = titleTabDl.children('dd');
     
-    titleTabDt.eq(0).addClass('action');
+    titleTabDt.eq(0).add Class('action');
     
     titleTabDt.on('click',['a'],function(e){
         e.preventDefault();
