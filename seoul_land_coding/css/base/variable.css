@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root {
+  
+  --color-white:#fff;
+  --color-black:#333;
+  --color-red:#e00;
+  --color-darkred:#660000;
+  --color-orange:#ee5500;
+  --color-pink:#ffe9e9;
+
+  --border-line1:1px solid #333;
+}
