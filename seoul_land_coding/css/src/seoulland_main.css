@@ -1,0 +1,508 @@
+/* seoulland_main.css */
+
+/* 공통부분 - 1920px 기준*/
+#wrap {width: 100%; height: auto; min-height: 500px;}
+#promotionBox,#lunaBox,#attractionBox,#informationBox
+    {width: 100%; height: 100vh;
+    padding: 210px 0 100px; box-sizing: border-box;}
+.section_title {width: 460px; height: 50px; margin: auto;
+    font-size: 40px; text-align: center; line-height: 50px;
+    color: #333; font-weight: 900;}
+/* ========================================== */
+
+/* #headBox */
+#headBox {position: fixed; top: 0; left: 0; z-index: 5000;
+    width: 100%; height: 9.375vw; min-height: 140px; 
+    max-height: 180px; background-color: rgba(0,0,0,0.85);}
+
+/* #headBox - .headBottom */
+.headBottom {width: 100%; height: 100%; 
+    padding: 60px 90px 20px; box-sizing: border-box;}
+.headbottom_wrap {position: relative; width: 100%; height: 100%;}
+h1 {float: left; width: 18.75vw; min-width: 220px; height: 100%;}
+h1 a {background-image: url("../../img/main/headBox/logo.png");
+    background-repeat: no-repeat; background-size: contain;
+    background-position: 50% 50%;}
+.headbottom_wrap p {
+    position: absolute; bottom: 0; left: 50%; transform: translate(-50%);
+    width: 540px; height: 60px; font-size: 30px; font-weight: 600;
+    text-align: center; line-height: 60px; color: #fff;}
+#navBox {float: right; width: 7.291666vw; min-width: 100px; height: 100%;}
+.searchBox, .menuBox {float: left; width: 45%; height: 100%;
+    background-repeat: no-repeat; 
+    background-position: 50% 50%; background-size: contain; 
+    background-image: url("../../img/main/headBox/search_icon.png");}
+.menuBox {float: right;
+    background-image: url("../../img/main/headBox/menu_icon.png")}
+.seach_area_wrap {display: none;}
+.menu_area_wrap {display: none;}
+
+/* #headBox - .headtop */
+.headtop {position: absolute; top: 0; left: 0; 
+    width: 100%; height: 40px; padding: 7px 0; box-sizing: border-box; background-color: var(--color-darkred);}
+.headtop_wrap {width: 65.625vw; min-width: 350px; height: 100%; 
+    margin: auto;}
+.sns_mobile_icon {display: none;}
+.sns_wrap {float: left; width: 240px; height: 100%;}
+.snsBox {width: 100%; height: 100%; 
+    display: flex; justify-content: space-between;}
+.snsBox li {float: left; width: 15%; height: 100%;
+    background-repeat: no-repeat; background-size: contain;
+    background-position: 50% 50%;}
+.snsBox li:nth-child(1){background-image: url("../../img/main/headBox/facebook_icon.png")}
+.snsBox li:nth-child(2){background-image: url("../../img/main/headBox/insta_icon.png")}
+.snsBox li:nth-child(3){background-image: url("../../img/main/headBox/blog_icon.png")}
+.snsBox li:nth-child(4){background-image: url("../../img/main/headBox/kakaostory_icon.png")}
+.snsBox li:nth-child(5){background-image: url("../../img/main/headBox/youtube_icon.png")}
+
+.loginBox {float:right; width: 150px; height: 100%;}
+.loginBox li {position: relative; float: left; 
+    width: 50%; height: 100%; 
+    color: #fff; font-size: 23px; font-weight: 400;
+    line-height: 26px; text-align: left;}
+.loginBox li:nth-child(1)::after {position: absolute;
+    top: 3px; right: 0; content: " ";
+    width: 2px; height: 80%; background-color: #fff;}
+.loginBox li:nth-child(2) {text-align: right;}
+
+/* ========================================== */
+
+/* #localNavBox */
+#localNavBox {display: none;
+    width: 100%; height: 100vh; background-color: #ddd;}
+
+/* ========================================== */
+
+/* #viewBox */
+#viewBox {position: relative; width: 100%; 
+    height: 100vh; min-height: 270px; background-color: #aaa;}
+
+/* #viewBox - image*/
+.view_img_wrap {width: 100%; height: 100%; overflow: hidden;}
+.view_img_wrap ul {width: 500%; height: 100%;}
+.view_img_wrap ul li {width: 20%; height: 100%;
+    background-repeat: no-repeat; background-size: auto 95%;
+    background-position: 50% 50%}
+.view_img_01 {
+    background-color: #f08000;
+    background-image: url("../../img/main/viewBox/main_img_01_full.jpg")}
+.view_img_02 {
+    background-color: #f08000;
+    background-image: url("../../img/main/viewBox/main_img_02_full.jpg")}
+.view_img_03 {
+    background-color: #f08000;
+    background-image: url("../../img/main/viewBox/main_img_03_full.jpg")}
+.view_img_04 {
+    background-color: #f08000;
+    background-image: url("../../img/main/viewBox/main_img_04_full.jpg")}
+.view_img_05 {
+    background-color: #f08000;
+    background-image: url("../../img/main/viewBox/main_img_05_full.jpg")}
+
+/* #viewBox - indicator*/
+.view_indicator{position: absolute; bottom: 130px; right: 70px;
+    width: 300px; height: 30px;}
+.view_indicator ul {width: 100%; height: 100%;}
+.view_indicator li {float: left;
+    width: 30px; height: 30px; margin-right: 20px;
+    background-color: #878787; border-radius: 30px;
+    border: 5px solid #fff; box-shadow: inset 3px 3px #333;
+    box-sizing: border-box;}
+.view_indicator li.view_action {width: 100px; 
+    background-color: var(--color-red);}
+.view_indicator li:last-child {margin-right: 0;}
+
+/* ========================================== */
+
+/* #promotionBox */
+.pro_full_wrap {position: relative; 
+    width: 65.625vw; min-width: 1260px;
+    height: 100%; margin: auto;}
+
+/* #promotionBox - mobilebtn*/
+.promotion_btn {display: none;}
+
+/* #promotionBox - promotion_plus */
+.promotion_plus {position: absolute; top: 90px; right: 0;
+    width: 300px; height: 40px; 
+    background-color: var(--color-orange);
+    border-radius: 10px; font-size: 25px; font-weight: 400;
+    color: #fff; text-align: center; line-height: 40px;}
+
+/* #promotionBox - promotion_content */
+.promotion_wrap {width: 100%; height: 23.9583333vw; 
+    margin-top: 120px;}
+.promotion_wrap ul {width: 100%; height: 100%; margin: auto;}
+.promotion_wrap ul li {float: left; width: 25%; height: 50%;
+    padding: 1.5625% 1.0416666%; box-sizing: border-box; 
+    border: 1px solid #ddd;}
+.promotion_wrap ul li dl {position: relative;
+    width: 100%; height: 100%;}
+.promotion_wrap ul li dl dt {position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 20px; font-size: 20px; font-weight: 600; color: #333; overflow: hidden; text-align: center; 
+    line-height: 20px;}
+.promotion_wrap ul li dl dd {position: absolute; top: 0; left: 0;
+    width: 100%; height: 70%; background-color: transparent;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain;}
+.pro_img_01 {
+    background-image: url("../../img/main/promotionBox/img_01.png");}
+.pro_img_02 {
+    background-image: url("../../img/main/promotionBox/img_02.png");
+}
+.pro_img_03 {
+    background-image: url("../../img/main/promotionBox/img_03.png");
+}
+.pro_img_04 {
+    background-image: url("../../img/main/promotionBox/img_04.png");
+}
+.pro_img_05 {
+    background-image: url("../../img/main/promotionBox/img_05.png");
+}
+.pro_img_06 {
+    background-image: url("../../img/main/promotionBox/img_06.png");
+}
+.pro_img_07 {
+    background-image: url("../../img/main/promotionBox/img_07.png");
+}
+.pro_img_08 {
+    background-image: url("../../img/main/promotionBox/img_08.png");
+}
+
+/* #promotionBox - content hover */
+.promotion_wrap ul li:hover {
+    box-shadow: 5px 7px 7px #333; box-sizing: border-box;
+    border: 5px solid var(--color-orange);}
+.promotion_wrap ul li a:hover {outline: 0;}
+
+/* ========================================== */
+
+/* #lunaBox */
+#lunaBox {width: 100%; height: 100vh; background-size: cover;
+    background-repeat: no-repeat; background-position: 50% 0;
+    background-image: url("../../img/main/lunaBox/luna_background_img_01.png");}
+.luna_full_wrap {position: relative;
+    width: 65.625vw; min-width: 900px; max-width: 1260px;
+    height: 100%; margin: auto; overflow: hidden; background-color: seagreen;}
+.luna_full_wrap > h2 {color: #fff;}
+
+/* #lunaBox - 전체 button */
+.luna_button {position: absolute; top: 13.020833vw; left: 60px;
+    z-index: 40; width: 90%; height: 0;}
+.luna_button button {width: 60px; height: 150px;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain;}
+.luna_next_btn {float: right; background-image: url("../../img/main/lunaBox/right_button_icon.png");}
+.luna_prev_btn {float: left; background-image: url("../../img/main/lunaBox/right_button_icon%20copy.png");}
+
+/* #lunaBox - content */
+.luna_wrap {position: relative; width: 100%; height: 23.958333vw;
+    margin: auto; margin-top: 40px; 
+    overflow: hidden; box-sizing: border-box;
+    background-color: #fce7cf; border: 2px solid #333;
+    border-radius: 20px;}
+.luna_wrap ul {width: 300%; height: 100%;}
+.luna_wrap ul li {float: left; display: flex;
+    width: 33.333333%; justify-content: space-between;
+    height: 100%; max-height: 520px;
+    padding: 2.604166vw 7.291666vw; box-sizing: border-box;}
+.luna_wrap ul li:nth-child(1) {width: 33.333334%}
+
+/* content_area */
+.luna_content_area {float: left; width: 63.41463414634146vw; min-width: 312px; max-width: 480px; 
+    height: 18.75vw;}
+.luna_content_area dl {width: 100%; height: 15.104166vw;}
+.luna_content_area dl dt {width: 100%; height: 70px; 
+    font-size: 24px; font-weight: 900; 
+    text-align: center; color: #333; line-height: 30px;}
+.luna_content_area dl dd {width: 100%; height: 9.8958333vw;
+    margin-top: 2.083333vw; font-size: 16px; font-weight: 400;
+    text-align: center; color: #333;}
+.luna_content_more {width: 100%; height: 30px; margin-top: 30px;
+    color: #333; text-align: center; line-height: 30px;
+    text-decoration: underline; font-weight: 600;}
+
+/* img_area */
+.luna_img_area {float: right; 
+    width: 18.75vw; height: auto;
+    margin-left: 60px;
+    background-repeat: no-repeat; background-size: cover;
+    background-position: 50% 50%;}
+
+.luna_mask_img {background-image: url("../../img/main/lunaBox/luna_img_04.jpg");}
+.luna_music_img {background-image: url("../../img/main/lunaBox/luna_img_01.jpg");}
+.luna_park_img {background-image: url("../../img/main/lunaBox/luna_img_08.jpg")}
+
+
+
+
+/* #lunaBox - indicator */
+
+/* ========================================== */
+
+/* #attractionBox */
+#attractionBox {width: 100%; height: 100vh; background-color: #ddd;}
+
+/* ========================================== */
+
+/* #informationBox */
+#informationBox {width: 100%; height: 100vh; background-color: #aaa;}
+
+/* ========================================== */
+
+/* #footBox */
+#footBox {width: 100%; height: 300px; background-color: #ddd;}
+
+/*==============================================*/
+/*================@@mediaQuery@@================*/
+/*==============================================*/
+
+
+/* mobile*/
+@media screen and (max-width:480px){
+    
+    /* #headBox */
+    #headBox {position: relative; background-color: #0f0915;}
+    .headBottom {padding: 60px 10px 20px; min-width: 350px;}
+    .headbottom_wrap p {display: none;}
+    #navBox {width: 45px;}
+    .searchBox {display: none;}
+    .sns_wrap {width: 26px;}
+    .snsBox {display: none;}
+    .sns_mobile_icon {display: block; width: 100%; height: 100%;}
+    .sns_mobile_icon button {width: 100%; height: 100%;
+        background-image: url("../../img/main/headBox/share%20icon.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: contain;}
+    
+    /* ========================================== */
+
+    /* #localNavBox */
+    #localNavBox {}
+
+    /* ========================================== */
+
+    /* #viewBox */
+    #viewBox {height: 79.16666666666667vw;}
+    .view_img_wrap ul li {background-size: cover;}
+    .view_img_01 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_01.jpg")}
+    .view_img_02 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_02.jpg")}
+    .view_img_03 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_03.jpg")}
+    .view_img_04 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_04.jpg")}
+    .view_img_05 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_05.jpg")}
+    
+    .view_indicator{position: absolute; bottom: -50px; right: 50%;
+        transform: translate(50%); width:100%; height: 50px;
+        padding: 10px 0; background-color: #0f0915;
+        box-sizing: border-box;}
+    .view_indicator ul {width: 300px; height: 30px; margin: auto;}
+
+    /* ========================================== */
+
+    /* #promotionBox */
+    #promotionBox {height: 129.166666vw; min-height: 620px; padding: 100px 0 120px; margin-top: 50px;}
+    .pro_full_wrap {width: 62.5vw; min-width: 260px;}
+    .promotion_wrap {margin-top: 40px; width: 100%; height: 47.9166666vw; min-height: 230px; overflow: hidden;}
+    .promotion_wrap ul {width: 800%; height: 100%;}
+    .promotion_wrap ul li {width: 12.5%; height: 230px;}
+    .promotion_plus {top: auto; bottom: 0; left: 50%; transform: translate(-50%);}    
+    .pro_full_wrap > h2 {width: 250px; height: 50px; white-space: pre-line; }
+    .promotion_btn {display: block; position: absolute; z-index: 100; 
+        top: 185px; left: 50%; transform: translate(-50%);
+        width: 70.8333333vw; min-width: 300px; height: 0;}
+    .promotion_btn button{width: 10%; height: 55px;
+        background-repeat: no-repeat; background-size: contain;
+        background-position: 50% 50%;}
+    .promotion_next_btn {float: right; background-image: url("../../img/main/promotionBox/nextbtn.png");}
+    .promotion_prev_btn {float: left; background-image: url("../../img/main/promotionBox/prevbtn.png");}
+    /* ========================================== */
+
+    /* #lunaBox */
+    #lunaBox {height: 218.75vw;
+     background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
+
+    /* ========================================== */
+
+    /* #attractionBox */
+    #attractionBox {height: 168.75vw;}
+
+    /* ========================================== */
+
+    /* #informationBox */
+    #informationBox {height: 233.333333vw;}
+    /* ========================================== */
+
+    /* #footBox */
+    #footBox {height: 85.416666vw;}
+
+}/* mobile end ====================================== */
+
+/* tablet */
+@media screen and (min-width:481px) and (max-width:1024px) {
+    
+    
+    /* #headBox */
+    #headBox {position: relative; background-color: #0f0915;}
+    .headbottom_wrap p {display: none;}
+    .headBottom {padding: 60px 60px 20px}
+    
+    .sns_wrap {width: 26px;}
+    .snsBox {display: none;}
+    .sns_mobile_icon {display: block; width: 100%; height: 100%;}
+    .sns_mobile_icon button {width: 100%; height: 100%;
+        background-image: url("../../img/main/headBox/share%20icon.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: contain;}
+    
+    /* ========================================== */
+
+    /* #localNavBox */
+    #localNavBox {}
+
+    /* ========================================== */
+
+    /* #viewBox */
+    #viewBox {height: 86.9140625vw;}
+    .view_img_wrap ul li {background-size: cover;}
+    .view_img_01 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_01.jpg")}
+    .view_img_02 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_02.jpg")}
+    .view_img_03 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_03.jpg")}
+    .view_img_04 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_04.jpg")}
+    .view_img_05 {
+    background-image: url("../../img/main/viewBox/mobile_main_ing_05.jpg")}
+    
+    .view_indicator{position: absolute; bottom: -50px; right: 50%;
+        transform: translate(50%); width:100%; height: 50px;
+        padding: 10px 0; background-color: #0f0915;
+        box-sizing: border-box;}
+    .view_indicator ul {width: 300px; height: 30px; margin: auto;}
+    
+    /* ========================================== */
+
+    /* #promotionBox */
+    #promotionBox {height: 270.833333vw; max-height: 1310px; padding: 100px 0 120px; margin-top: 50px;}
+    .pro_full_wrap {width: 76.171875%; min-width: 460px;}
+    .promotion_wrap ul {height: 100%;}
+    .promotion_wrap ul li {width: 50%; height: 230px;
+        padding: 2.9296875% 1.953125%;}
+    .promotion_plus {left: 50%; transform: translate(-50%);}
+
+    /* ========================================== */
+
+    /* #lunaBox */
+    #lunaBox {height: 111.328125vw;
+        background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
+    
+    /* ========================================== */
+
+    /* #attractionBox */
+    #attractionBox {height: 78.125vw;}
+
+    /* ========================================== */
+
+    /* #informationBox */
+    #informationBox {height: 78.125vw;}
+    /* ========================================== */
+
+    /* #footBox */
+    #footBox {}
+    
+}/* tablet end ====================================== */
+
+/* pc - labtop */
+@media screen and (min-width:1025px) and (max-width:1440px) {
+    
+    #promotionBox,#lunaBox,#attractionBox,#informationBox{
+        padding-top: 170px}
+    
+    /* #headBox */
+    .headbottom_wrap p {display: none;}
+
+    /* ========================================== */
+
+    /* #localNavBox */
+    #localNavBox {}
+
+    /* ========================================== */
+
+    /* #viewBox */
+    #viewBox {}
+
+    /* ========================================== */
+
+    /* #promotionBox */
+    .pro_full_wrap {width: 87.5vw; min-width: 900px}
+
+    /* ========================================== */
+
+    /* #lunaBox */
+    .luna_button {top: 16.020833vw; left:50%; 
+        transform: translate(-50%); width: 95%;}
+    .luna_button button {width: 60px; height: 93px;}
+
+    /* ========================================== */
+
+    /* #attractionBox */
+    #attractionBox {}
+
+    /* ========================================== */
+
+    /* #informationBox */
+    #informationBox {}
+    /* ========================================== */
+
+    /* #footBox */
+    #footBox {}
+
+}/* pc - labtop end ====================================== */
+
+/* pc */
+@media screen and (min-width:1441px) {
+    
+    /* #headBox */
+    #headBox {}
+
+    /* ========================================== */
+
+    /* #localNavBox */
+    #localNavBox {}
+
+    /* ========================================== */
+
+    /* #viewBox */
+    #viewBox {}
+
+    /* ========================================== */
+
+    /* #promotionBox */
+    #promotionBox {}
+
+    /* ========================================== */
+
+    /* #lunaBox */
+    #lunaBox {}
+
+    /* ========================================== */
+
+    /* #attractionBox */
+    #attractionBox {}
+
+    /* ========================================== */
+
+    /* #informationBox */
+    #informationBox {}
+    /* ========================================== */
+
+    /* #footBox */
+    #footBox {}
+
+}/* pc - full end ====================================== */
