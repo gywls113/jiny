@@ -9,6 +9,7 @@
   --color-darkred:#660000;
   --color-orange:#ee5500;
   --color-pink:#ffe9e9;
-
+  --color-point: #f70;
+  --border-point:2px solid #f70;
   --border-line1:1px solid #333;
 }

@@ -18,7 +18,7 @@ table,thead,tbody,tfoot,th,td {border: 1px solid #333; border-spacing: 0;}
 header,nav,section,article,footer,aside,main,figure,figcaption {display: block;}
 a {display: block; width: 100%; height: 100%;
 text-decoration: none; color: inherit;}
-a:hover {position: relative; z-index: 500; outline: 3px solid #f70;}
+
 button {background-color: transparent; cursor: pointer;}
 hr {border-bottom: 1px solid #333;}
 

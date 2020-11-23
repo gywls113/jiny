@@ -18,4 +18,4 @@
 .float_first li:first-child {margin-left: 0;}
 .float_last li:last-child {margin-right: 0;}
 
-a:hover {position: relative; z-index: 500; outline: 3px solid #f70;}
+/*a:hover {position: relative; z-index: 500; outline: 3px solid #f70;}*/

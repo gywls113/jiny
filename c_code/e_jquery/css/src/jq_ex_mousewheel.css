@@ -1,0 +1,11 @@
+/* jq_ex_mousewheel.css */
+
+#wrap {width: 100%; height: auto;}
+#headBox {position: absolute; width: 80%; height: 40px;
+  background-color: #fff; left: 0; right: 0; top: 0; margin: auto;}
+#viewBox {width: 100%; height: 100vh; background-color: #f8d;
+  padding-top: 60px}
+#conBox_01 {width: 100%; height: 100vh; background-color: #98c;}
+#conBox_02 {width: 100%; height: 100vh; background-color: #8ab;}
+#conBox_03 {width: 100%; height: 100vh; background-color: #734;}
+#footBox {width: 100%; height: 400px; background-color: #f8a;}
