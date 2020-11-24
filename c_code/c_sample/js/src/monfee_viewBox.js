@@ -63,7 +63,7 @@ var go = setInterval(function(){
     var prevSlideBtn = slideBtn.children('button').eq(1);
     //console.log(nextSlideBtn,prevSlideBtn);
     var slideN = 0; //최초의 값
-    var timed = 2000;; //일정시간마다 처리하게하는 시간
+    var timed = 2000; //일정시간마다 처리하게하는 시간
     
     nextSlideBtn.on('click',function(e){
         //a,button 요소처럼 이벤트기능이 이미 내장된 요소는 미리 해당 기능을 제거할 필요가 //있다.
@@ -131,7 +131,18 @@ var go = setInterval(function(){
         
             indLi.eq(slideN).addClass('action');
             indLi.eq(slideN).siblings().removeClass('action');
-        })        
+          
+            indiLi.childeren('a').on('focus',function(e){
+            e.preventDefault();
+            var thisI = $(this);
+            slideN = its.parent().index();
+            
+            backImg.stop().animate({left:slideN * -100 + '%'})
+        
+            indLi.eq(slideN).addClass('action');
+            indLi.eq(slideN).siblings().removeClass('action');
+        });
+        });        
         
         
     });
