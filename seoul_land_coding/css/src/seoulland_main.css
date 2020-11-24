@@ -178,17 +178,19 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 /* ========================================== */
 
 /* #lunaBox */
-#lunaBox {width: 100%; height: 100vh; background-size: cover; 
-    background-repeat: no-repeat; background-position: 50% 0;
-    background-image: url("../../img/main/lunaBox/luna_background_img_01.png");}
+#lunaBox {width: 100%; height: 100vh; background-size: 100% 95%; 
+    background-repeat: no-repeat; background-position: 50% 100%;
+    background-color: #0f0915; 
+    background-image: url("../../img/main/lunaBox/luna_background_img.jpg");}
 .luna_full_wrap {position: relative;
     width: 100%; min-width: 900px; max-width: 1260px;
-    height: auto; min-height: 520px; margin: auto;}
+    height: 90%; min-height: 320px; margin: auto;}
 .luna_full_wrap > h2 {color: #fff;}
+.luna_btn_content_wrap {position: relative; width: 100%; height: 100%;}
 
 /* #lunaBox - 전체 button */
-.luna_button {position: absolute; top: 13.020833vw; left: 50%;
-    transform: translateX(-50%);
+.luna_button {position: absolute; top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 40; width: 95%; height: 0;}
 .luna_button button {width: 60px; height: 150px;
     background-repeat: no-repeat; background-position: 50% 50%;
@@ -197,42 +199,43 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 .luna_prev_btn {float: left; background-image: url("../../img/main/lunaBox/right_button_icon%20copy.png");}
 
 /* #lunaBox - content */
-.luna_wrap {position: relative; width: 100%; 
-    height: 27.083333vw; min-height: 300px;
+
+.luna_wrap {width: 100%; height: 100%;
     margin: auto; margin-top: 40px; box-sizing: border-box; 
-    overflow: hidden;
-    background-color: #fce7cf; border: 2px solid #333;
-    border-radius: 20px;}
-.luna_wrap ul {width: 300%; height: 100%;}
-.luna_wrap ul li {float: left; display: flex;
-    width: 33.333333%; justify-content: center; align-items: center;
-    height: 100%; max-height: 520px;
-    padding: 0 8.291666vw; box-sizing: border-box;}
+    overflow: hidden;}
+.luna_wrap ul {width: 300%; height: 100%; min-height: 300px}
+.luna_wrap ul li {position: relative; float: left; width: 33.333333%;
+     height: 100%; box-sizing: border-box; background-color: #fce7cf; 
+    border: 2px solid #333; border-radius: 20px;}
 .luna_wrap ul li:nth-child(1) {width: 33.333334%}
+.luna_content_wrap {position: absolute; top:50%; left:50%;
+  transform:translate(-50%, -50%); display: flex; justify-content: center;
+  width: 80%; max-width: 1004px; height: auto; margin: auto;}
+.luna_content_wrap:after { content:""; display: block; clear:both;}
 
 /* content_area */
 .luna_content_area {
-    display: flex; flex-direction: column;
-    float: left; width: 13.54166666vw; min-width: 312px; max-width: 480px; 
-    height: 80%;}
-.luna_content_area dl {width: 100%; height: 100%;}
+    float: left; width: 13.54166666vw; min-width: 250px; max-width: 480px; 
+    height:25vw; min-height: 210px; padding-top: 3rem; box-sizing: border-box;}
+.luna_content_area dl {width: 100%; height: 85%;}
 .luna_content_area dl dt {width: 100%; height: 70px; 
-    font-size: 24px; font-weight: 900; 
+    font-size: 24px; font-weight: 900; word-break: keep-all;
     text-align: center; color: #333; line-height: 30px;}
-.luna_content_area dl dd {width: 100%; height: 100%;
+.luna_content_area dl dd {width: 100%; height: auto; min-height: 120px;
     margin-top: 2.083333vw; font-size: 16px; font-weight: 400;
-    text-align: center; color: #333;}
+    text-align: center; color: #333; word-break: keep-all;}
 .luna_content_more {width: 100%; height: 30px; margin-top: 30px;
-    color: #333; text-align: center; line-height: 30px;
+    color: #333; font-size: 20px; text-align: center; line-height: 30px;
     text-decoration: underline; font-weight: 600;}
 
 /* img_area */
-.luna_img_area {width: 25vw; height: 80%; margin-left: 60px;
+.luna_img_area {float:right;
+    width: 25vw; max-width: 600px; height:25vw; min-height: 250px; margin-left: 50px;
     background-repeat: no-repeat; background-size: cover;
     background-position: 50% 50%;}
 
 .luna_mask_img {background-image: url("../../img/main/lunaBox/luna_img_04.jpg");}
-.luna_music_img {background-image: url("../../img/main/lunaBox/luna_img_01.jpg");}
+.luna_music_img {background-image: url("../../img/main/lunaBox/luna_img_01.png");}
 .luna_park_img {background-image: url("../../img/main/lunaBox/luna_img_08.jpg")}
 
 /* #lunaBox - animation */
@@ -254,14 +257,74 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 .luna_animation_02 {top: 340px; left: -140px;
     width: 167px; height: 90px;
     background-image: url("../../img/main/lunaBox/bg_animation_02.png");}
-.luna_animation_03 {top:50px; right: -100px;
+.luna_animation_03 {top:50px; right: -30px;
     width: 82px; height: 73px;
     background-image: url("../../img/main/lunaBox/bg_animation_03.png");} 
 
 /* ========================================== */
 
 /* #attractionBox */
-#attractionBox {width: 100%; height: 100vh; background-color: #ddd;}
+#attractionBox {position: relative; width: 100%; height: 100vh;}
+.attraction_full_wrap {position: absolute; top: 210px; left: 50%;
+    transform: translateX(-50%); width: 65.625vw; min-width: 1260px; 
+    height: 31.770833vw; min-height: 500px}
+.attraction_wrap {position: relative; width: 100%; height: 27.0833333vw; 
+    min-height: 300px; margin-top: 40px;}
+
+/* attraction_button */
+.attraction_button {position: absolute; top: 38%; left: 0;
+    transform: translateY(-50%); width: 100%; height: 0;}
+.attraction_button button {width: 60px; height: 150px;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain;}
+.attraction_next_btn {float: right; background-image: url("../../img/main/attractionBox/attraction_right_btn_icon.png");}
+.attraction_prev_btn {float: left; background-image: url("../../img/main/attractionBox/attraction_left_btn_icon.png");}
+
+/* attraction_content */
+.attraction_content  {width: 80%; height: 100%;
+    border: 1px solid #333; 
+    margin: auto; overflow: hidden; box-shadow: 10px 7px 15px #333;}
+.attraction_content > ul {width: 500%; height: 100%;}
+.attraction_content > ul > li {float: left; width: 20%; height: 100%;}
+.attraction_list {width: 100%; height: 100%;}
+.attraction_list li {float: left;
+    width: 33.333333%; height: 50%; background-color: #fff;}
+.attraction_list li:nth-child(3),.attraction_list li:nth-child(6){
+    width: 33.333334%;}
+.attraction_content > ul > li > ul > li > a {
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: cover;}
+.attraction_content > ul > li > ul > li > a:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+/* attraction_content - attraciton이미지삽입*/
+/*attraction_01*/
+.attraction_01_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_02_01.jpg");}
+.attraction_01_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_02_02.jpg");}
+.attraction_01_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_02_03.jpg");}
+.attraction_01_img_area li:nth-child(5) a {background-image: url("../../img/main/attractionBox/attraction_02_04.jpg");}
+.attraction_01_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_02_05.jpg");}
+/*attraction_02*/
+.attraction_02_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_01_01.jpg");}
+.attraction_02_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_01_02.png");}
+/*attraction_03*/
+.attraction_03_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_03_01.png");}
+.attraction_03_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_03_02.png");}
+.attraction_03_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_03_03.png");}
+.attraction_03_img_area li:nth-child(5) a {background-image: url("../../img/main/attractionBox/attraction_03_04.jpg");}
+.attraction_03_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_03_05.jpg");}
+/*attraction_04*/
+.attraction_04_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_04_01.jpg");}
+.attraction_04_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_04_02.png");}
+.attraction_04_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_04_03.png");}
+.attraction_04_img_area li:nth-child(5) a {background-image: url("../../img/main/attractionBox/attraction_04_04.jpg");}
+.attraction_04_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_04_05.jpg");}
+/*attraction_05*/
+.attraction_05_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_05_01.png");}
+.attraction_05_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_05_02.png");}
+.attraction_05_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_05_03.png");}
+/*no_attraction*/
+.attraction_none_img {background-image: url("../../img/main/attractionBox/no_attraction.PNG")}
 
 /* ========================================== */
 
@@ -343,13 +406,35 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     /* ========================================== */
 
     /* #lunaBox */
-    #lunaBox {height: 218.75vw;
-     background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
+    #lunaBox {height: auto; min-height: 500px; background-size: cover; 
+        padding: 100px 20px 120px; background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
+    .luna_full_wrap {position: relative;
+        width: 100%; min-width: 200px; max-width: 440px;}
+    .luna_full_wrap > h2 {white-space: pre-line; 
+        width: 220px; height: auto;}
+    .luna_button {display: none;}
+    .luna_content_wrap {display: block;}
+    .luna_wrap ul {width: 100%;}
+    .luna_wrap ul li {display: block; float: none; width: 100%;
+        height: auto; min-height: 200px;
+        padding: 30px 20px; margin-top: 20px;}
+    .luna_wrap ul li:nth-child(1) {width: 100%; margin-top: 0;}
+    .luna_content_wrap {position: static; transform: translate(0, 0);}
+    .luna_content_area {float: none; width: 100%; min-width: 100px; max-width: 440px; 
+        height:auto; min-height: 100px; padding-top: 0;}
+    .luna_content_area dl {width: 100%; height: auto;}
+    .luna_content_area dl dt {height: auto; min-height: 70px;}
+    .luna_content_area dl dd {display: none;}
+    .luna_img_area {float:none; width: 100%; max-width: 400px; height:auto; 
+        max-height: 300px; margin-left: 0; margin-top: 40px;}
+    .luna_animation_01 {display: none;}
+    .luna_animation_02 {display: none;}
+    .luna_animation_03 {display: none;} 
 
     /* ========================================== */
 
     /* #attractionBox */
-    #attractionBox {height: 168.75vw;}
+    #attractionBox {height: 168.75vw; } 
 
     /* ========================================== */
 
@@ -419,26 +504,31 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     /* ========================================== */
 
     /* #lunaBox */
-    #lunaBox {height: auto; min-height: 1050px; 
+    #lunaBox {height: auto; min-height: 1050px; background-size: cover;
+        background-position: 50% 50%;
         padding: 100px 0 120px; overflow: hidden;
         background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
     .luna_full_wrap {width: 60%; min-width: 300px; 
         height: auto; min-height: 300px;}
     .luna_full_wrap > h2 {white-space: pre-line; 
         width: 300px; height: auto;}
-    .luna_button {top: 400px; width: 150%;}
+    .luna_button {width: 150%}
     .luna_wrap {width: 100%; height: auto; overflow: hidden;}
-    .luna_wrap ul li {display: block;
-        max-height: 740px; padding: 50px 50px;}
+    .luna_wrap ul {height: auto;}
+    .luna_wrap ul li {display: block; height: auto;
+        padding: 50px 50px;}
+    .luna_content_wrap {display: block; position: static; 
+        width: 100%; transform: translate(0, 0);}
     .luna_content_area {float: none;
-        width: 100%; min-width: 200px; 
+        width: 100%; min-width: 0px; 
         max-width: 460px; height: auto; margin: auto;}
-    .luna_content_area dl dd {margin-top: 20px;}
+    .luna_content_area dl dt {height: auto; min-height: 70px;}
+    .luna_content_area dl dd {margin-top: 20px; line-height: 30px;}
     .luna_img_area {float: none;
         width: 100%; height: 36.1328125vw; 
         margin-left: 0; margin-top: 50px;}
     .luna_animation_01 {display: none;}
-    .luna_animation_02 {top: 625px;}
+    .luna_animation_02 {top: 825px;}
     .luna_animation_03 {top:150px; right: -20px;}
     
 
@@ -487,9 +577,9 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 
     /* #lunaBox */
     #lunaBox {padding: 170px 60px 100px;}
-    .luna_button {top: 16.020833vw; left:50%; 
-        transform: translate(-50%); width: 95%;}
+    .luna_button {top: 16.020833vw; left:50%; top: 40%; width: 95%;}
     .luna_button button {width: 60px; height: 93px;}
+    .luna_content_area {padding-top: 0}
 
     /* ========================================== */
 
