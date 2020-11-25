@@ -54,7 +54,7 @@ h1 {float: left; width: 250px; height: 100%;
 .view_indi_button > button > i {font-size: 24px; color: #fff;
   text-align: center; line-height: 24px;}
 
-.count {position: absolute; bottom: 100px; right: 45px;
+.count_page {position: absolute; bottom: 100px; right: 45px;
   width: 80px; height: 30px; background-color: dimgrey;
   font-size: 30px; font-weight: 600; text-align: center;
   line-height: 25px; color: #fff;}
@@ -73,6 +73,4 @@ h1 {float: left; width: 250px; height: 100%;
   font-size: 80px; text-align: center; line-height: 100px;
   color: #fff;
   }
-/*
-.scroll_top  i {font-size: 80px; text-align: center; line-height: 100px;
-  color: #fff;}*/
+
