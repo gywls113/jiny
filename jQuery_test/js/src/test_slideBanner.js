@@ -5,13 +5,15 @@ var viewBox = $('#viewBox');
 var viewImg = viewBox.children('.view_img')
 var viewImgUl = viewImg.children('ul'); 
 var viewImgLi = viewImgUl.children('li');
+var count = viewBox.find('.count');
+var totalSlineLen = viewImgLi.length;
 var permission = true;
-
+  
 var viewImgLiLast = viewImgLi.eq(-1).clone(); 
 viewImgUl.prepend(viewImgLiLast); 
 
 var reViewImgLi = viewImgUl.find('li'); 
-viewImgUl.css({'marginLeft':-100 + '%','width': reViewImgLi.length * 100 + '%'});
+viewImgUl.css({'width': reViewImgLi.length * 100 + '%'});
 reViewImgLi.css({'width': (100 / reViewImgLi.length) + '%'});
 
 var indicatorArea = viewBox.children('.view_indicator');
@@ -20,8 +22,8 @@ var nextSlideBtn = indiButton.children('.next_btn');
 var prevSlideBtn = indiButton.children('.prev_btn');
 
 var slideN = 0;
-var timed = 1500;
-   
+var timed = 2000;
+  
 var indicator = viewBox.find('.view_indicator');
 var indLi = indicator.find('li');
     
@@ -45,7 +47,7 @@ var indLi = indicator.find('li');
         });
         indLi.eq(slideN).addClass('action');
         indLi.eq(slideN).siblings().removeClass('action');
-        }  
+        };  
     });
   
     //이전 슬라이드 버튼
@@ -77,55 +79,46 @@ var indLi = indicator.find('li');
         viewImgUl.stop().animate({'marginLeft': slideN * -100 +'%'});
         indLi.eq(slideN).addClass('action');
         indLi.eq(slideN).siblings().removeClass('action');
-        /*
-          indLi.childeren('a').on('focus',function(e){
-            e.preventDefault();
-            var thisI = $(this);
-            slideN = its.parent().index();
+    });      
+        //indicaotr focus영역
+        indLi.children('a').on('focus',function(e){
+          e.preventDefault();
+          var its = $(this);
+          slideN = its.parent().index();
 
-            viewImgUl.stop().animate({marginLeft:slideN * -100 + '%'})
+          viewImgUl.stop().animate({marginLeft:slideN * -100 + '%'})
 
-            indLi.eq(slideN).addClass('action');
-            indLi.eq(slideN).siblings().removeClass('action');
+          indLi.eq(slideN).addClass('action');
+          indLi.eq(slideN).siblings().removeClass('action');
+        });  
+      
 
-            indiLi.childeren('a').on('focus',function(e){
-            e.preventDefault();
-            var thisI = $(this);
-            slideN = its.parent().index();
-
-            viewImgUl.stop().animate({marginLeft:slideN * -100 + '%'})
-
-            indLi.eq(slideN).addClass('action');
-            indLi.eq(slideN).siblings().removeClass('action');
-            });
-        }); */   
-    });
-  
     // 시간
     var startInterval;
-    var Start = function(){
+    var StartScroll = function(){
         startInterval = setInterval(function(){
-
+        
+        slideN += 1;
         viewImgUl.stop().animate({'marginLeft':slideN * -100 + '%'}, function(){
-            if(slideN >= viewImgLi.length-1){
-            slideN = -1;
-            viewImgUl.stop().css({'marginLeft':slideN * -100 + '%'});
-        }            
+        if(slideN >= viewImgLi.length-1){
+        slideN = -1;
+        viewImgUl.stop().css({'marginLeft':slideN * -100 + '%'});
+        }                      
         });
         indLi.eq(slideN).addClass('action');
         indLi.eq(slideN).siblings().removeClass('action'); 
         },timed);
     };
-    Start();
-    var StopSlide = function(){
+    StartScroll();
+    var StopScroll = function(){
         clearInterval(startInterval);
     };
-
+    // mouse 올리면 일시정지/ mouse 떼면 재생
     viewBox.on({
-        'mouseenter':StopSlide,
-        'mouseleave':Start
+        'mouseenter':StopScroll,
+        'mouseleave':StartScroll
     });
-  
+
   
 })(jQuery);
 

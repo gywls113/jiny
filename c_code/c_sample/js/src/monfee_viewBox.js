@@ -131,17 +131,6 @@ var go = setInterval(function(){
         
             indLi.eq(slideN).addClass('action');
             indLi.eq(slideN).siblings().removeClass('action');
-          
-            indiLi.childeren('a').on('focus',function(e){
-            e.preventDefault();
-            var thisI = $(this);
-            slideN = its.parent().index();
-            
-            backImg.stop().animate({left:slideN * -100 + '%'})
-        
-            indLi.eq(slideN).addClass('action');
-            indLi.eq(slideN).siblings().removeClass('action');
-        });
         });        
         
         
