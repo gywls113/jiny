@@ -1,4 +1,4 @@
-// seoul_land_main.js
+// main_1920_scroll.js
 
 (function($){
     var win = $(window);
