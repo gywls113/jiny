@@ -18,4 +18,9 @@
     informationBox.load('./seoulland_main/informationBox.html');
     footBox.load('./seoulland_main/footBox.html');
     
+    /*
+    setTimeout(function(){
+        $('body').append('<script src="../js/src/seoulland_main/footBox_familysite.js"></script>');
+    }, 100);
+    */
 })(jQuery);

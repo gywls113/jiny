@@ -1,17 +1,17 @@
 /* seoulland_main.css */
 
 /* 공통부분 - 1920px 기준*/
-#wrap {width: 100%; height: auto; min-height: 500px;}
+#wrap {position: relative; width: 100%; height: auto; min-height: 500px;}
 #promotionBox,#lunaBox,#attractionBox,#informationBox
-    {width: 100%; height: 100vh;
+    {width: 100%; height: 100vh; min-height: 960px;
     padding: 240px 0 90px; box-sizing: border-box;}
 .section_title {width: 460px; height: 50px; margin: auto;
     font-size: 40px; text-align: center; line-height: 50px;
     color: #333; font-weight: 900;}
 /* ========================================== */
 
-/* #headBox */
-#headBox {position: fixed; top: 0; left: 0; z-index: 5000;
+/************* #headBox *************/
+#headBox {position: fixed; top: 0; left: 0; z-index: 500;
     min-height: 960px;
     width: 100%; height: 9.375vw; min-height: 140px; 
     max-height: 180px; background-color: rgba(0,0,0,0.5);}
@@ -28,15 +28,34 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     position: absolute; bottom: 0; left: 50%; transform: translate(-50%);
     width: 540px; height: 60px; font-size: 30px; font-weight: 600;
     text-align: center; line-height: 60px; color: #fff;}
+
+/****** 검색, 메뉴영역 ******/
 #navBox {float: right; width: 7.291666vw; min-width: 100px; height: 100%;}
 .searchBox, .menuBox {float: left; width: 45%; height: 100%;
     background-repeat: no-repeat; 
-    background-position: 50% 50%; background-size: contain; 
-    background-image: url("../../img/main/headBox/search_icon.png");}
+    background-position: 50% 50%; background-size: contain; }
+.searchBox {background-image: url("../../img/main/headBox/search_icon.png");}
 .menuBox {float: right;
-    background-image: url("../../img/main/headBox/menu_icon.png")}
+    background-image: url("../../img/main/headBox/menu_icon.png");}
+/* 메뉴 아이콘 */
+.menu_btn {position: relative; z-index: 5000; width: 100%; height: 100%;}
+.menu_btn i {display: block; position: absolute;
+    top:0; bottom: 0; right: 0; left: 0; margin: auto;
+    border-radius: 5px; opacity: 1; transition: all 300ms ease;
+    width: 100%; height: 4px; background-color: #333;}
+.line_02 {transform: translateY(-25px);}
+.line_03{transform: translateY(25px);}
+.menu_btn.on .line_01{opacity: 0;}
+.menu_btn.on .line_02{transform: translateY(0) scaleX(1.3) rotate(50deg);}
+.menu_btn.on .line_03{transform: translateY(0) scaleX(1.3) rotate(-50deg);}
+/* 메뉴 영역 */
+.menu_area_wrap {display: block;  position: fixed; top: 0; right: 0; z-index:510;
+    width: 100%; height: 100%; background-color: rgba(255,255,255,1);
+    padding:60px 90px 120px; box-sizing: border-box;}
+.red_logo {float: left; width: 18.75vw; min-width: 220px; height: 100%; background-color: aquamarine}
+/*검색 영역*/
 .seach_area_wrap {display: none;}
-.menu_area_wrap {display: none;}
+
 
 /* #headBox - .headtop */
 .headtop {position: absolute; top: 0; left: 0;
@@ -69,9 +88,35 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 /* ========================================== */
 
 /* #localNavBox */
-#localNavBox {display: none;
-    width: 100%; height: 100vh; background-color: #ddd;}
+/* section_move_indicator*/
+#localNavBox {position: fixed; top:0; right: 0;
+    width: 470px; height: 100vh; z-index: 50;
+    padding: 290px 90px 220px 0; box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);}
+.local_nav_wrap {width: 100%; height: 100%;}
+.local_nav_wrap > li {width: 100%; height: 30px;
+    margin-bottom: 20px; color: #fff; font-size: 24px;
+    font-weight: 600; line-height: 30px; text-align: right;}
+.local_nav_wrap > li  i {display: block; float: right;
+    width: 30px; height: 5px; margin-left: 10px;
+    background-color: #fff; margin-top: 9px;
+    transition: all 300ms ease; border-radius: 20px;}
+.local_nav_wrap > li:hover {transform: scale(1.4) translateX(-50px);}
+.local_nav_wrap > li:nth-child(5) {margin-bottom: 0;}
+/* 1:1질문하기 */
+.local_nav_wrap > li:nth-child(6) {float:right; 
+    width: 140px; height: 140px; margin-top: 30px;
+    border-radius: 140px; background-color: var(--color-red);}
+.local_nav_wrap > li:nth-child(6):hover {transform: none;}
+.question_box {width: 100%; height: 100%;}
+.question_box dt {width: 100%; height: 100%;}
+.question_box dt > a {position: relative; display: block;
+    width: 100%; height: 100%; }
+.question_box dt .center_line {top:30%;}
+.question_box dt .center_text{opacity:1;}
+/* 1:1질문하기 - hover */
 
+/* scroll icon */
 /* ========================================== */
 
 /* #viewBox */
@@ -79,10 +124,10 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     height: 100vh; min-height: 270px; background-color: #aaa;}
 
 /* #viewBox - image*/
-.view_img_wrap {width: 100%; height: 100%; overflow: hidden;}
-.view_img_wrap ul {width: 500%; height: 100%;}
-.view_img_wrap ul li {width: 20%; height: 100%;
-    background-repeat: no-repeat; background-size: auto 95%;
+.view_img_wrap { width: 100%; height: 100%; overflow: hidden;}
+.view_img_wrap ul {position: relative;width: 500%; height: 100%;}
+.view_img_wrap ul li {float: left; width: 20%; height: 100%;
+    background-repeat: no-repeat; background-size: cover;
     background-position: 50% 50%}
 .view_img_01 {
     background-color: #f08000;
@@ -101,8 +146,8 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     background-image: url("../../img/main/viewBox/main_img_05_full.jpg")}
 
 /* #viewBox - indicator*/
-.view_indicator{position: absolute; bottom: 130px; right: 70px;
-    width: 300px; height: 30px;}
+.view_indicator{position: absolute; bottom: 130px; right: 90px;
+    width: 300px; height: 30px; z-index: 51;}
 .view_indicator ul {width: 100%; height: 100%;}
 .view_indicator li {float: left;
     width: 30px; height: 30px; margin-right: 20px;
@@ -117,7 +162,7 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 
 /* #promotionBox */
 .pro_full_wrap {position: relative; 
-    width: 65.625vw; min-width: 1260px;
+    width: 65.625vw; min-width: 900px;
     height: 100%; margin: auto;}
 
 /* #promotionBox - mobilebtn*/
@@ -131,14 +176,15 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     color: #fff; text-align: center; line-height: 40px;}
 
 /* #promotionBox - promotion_content */
-.promotion_wrap {width: 100%; height: 23.9583333vw; 
+.promotion_wrap {width: 100%; height: 460px;  
     margin-top: 120px;}
 .promotion_wrap ul {width: 100%; height: 100%; margin: auto;}
-.promotion_wrap ul li {float: left; width: 25%; height: 50%;
-    padding: 1.5625% 1.0416666%; box-sizing: border-box; 
-    border: 1px solid #ddd;}
-.promotion_wrap ul li dl {position: relative;
-    width: 100%; height: 100%;}
+.promotion_wrap ul li {position: relative; float: left; 
+    width: 25%; height: 50%; border: 1px solid #ddd;
+    box-sizing: border-box;}
+.promotion_wrap ul li dl {position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; height: 80%;}
 .promotion_wrap ul li dl dt {position: absolute; bottom: 0; left: 0;
     width: 100%; height: 20px; font-size: 20px; font-weight: 600; color: #333; overflow: hidden; text-align: center; 
     line-height: 20px; white-space: nowrap; text-overflow: ellipsis;}
@@ -179,24 +225,23 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 /* ========================================== */
 
 /* #lunaBox */
-#lunaBox {position: relative; height: 100vh; min-height: 960px; 
-    background-size: cover; 
+#lunaBox {position: relative; background-size: cover; 
     background-repeat: no-repeat; background-position: 50% 50%;
-    background-color: #0f0915; 
     background-image: url("../../img/main/lunaBox/luna_bg.png");}
 #lunaBox::before {content: ""; display: block; position: absolute; 
-    top: 0; left: 0; z-index: 1;
-    width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);}
+    top: 0; left: 0; z-index: 1; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.4);}
 .luna_full_wrap {position: relative; z-index: 2;
-    width: 100%; min-width: 900px; max-width: 1260px;
-    height: 90%; min-height: 320px; margin: auto;}
+    width: 62.625vw; min-width: 900px;
+    height: 630px; margin: auto;}
 .luna_full_wrap > h2 {color: #fff;}
-.luna_btn_content_wrap {position: relative; width: 100%; height: 100%;}
+.luna_btn_content_wrap {position: relative; 
+    width: 100%; height: 540px;}
 
 /* #lunaBox - 전체 button */
 .luna_button {position: absolute; top: 40%; left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 40; width: 80%; height: 0;}
+    z-index: 40; width: 90%; height: 0;}
 .luna_button button {width: 60px; height: 150px;
     background-repeat: no-repeat; background-position: 50% 50%;
     background-size: contain;}
@@ -209,33 +254,37 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
     margin: auto; margin-top: 40px; box-sizing: border-box; 
     overflow: hidden;}
 .luna_wrap ul {width: 300%; height: 100%; min-height: 300px}
+.luna_wrap ul:after,
+.luna_wrap ul::after{content:""; display:block; clear: both;}
 .luna_wrap ul li {position: relative; float: left; width: 33.333333%;
      height: 100%; box-sizing: border-box; background-color: #fff; 
-    border: 2px solid #333; border-radius: 20px;}
+     border: 2px solid #333; border-radius: 20px;}
 .luna_wrap ul li:nth-child(1) {width: 33.333334%}
 .luna_content_wrap {position: absolute; top:50%; left:50%;
-  transform:translate(-50%, -50%); display: flex; justify-content: center;
-  width: 80%; max-width: 1004px; height: auto; margin: auto;}
-.luna_content_wrap:after { content:""; display: block; clear:both;}
+    transform:translate(-50%, -50%); 
+    display: flex; justify-content: center;
+    width: 80%; height: auto; margin: auto;}
 
 /* content_area */
 .luna_content_area {
-    float: left; width: 13.54166666vw; min-width: 250px; max-width: 480px; 
-    height:25vw; min-height: 210px; padding-top: 3rem; box-sizing: border-box;}
-.luna_content_area dl {width: 100%; height: 85%;}
+    width: 13.54166666vw; min-width: 250px; max-width: 480px; 
+    height:auto; min-height: 210px; padding: 3rem 0; box-sizing: border-box;}
+.luna_content_area dl {width: 100%; height:auto;}
 .luna_content_area dl dt {width: 100%; height: 70px; 
     font-size: 24px; font-weight: 900; word-break: keep-all;
     text-align: center; color: #333; line-height: 30px;}
-.luna_content_area dl dd {width: 100%; height: auto; min-height: 120px;
+.luna_content_area dl dd {width: 100%; height: auto; 
+    min-height: 120px;
     margin-top: 2.083333vw; font-size: 16px; font-weight: 400;
-    text-align: center; color: #333; word-break: keep-all;}
+    text-align: center; color: #333; word-break: keep-all;
+    line-height: 20px;}
 .luna_content_more {width: 100%; height: 30px; margin-top: 30px;
     color: #333; font-size: 20px; text-align: center; line-height: 30px;
     text-decoration: underline; font-weight: 600;}
 
 /* img_area */
-.luna_img_area {float:right;
-    width: 25vw; max-width: 600px; height:25vw; min-height: 250px; margin-left: 50px;
+.luna_img_area {width: 25vw; max-width: 600px; 
+    height:425px; margin-left: 50px;
     background-repeat: no-repeat; background-size: cover;
     background-position: 50% 50%;}
 
@@ -247,12 +296,11 @@ h1 a {background-image: url("../../img/main/headBox/logo.png");
 /* ========================================== */
 
 /* #attractionBox */
-#attractionBox {position: relative; width: 100%; height: 100vh;
-    min-height: 960px; overflow: hidden;}
-.attraction_full_wrap {position: absolute; top: 210px; left: 50%;
+#attractionBox {position: relative; overflow: hidden;}
+.attraction_full_wrap {position: absolute; top: 240px; left: 50%;
     transform: translateX(-50%); width: 65.625vw; min-width: 900px;
-    height: 31.770833vw; min-height: 300px; z-index: 10;}
-.attraction_wrap {position: relative; width: 100%; height: 27.0833333vw; 
+    height: 630px; z-index: 10;}
+.attraction_wrap {position: relative; width: 100%; height: 540px;
     min-height: 150px; margin-top: 40px;}
 
 /* attraction_button */
@@ -327,13 +375,13 @@ font-size: 25px;}
 /*attraction_05*/
 .attraction_05_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_05_01.png");}
 .attraction_05_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_05_02.png");}
-.attraction_05_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_05_03.png");}
+.attraction_05_img_area li:nth-child(6) a {background-image: url("../../img/main/attractionBox/attraction_05_03.jpg");}
 /*no_attraction*/
 .attraction_none_img {background-image: url("../../img/main/attractionBox/no_attraction.PNG")}
 
 /* #attractionBox - bg animation*/
 .wheel {position: absolute; top: 93px; left: -444px; 
-    width: 967px; height: 1174px; opacity: 0.4;}
+    width: 967px; height: 1174px; opacity: 0.2;}
 
 @keyframes wheel_rot {
     0% {transform: rotate(0g)}
@@ -387,8 +435,8 @@ font-size: 25px;}
 #informationBox {width: 100%; height: 100vh; min-height: 960px; background-color: #fff;}
 .info_full_box {width: 65.625vw; min-width: 900px; height: 100%; margin: auto;}
 .info_full_box p {width: 100%; height: 30px;
-     margin: auto; text-align: center; line-height: 30px; color:#333; 
-    margin-top: 40px; word-break: keep-all;}
+      margin: auto; text-align: center; line-height: 30px; color:#333; 
+     margin-top: 40px; word-break: keep-all;}
 .info_more {width: 240px; height: 40px; margin: auto; margin-top: 20px;
     background-color: var(--color-orange); text-align: center;
     border-radius: 10px; margin-bottom: 30px;
@@ -438,15 +486,19 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     text-align: center; font-weight: 600; line-height: 60px;}
 .family_site_area {float: left; width: 50%; height: 300%;}
 .family_site_area dl {position: relative; width: 100%; height: 100%;}
-.family_site_area dt {width: 100%; height: 60px;
-    color: #fff; font-size: 30px; background-color: #660000;
+.family_site_area dt {width: 100%; height: 60px;color: #fff; 
+    font-size: 30px; background-color: #660000;
     text-align: center; font-weight: 600; line-height: 60px;}
-.family_site_area dd {display: none; position: absolute; top: -120px; left: 0;
+.family_site_area dt i {margin-left: 20px; font-size: 2rem;}
+.family_site_area dt.footer_action i{transform: rotate(180deg); }
+.family_site_area dd {display: none; position: absolute; bottom: 180px; left: 0;
     width: 100%; height: 120px; background-color: rgba(0,0,0,0.7);}
 .family_site_area dd ul {width: 100%; height: 100%;}
 .family_site_area dd ul li {width: 100%; height: 50%; 
     font-size: 20px; text-align: center; line-height: 60px;
     color: #fff;}
+
+
 /*==============================================*/
 /*================@@mediaQuery@@================*/
 /*==============================================*/
@@ -454,13 +506,19 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
 
 /* mobile*/
 @media screen and (max-width:480px){
+
     
     /* #headBox */
-    #headBox {position: relative; background-color: #0f0915;}
-    .headBottom {padding: 60px 10px 20px; min-width: 350px;}
+    #headBox {position: relative; min-width: 260px; 
+        height: 110px; min-height: 110px;
+        background-color: #0f0915;}
+    .headBottom {padding: 60px 20px 20px; min-width: 220px;}
+    h1 {width: 110px; min-width: 110px; height: 30px;}
     .headbottom_wrap p {display: none;}
     #navBox {width: 45px;}
+    .menuBox {width: 30px; height: 30px;}
     .searchBox {display: none;}
+    .headtop_wrap {min-width: 220px;}
     .sns_wrap {width: 26px;}
     .snsBox {display: none;}
     .sns_mobile_icon {display: block; width: 100%; height: 100%;}
@@ -472,7 +530,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #localNavBox */
-    #localNavBox {}
+    #localNavBox {display: none;}
 
     /* ========================================== */
 
@@ -484,7 +542,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .view_img_02 {
     background-image: url("../../img/main/viewBox/mobile_main_ing_02.jpg")}
     .view_img_03 {
-    background-image: url("../../img/main/viewBox/mobile_main_ing_03.jpg")}
+    background-image: url("../../img/main/viewBox/mobile_main_ing_03.png")}
     .view_img_04 {
     background-image: url("../../img/main/viewBox/mobile_main_ing_04.jpg")}
     .view_img_05 {
@@ -492,23 +550,26 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     
     .view_indicator{position: absolute; bottom: -50px; right: 50%;
         transform: translate(50%); width:100%; height: 50px;
-        padding: 10px 0; background-color: #0f0915;
+        padding: 15px 0; background-color: #0f0915;
         box-sizing: border-box;}
-    .view_indicator ul {width: 300px; height: 30px; margin: auto;}
-
+    .view_indicator ul {width: 220px; height: 30px; margin: auto;}
+    .view_indicator li {width: 20px; height: 20px;}
+    .view_indicator li.view_action {width: 60px;} 
     /* ========================================== */
 
     /* #promotionBox */
-    #promotionBox {height: 129.166666vw; min-height: 620px; padding: 100px 20px 120px; margin-top: 50px;}
-    .pro_full_wrap {width: 62.5vw; min-width: 260px;}
-    .promotion_wrap {margin-top: 40px; width: 100%; height: 47.9166666vw; min-height: 230px; overflow: hidden;}
+    #promotionBox {height: 670px; min-height: 670px; padding: 100px 20px 120px; margin-top: 50px;}
+    .pro_full_wrap {width: 92.5vw; min-width: 220px;}
+    .promotion_wrap {width: 80%; margin: auto; margin-top: 40px; 
+        height: 230px; min-height: 230px; overflow: hidden;}
     .promotion_wrap ul {width: 800%; height: 100%;}
     .promotion_wrap ul li {width: 12.5%; height: 230px;}
-    .promotion_plus {top: auto; bottom: 0; left: 50%; transform: translate(-50%);}    
-    .pro_full_wrap > h2 {width: 250px; height: 50px; white-space: pre-line; }
+    .promotion_plus {top: auto; bottom: 0; left: 50%; 
+        transform: translate(-50%); width: 220px;}    
+    .pro_full_wrap > h2 {width: 220px; height: 100px; white-space: pre-line; }
     .promotion_btn {display: block; position: absolute; z-index: 100; 
-        top: 185px; left: 50%; transform: translate(-50%);
-        width: 70.8333333vw; min-width: 300px; height: 0;}
+        top: 235px; left: 50%; transform: translate(-50%);
+        width: 100%; min-width: 240px; height: 0;}
     .promotion_btn button{width: 10%; height: 55px;
         background-repeat: no-repeat; background-size: contain;
         background-position: 50% 50%;}
@@ -517,43 +578,46 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #lunaBox */
-    #lunaBox {height: auto; min-height: 500px; background-size: cover; 
+    #lunaBox {height: auto; min-height: 1500px; 
         padding: 100px 20px 120px; background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
     #lunaBox::before {display: none;}
-    .luna_full_wrap {position: relative;
-        width: 100%; min-width: 200px; max-width: 440px;}
-    .luna_full_wrap > h2 {white-space: pre-line; 
-        width: 220px; height: auto;}
-    .luna_button {display: none;}
-    .luna_content_wrap {display: block;}
-    .luna_wrap ul {width: 100%;}
-    .luna_wrap ul li {display: block; float: none; width: 100%;
-        height: auto; min-height: 200px;
-        padding: 30px 20px; margin-top: 20px;}
+    .luna_full_wrap {width: 100%; min-width: 200px;
+        height: 100%; margin: auto;}
+    .luna_full_wrap > h2 {width: 100%; min-width: 220px; height: 100px;
+        white-space: pre-line;}
+    .luna_btn_content_wrap {height: 1300px;}
+    .luna_button {display: none;} 
+    .luna_wrap {overflow: visible;}
+    .luna_wrap ul {width: 100%; height: 100%; min-height: 420px}
+    .luna_wrap ul li {position: static; float: none; 
+        width: 100%; height: 420px; box-sizing: border-box; 
+        background-color: #fff; margin-top: 20px; padding: 30px 0;
+        border: 2px solid #333; border-radius: 20px;}
     .luna_wrap ul li:nth-child(1) {width: 100%; margin-top: 0;}
-    .luna_content_wrap {position: static; transform: translate(0, 0);}
-    .luna_content_area {float: none; width: 100%; min-width: 100px; max-width: 440px; 
-        height:auto; min-height: 100px; padding-top: 0;}
-    .luna_content_area dl {width: 100%; height: auto;}
-    .luna_content_area dl dt {height: auto; min-height: 70px;}
+    .luna_content_wrap {position: static; display: block;
+        transform: translate(0,0);}
+    
+    .luna_content_area {padding: 0; height: 120px; min-height: 120px;
+        width: 100%; min-width: 180px; max-width: 480px;}
+    .luna_content_area dl {width: 100%; min-width: 180px; height:auto;}
     .luna_content_area dl dd {display: none;}
-    .luna_img_area {float:none; width: 100%; max-width: 400px; height:auto; 
-        max-height: 300px; margin-left: 0; margin-top: 40px;}
-    .luna_animation_01 {display: none;}
-    .luna_animation_02 {display: none;}
-    .luna_animation_03 {display: none;} 
+    .luna_content_more {margin-top: 20px;}
+
+    .luna_img_area {width: 100%; min-width: 180px; 
+        height: 200px; margin-left: 0; margin-top: 30px;}
+
 
     /* ========================================== */
 
     /* #attractionBox */
-    #attractionBox {height: 168.75vw; min-height: 815px; padding: 100px 20px 120px;} 
+    #attractionBox {height: 865px; min-height: 865px; padding: 100px 20px 120px;} 
     .attraction_wrap {height: 550px;}
     .attraction_full_wrap {top: 100px; 
-        width: 70.833333%; min-width: 160px;
+        width: 90.833333%; min-width: 220px;
         height: auto; min-height: 300px;}
     .attraction_full_wrap > h2 {white-space: pre-line; 
         width: 220px; height: auto;}
-    .attraction_content {width: 70%; box-shadow: 4px 3px 5px #ccc;}
+    .attraction_content {width: 80%; box-shadow: 4px 3px 5px #ccc;}
     .attraction_button button {width: 20px; height: 100px;}
     .attraction_info dt {height: auto; word-break: keep-all;
         text-align: center; margin-bottom: 20px;}
@@ -624,7 +688,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #localNavBox */
-    #localNavBox {}
+    #localNavBox {display: none;}
 
     /* ========================================== */
 
@@ -636,7 +700,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .view_img_02 {
     background-image: url("../../img/main/viewBox/mobile_main_ing_02.jpg")}
     .view_img_03 {
-    background-image: url("../../img/main/viewBox/mobile_main_ing_03.jpg")}
+    background-image: url("../../img/main/viewBox/mobile_main_ing_03.png")}
     .view_img_04 {
     background-image: url("../../img/main/viewBox/mobile_main_ing_04.jpg")}
     .view_img_05 {
@@ -661,19 +725,21 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #lunaBox */
-    #lunaBox {height: auto; min-height: 1050px; background-size: cover;
+    #lunaBox {height: auto; min-height: 1280px; 
+        background-size: cover;
         background-position: 50% 50%;
-        padding: 100px 0 120px; overflow: hidden;
+        padding: 100px 0 120px; 
         background-image: url("../../img/main/lunaBox/luna_background_img(mobile).jpg");}
     #lunaBox::before {display: none;}
     .luna_full_wrap {width: 60%; min-width: 300px; 
-        height: auto; min-height: 300px;}
+        height: auto; min-height: 1060px;}
+    .luna_btn_content_wrap{height:auto;}
     .luna_full_wrap > h2 {white-space: pre-line; 
         width: 300px; height: auto;}
     .luna_button {width: 150%}
-    .luna_wrap {width: 100%; height: auto; overflow: hidden;}
+    .luna_wrap {width: 100%; height: auto; min-height: 920px; overflow: hidden;}
     .luna_wrap ul {height: auto;}
-    .luna_wrap ul li {display: block; height: auto;
+    .luna_wrap ul li {display: block; height: auto; min-height: 920px;
         padding: 50px 50px;}
     .luna_content_wrap {display: block; position: static; 
         width: 100%; transform: translate(0, 0);}
@@ -683,22 +749,17 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .luna_content_area dl dt {height: auto; min-height: 70px;}
     .luna_content_area dl dd {margin-top: 20px; line-height: 30px;}
     .luna_img_area {float: none;
-        width: 100%; height: 36.1328125vw; 
+        width: 100%; height: 370px; 
         margin-left: 0; margin-top: 50px;}
-    .luna_animation_01 {display: none;}
-    .luna_animation_02 {top: 825px; left: -140px;}
-    .luna_animation_03 {top:150px; right: -20px;}
-    
 
 
     /* ========================================== */
 
     /* #attractionBox */
-    #attractionBox {height: auto; min-height: 815px; padding: 100px 0 120px;}
+    #attractionBox {height: 800px; min-height: 800px; padding: 0;}
     .attraction_full_wrap {top: 100px;
-        width: 76.171875%; min-width: 460px;
-        height: auto; min-height: 300px;}
-    .attraction_wrap {min-height: 500px}
+        width: 76.171875%; min-width: 440px; height: 580px;}
+    .attraction_wrap {height: 480px; min-height: 480px}
     .attraction_full_wrap > h2 {white-space: pre-line; 
         width: 300px; height: auto;}
     .attraction_content {width: 70%;}
@@ -714,7 +775,8 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #informationBox */
-    #informationBox {height: auto; min-height: 815px; padding: 100px 0 120px;}
+    #informationBox {height: auto; min-height: 815px; 
+        padding: 100px 0 120px;}
     .info_full_box {position: relative; width: 76.171875%; min-width: 440px;
         padding-bottom: 80px;}
     .info_full_box p {margin-bottom: 40px; height: auto;}
@@ -735,16 +797,15 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .footer_adress {width: 100%; min-width: 200px;}
     .footer_adress h2 {float: none; margin-bottom: 40px;}
     adress {float: none; width: 100%; height: auto;}
-    .app_down {width: 100%;}
-    .family_site_area {display: none;}
-    
+
 }/* tablet end ====================================== */
 
 /* pc - labtop */
 @media screen and (min-width:1025px) and (max-width:1440px) {
     
-    #promotionBox,#lunaBox,#attractionBox,#informationBox{
-        padding-top: 170px}
+    #promotionBox,#lunaBox,#attractionBox,#informationBox
+    {width: 100%; height: 100vh; min-height: 800px;
+    padding: 170px 0 90px; box-sizing: border-box;}
     
     /* #headBox */
     .headbottom_wrap p {display: none;}
@@ -752,7 +813,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #localNavBox */
-    #localNavBox {}
+    #localNavBox {position: absolute;}
 
     /* ========================================== */
 
@@ -762,29 +823,35 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     /* ========================================== */
 
     /* #promotionBox */
-    .pro_full_wrap {width: 87.5vw; min-width: 900px}
-
+    .pro_full_wrap {height: 540px;}
+    .promotion_wrap {height: 380px; margin-top: 110px;}
+    
     /* ========================================== */
 
     /* #lunaBox */
-    #lunaBox {padding: 170px 60px 100px;}
-    .luna_button {top: 16.020833vw; left:50%; top: 40%; width: 80%;}
+    .luna_button {top: 16.020833vw; left:50%; top: 40%; width: 90%;}
     .luna_button button {width: 60px; height: 93px;}
-    .luna_content_area {padding-top: 0}
-
+    .luna_full_wrap {height: 540px;}
+    .luna_btn_content_wrap {height: 450px;}
+    
     /* ========================================== */
 
     /* #attractionBox */
+    .attraction_full_wrap {height: 540px; top:170px;}
+    .attraction_wrap {height: 450px;}
     .attraction_list li {width: 50%}
-    .attraction_list li:nth-child(3),.attraction_list li:nth-child(6){
-    width: 50%;}
+    .attraction_list li:nth-child(3),
+    .attraction_list li:nth-child(6){width: 50%;}
 
     /* ========================================== */
 
     /* #informationBox */
-    #informationBox {   }
-    .info_full_box ul li {width: 30%; margin-left: 5%;}
+    .info_full_box {height: 540px;}
+    .info_full_box ul {height: 330px;}
+    .info_full_box ul li {width: 30%; margin-left: 5%;
+        padding: 20px;}
     .info_full_box ul li:nth-child(4) {display: none;}
+    .info_full_box ul li div {height: 200px;}
     /* ========================================== */
 
     /* #footBox */
