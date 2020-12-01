@@ -29,7 +29,7 @@
       */
       //(j === undefined)?k=myViewLen:k=j;
       k = j|| myViewLen;    
-        
+           
       //myLen =  i + myViewLen;
       myLen = i + k;
       for(; i < myLen; i+=1){
