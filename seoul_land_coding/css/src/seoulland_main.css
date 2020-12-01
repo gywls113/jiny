@@ -52,7 +52,7 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 .menu_btn.on .line_03{transform: translateY(0) scaleX(1.3) rotate(-50deg); background-color: #333;}
 
 /* 메뉴 영역 */
-.menu_area_wrap {display: block;  position: fixed; 
+.menu_area_wrap {display: none;  position: fixed; 
     top: 0; right: 0; z-index:510;
     width: 100%; height: 100%; min-height: 960px;
     background-color: rgba(255,255,255,1);
@@ -139,6 +139,7 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
     transition: all 300ms ease; border-radius: 20px;}
 .local_nav_wrap > li:hover {transform: scale(1.4) translateX(-50px);}
 .local_nav_wrap > li:nth-child(5) {margin-bottom: 0;}
+.local_nav_wrap > li a {outline: 0;}
 /* 1:1질문하기 */
 .local_nav_wrap > li:nth-child(6) {float:right; 
     width: 140px; height: 140px; margin-top: 30px;
@@ -563,6 +564,25 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
         background-repeat: no-repeat; background-position: 50% 50%;
         background-size: contain;}
     
+    .menu_btn i {width: 30px; min-width: 30px; height: 2px;}
+    .line_02 {transform: translateY(-10px);}
+    .line_03{transform: translateY(10px);}
+    .menu_area_wrap {position: absolute; 
+        top: -60px; left: 50%; transform: translateX(-50%);
+        width: 100vw; height: 1500px; min-height: 1500px;
+        padding:60px 0 120px; box-shadow: 0 0 10px #333;}
+    .red_logo {display: none;}
+    .menu_area {width: 100%; min-width: 220px; 
+        max-width: 400px; height: 1260px; margin-top: 100px;}
+    .menu {float: none; width: 80%; height: 25%; margin: auto;}
+    .menu::after {top:290px; left: 0;
+        width: 100%; height: 2px;}
+    .menu:last-child::after {display: none;}
+    .menu dl {width: 100%; height: 100%;}
+    .menu dt {height: 15%; line-height: 30px;}
+    .menu dt::before {display: none;}
+    .menu dd {height: 75%; margin-top: 10%;}
+
     /* ========================================== */
 
     /* #localNavBox */
@@ -589,8 +609,8 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
         padding: 15px 0; background-color: #0f0915;
         box-sizing: border-box;}
     .view_indicator ul {width: 220px; height: 30px; margin: auto;}
-    .view_indicator li {width: 20px; height: 20px;}
-    .view_indicator li.view_action {width: 60px;} 
+    .view_indicator li {width: 20px; height: 20px; border: 3px solid #fff;}
+    .view_indicator li.view_action {width: 60px; border: 3px solid #fff;} 
     /* ========================================== */
 
     /* #promotionBox */
@@ -721,6 +741,24 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
         background-repeat: no-repeat; background-position: 50% 50%;
         background-size: contain;}
     
+    .line_02 {transform: translateY(-20px);}
+    .line_03{transform: translateY(20px);}
+    .menu_area_wrap {position: absolute; top:-60px; left: 50%; 
+        transform: translateX(-50%); width: 100vw;
+        height: 1000px; min-height: 1000px; padding:60px 0 120px;
+        box-shadow: 0 0 10px #333;}
+    .menu_area {width: 76.171875%; min-width: 460px;
+    max-width: 904px; height: 720px; margin: auto; margin-top: 150px;}
+    .red_logo {margin-left: 60px;}
+    .menu {float: none; width: 100%; height: 25%}
+    .menu::after {top:180px; left: 0; width: 100%; height: 2px;}
+    .menu dl {padding: 20px; box-sizing: border-box;}
+    .menu dt {float: left; width: 50%; height: 100%; line-height: 230px;}
+    .menu dt::before {top:0; width: 60px; height: 60px;}
+    .menu dd {float: right; width: 50%; height: 100%; 
+        margin-top: 20px; line-height: 35px;}
+    .menu .menu_02_list {margin-top: 0;}
+    
     /* ========================================== */
 
     /* #localNavBox */
@@ -845,7 +883,8 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     
     /* #headBox */
     .headbottom_wrap p {display: none;}
-
+    .line_02 {transform: translateY(-20px);}
+    .line_03{transform: translateY(20px);}
     /* ========================================== */
 
     /* #localNavBox */
