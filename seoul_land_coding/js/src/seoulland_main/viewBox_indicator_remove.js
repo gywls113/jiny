@@ -12,7 +12,7 @@
     
     //브라우저 상단에 떨어져있는 양 체크
     var viewIndiOffset = viewIndi.offset().top;
-    console.log(viewIndiOffset);
+    //console.log(viewIndiOffset);
 
     var offsetRel = viewIndiOffset - localBottom; // 로컬네비와 인디케이터 사이의 갭
         
@@ -22,7 +22,7 @@
     win.on('scroll',function(e){
         // 스크롤이 이동한 위치값을 파악
         var winSt = win.scrollTop();
-        console.log(winSt);
+        //console.log(winSt);
         
         if(winSt >= offsetRel){
             viewIndi.stop().fadeOut();
