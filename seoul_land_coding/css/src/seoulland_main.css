@@ -34,7 +34,7 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 .searchBox, .menuBox {float: left; width: 45%; height: 100%;
     background-repeat: no-repeat; 
     background-position: 50% 50%; background-size: contain; }
-.searchBox {background-image: url("../../img/main/headBox/search_icon.png");}
+.searchBox {display: none; background-image: url("../../img/main/headBox/search_icon.png");}
 .menuBox {float: right;}
 
 /* 메뉴 아이콘 */
@@ -98,8 +98,8 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
     width: 100%; height: 40px; padding: 7px 0; box-sizing: border-box; background-color: var(--color-darkred);}
 .headtop_wrap {width: 65.625vw; min-width: 350px; height: 100%; 
     margin: auto;}
-.sns_mobile_icon {display: none;}
 .sns_wrap {float: left; width: 240px; height: 100%;}
+.sns_mobile_icon {display: none;}
 .snsBox {width: 100%; height: 100%; 
     display: flex; justify-content: space-between;}
 .snsBox li {float: left; width: 15%; height: 100%;
@@ -128,18 +128,23 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 #localNavBox {position: fixed; top:0; right: 0;
     width: 470px; height: 100vh; z-index: 50;
     padding: 290px 90px 220px 0; box-sizing: border-box;
-    background-color: rgba(0,0,0,0.6);}
-.local_nav_wrap {width: 100%; height: 100%;}
-.local_nav_wrap > li {width: 100%; height: 30px;
+    background-color: rgba(0,0,0,0.6); text-align: right;}
+.local_nav_wrap {display:inline-block; width: 30px; height: 100%;}
+.local_nav_wrap > li {position:relative;
+    width:100%; height: 30px;
     margin-bottom: 20px; color: #fff; font-size: 24px;
     font-weight: 600; line-height: 30px; text-align: right;}
 .local_nav_wrap > li  i {display: block; float: right;
     width: 30px; height: 5px; margin-left: 10px;
     background-color: #fff; margin-top: 9px;
-    transition: all 300ms ease; border-radius: 20px;}
-.local_nav_wrap > li:hover {transform: scale(1.4) translateX(-50px);}
+    transition: all 150ms ease; border-radius: 20px;}
+.local_nav_wrap > li:hover > a{transform: scale(1.4) translateX(-10px);}
 .local_nav_wrap > li:nth-child(5) {margin-bottom: 0;}
-.local_nav_wrap > li a {outline: 0;}
+.local_nav_wrap > li a { outline: 0; white-space: nowrap; transition:all 300ms linear;}
+.local_nav_wrap > li a > span{position:absolute; top:0; right:120%;}
+.local_nav_wrap > li.action i, 
+.local_nav_wrap > li.on i { background-color:var(--color-red);}
+
 /* 1:1질문하기 */
 .local_nav_wrap .qusetion_area {float:right; 
     width: 140px; height: 140px; margin-top: 30px;
@@ -149,13 +154,13 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 .question_box dt {width: 100%; height: 100%;}
 .question_box dt > a {position: relative; display: block;
     width: 100%; height: 100%; }
-.question_box dt .center_line {top:30%;}
-.question_box dt .center_text{opacity:1;}
+.question_box dt .center_line {top:30%; left:0; right:auto;}
+.question_box dt .center_text{position:static; opacity:1;}
 
 /* 1:1질문하기 - hover */
 .question_box dd {display: none;
     position: absolute; top:0; right: 0;
-    width: 720px; height: 140px; z-index: 60; 
+    width: 720px; height: 140px; z-index: 501; 
     padding: 40px 60px; box-sizing: border-box;
     border-radius: 140px; box-shadow: 3px 4px 8px #333;
     background-color: var(--color-red);}
@@ -235,7 +240,7 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 /* #promotionBox - promotion_content */
 .promotion_wrap {width: 100%; height: 460px;  
     margin-top: 120px;}
-.promotion_wrap ul {width: 100%; height: 100%; margin: auto;}
+.promotion_wrap ul {position: relative; width: 100%; height: 100%; margin: auto;}
 .promotion_wrap ul li {position: relative; float: left; 
     width: 25%; height: 50%; border: 1px solid #ddd;
     box-sizing: border-box;}
@@ -356,13 +361,13 @@ h1 a {background-image: url("../../img/main/headBox/logo(white).png");
 #attractionBox {position: relative; overflow: hidden;}
 .attraction_full_wrap {position: absolute; top: 240px; left: 50%;
     transform: translateX(-50%); width: 65.625vw; min-width: 900px;
-    height: 630px; z-index: 10;}
+    height: 630px; z-index: 30;}
 .attraction_wrap {position: relative; width: 100%; height: 540px;
     min-height: 150px; margin-top: 40px;}
 
 /* attraction_button */
-.attraction_button {position: absolute; top: 50%; left: 0;
-     width: 100%; height: 0;}
+.attraction_button {position: absolute; top: 50%; left: 0; z-index: 10000;
+     width: 100%; height: 0; }
 .attraction_button button {width: 60px; height: 150px;
     background-repeat: no-repeat; background-position: 50% 50%;
     background-size: contain; transform: translateY(-50%)}
@@ -418,8 +423,8 @@ font-size: 25px;}
 .attraction_01_04 a {background-image: url("../../img/main/attractionBox/attraction_02_04.jpg");}
 .attraction_01_05 a {background-image: url("../../img/main/attractionBox/attraction_02_05.jpg");}
 /*attraction_02*/
-.attraction_02_img_area li:nth-child(5) a {background-image: url("../../img/main/attractionBox/attraction_01_01.jpg");}
-.attraction_02_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_01_02.png");}
+.attraction_02_img_area li:nth-child(4) a {background-image: url("../../img/main/attractionBox/attraction_01_01.jpg");}
+.attraction_02_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_01_02.png");}
 /*attraction_03*/
 .attraction_03_img_area li:nth-child(2) a {background-image: url("../../img/main/attractionBox/attraction_03_01.png");}
 .attraction_03_img_area li:nth-child(3) a {background-image: url("../../img/main/attractionBox/attraction_03_02.png");}
@@ -443,10 +448,10 @@ background-position: 50% 100%;}
 
 /* #attractionBox - bg animation*/
 .wheel {position: absolute; top: 93px; left: -444px; 
-    width: 967px; height: 1174px; opacity: 0.2;}
+    width: 967px; height: 1174px; opacity: 0.4;}
 
 @keyframes wheel_rot {
-    0% {transform: rotate(0g)}
+    0% {transform: rotate(0)}
     100% {transform: rotate(360deg)}
 }
 
@@ -581,14 +586,23 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .menuBox {width: 30px; height: 30px;}
     .searchBox {display: none;}
     .headtop_wrap {min-width: 220px;}
-    .sns_wrap {width: 26px;}
-    .snsBox {display: none;}
-    .sns_mobile_icon {display: block; width: 100%; height: 100%;}
+    .sns_wrap {position: relative; width: 26px;}
+    .sns_mobile_icon {position: absolute; top: 0; left: 0; z-index: 50;
+      display: block; width: 100%; height: 100%;}
     .sns_mobile_icon button {width: 100%; height: 100%;
         background-image: url("../../img/main/headBox/share%20icon.png");
         background-repeat: no-repeat; background-position: 50% 50%;
         background-size: contain;}
-    
+    .snsBox {position: absolute; display: none; top:0; left: 0; z-index: 40; 
+          width: 91.6666666vw; min-width: 220px; height: 100%; 
+          background-color: var(--color-darkred);}
+  
+    .snsBox li {width: 26px; margin-left: 15px;}
+    .snsBox li:first-child {margin-left: 40px;}
+  
+  
+  
+  
     .menu_btn i {width: 30px; min-width: 30px; height: 2px;}
     .line_02 {transform: translateY(-10px);}
     .line_03{transform: translateY(10px);}
@@ -758,14 +772,20 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
     .headbottom_wrap p {display: none;}
     .headBottom {padding: 60px 60px 20px}
     
-    .sns_wrap {width: 26px;}
-    .snsBox {display: none;}
-    .sns_mobile_icon {display: block; width: 100%; height: 100%;}
+    .sns_wrap {position: relative; width: 26px;}
+    
+    .sns_mobile_icon {position: absolute; top: 0; left: 0; z-index: 50;
+      display: block; width: 100%; height: 100%;}
     .sns_mobile_icon button {width: 100%; height: 100%;
         background-image: url("../../img/main/headBox/share%20icon.png");
         background-repeat: no-repeat; background-position: 50% 50%;
         background-size: contain;}
     
+    .snsBox {position: absolute; display: none; top:0; left: 0; z-index: 40; 
+          width: 76.171875vw; min-width: 300px; height: 100%; 
+          background-color: var(--color-darkred);}
+    .snsBox li {width: 26px; margin-left: 20px;}
+    .snsBox li:first-child {margin-left: 60px;}
     .line_02 {transform: translateY(-20px);}
     .line_03{transform: translateY(20px);}
     .menu_area_wrap {position: absolute; top:-60px; left: 50%; 

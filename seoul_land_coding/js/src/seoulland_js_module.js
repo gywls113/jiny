@@ -12,6 +12,7 @@ var resultDevice;
         {type:'tablet', size:1024},
         {type:'laptop', size:1440},
         {type:'pc', size:1920},
+        {type:'pcfull'}
     ];
     
     //브라우저 최초 크기값 확인

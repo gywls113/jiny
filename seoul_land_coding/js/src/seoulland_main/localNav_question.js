@@ -15,6 +15,7 @@
         
         if(questionStatus === 'none'){
             questionDd.stop().fadeIn();
+          closeBtn.find('button').focus();
         };
     
     });

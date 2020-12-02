@@ -7,39 +7,60 @@
     var localLi = localNavWrap.children('li');
     var localI = localLi.find('i');
     var qna = localNavWrap.find('.qusetion_area');
+    var lunaBox = $('#lunaBox');
     
     var localOffset = localNav.offset().top; 
     //console.log(localOffset);
     // 로컬네비가 얼마나 떨어져있는가
+  
 
     win.on('scroll',function(e){
+       
+      var winSt = win.scrollTop();
+      
+      if(winSt >= 280){
+      
+          localNav.css({width:100+'px','backgroundColor':'transparent','paddingTop':450+'px','paddingLeft':0,paddingBottom:0});
+          localLi.css({fontSize:0, transform:'none', color:'var(--color-orange)'});   
+          localLi.find('a').css({'transform':'none'});
+          localI.css({height:'30px',borderRadius:'100%',border:"3px solid #888",boxSizing:'border-Box', 'margin':0});
+          qna.css({display:'none'});
+//            localI.hover(
+//              function(){
+//               localLi.css({transform: 'none',fontSize: 16+'px',color:'#333', borderBottom: '3px solid var(--color-red)'}); 
+//              });
 
-        var winSt = win.scrollTop();
-        //console.log(winSt);
+          localLi.on('mouseenter', function(){
+              $(this).addClass('on');
+              $(this).siblings().removeClass('on');
+              $(this).css({fontSize:'1rem'});
+              $(this).siblings().css({fontSize:0});
+  //            $(this).siblings().removeStyle();
+  //            $(this).css({
+  //              fontSize: 16+'px',color:'#333', 
+  //              borderBottom: '3px solid var(--color-red)'});
+  //            $(this).siblings().css({'lineHeight':50+'px',fontSize:0});
+          });
+          localNavWrap.on('mouseleave', function(){
+            localLi.removeClass('action');
+            localLi.removeClass('on');
+            localLi.css({fontSize:0});
+          });
+
+      }else if(winSt < 280){
+
+          localLi.off('mouseenter');
+          localNavWrap.off('mouseleave');
+          localNav.removeAttr('style');
+          localLi.removeAttr('style');
+          localI.removeAttr('style');
+          qna.removeAttr('style');
+          localLi.find('a').removeAttr('style');
+
+      }
         
-        if(winSt >= 280){
-            localNav.css({width:300+'px','backgroundColor':'transparent','paddingTop':450+'px','paddingLeft':0,paddingBottom:0});
-            
-            localLi.css({'lineHeight':50+'px',fontSize:0});           
-            localI.css({height:'30px',borderRadius:'100%',border:"3px solid #888",boxSizing:'border-Box'});
-            localI.css({height:'30px',borderRadius:'100%',border:"3px solid #888",boxSizing:'border-Box'});
-            
-            qna.css({display:'none'});
-            
-            localI.hover(function(){
-               localLi.css({transform: 'none',fontSize: 16+'px',color:'#333', borderBottom: '3px solid var(--color-red)'}); 
-            });
-            
-        }else {
-            localNav.removeAttr('style');
-            localLi.removeAttr('style');
-            localI.removeAttr('style');
-            qna.removeAttr('style');
-        }
-        
-    });
+    }); //=====win.scroll fin
     
-
 })(jQuery);
 
 /*

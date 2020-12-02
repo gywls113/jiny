@@ -23,7 +23,7 @@ button {background-color: transparent; cursor: pointer;}
 hr {border-bottom: 1px solid #333;}
 
 a:hover, a:focus,
-button:hover, button:focus {position: relative; z-index: 500; outline: 3px solid #f70;}
+button:hover, button:focus {position: relative; z-index: 5; outline: 3px solid #f70;}
 
 /* variable 지원여부 파악 */
 
