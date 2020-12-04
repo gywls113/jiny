@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* strawberry_farm_sub2.css */
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* design */
+
+/* ----------------------------------------------- */
+#wrap { 
+  width: 1600px; height: 1820px;
+  margin: auto;
+}
+ 
+/* ----------------------------------------------- */
+#spotBox {
+  width: 1600px; height: 1140px;
+  padding: 150px 170px 70px; box-sizing: border-box;
+}
+ #spotBox ul {width: 1260px; height: 960px;}
+ #spotBox ul li {
+  float: left; width: 620px; height: 450px;
+  margin: auto; margin-left: 20px; margin-bottom: 20px;
+  background-repeat: no-repeat; background-position: 50% 50%;
+ }
+ #spotBox ul li:nth-child(1) {margin-left: 0; background-image: url("../../img/sub2/placeBox_01.png");}
+ #spotBox ul li:nth-child(2) {background-image: url("../../img/sub2/placeBox_02.png");}
+ #spotBox ul li:nth-child(3) {margin-left: 0; margin-bottom: 0; background-image: url("../../img/sub2/placeBox_03.png")}
+ #spotBox ul li:nth-child(4) {margin-bottom: 0; background-image: url("../../img/sub2/placeBox_04.png")}
+ .spot_textbox {
+   width: 620px; height: 90px;
+   padding: 20px 160px; box-sizing: border-box; 
+   background-color: rgba(0,0,0,0.7);
+ }
+ .spot_text {
+   width: 300px; height: 50px;
+   font-family: 'NanumSquareRound',sans-serif; font-size: 48px;
+   color: #fff; font-weight: 700; line-height: 120%; text-align: center;
+ }

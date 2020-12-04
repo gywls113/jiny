@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* strawberry_farm.css */
+
+
+.title {
+  width: 460px; height: 80px;
+  margin: auto;
+  /* background-color: #abc; */
+}
+  .title_text {
+    width: 300px; height: 50px; margin: auto;
+    font-family: 'NanumSquareRound',sans-serif; font-size: 50px;
+    font-weight: 900; text-align: center; line-height: 50px;
+  }
+  .title_line {
+    width: 100%; height: 7px;
+    margin: auto; margin-top: 20px;
+    background-color: #ccc;
+  }
+
+/* design */
+
+/* ----------------------------------------------- */
+#wrap { 
+  width: 1600px; height: 4040px;
+  margin: auto;
+}
+
+/* ----------------------------------------------- */
+#viewBox {
+  width: 100%; height: 790px;
+  position: relative;
+  background-color: #999;
+}
+  .view_btn {
+    width: 1420px; height: 0; 
+    position: absolute; top: 370px; left: 0; right: 0; z-index: 50;
+    margin: auto;
+  }
+    .view_btn button{
+      width: 80px; height: 80px;
+      background-image: url("../../img/button.png");background-repeat: no-repeat; 
+    }
+    .next_btn {float: right; background-position: -1352px 0;}
+    .prev_btn {float: left; background-position: 0 0;} /* ----btn */
+  
+  .view_img {
+    width: 100%; height: 790px;
+    position: relative; left: 0; top: 0;
+  }
+    .view_img > div {
+      float: left; position: absolute;
+      width: 100%; height: 790px;
+    }
+    .view_img_01 {
+        background-image: url("../../img/main1.png"); background-repeat: no-repeat;
+        background-position: 50% 50%; z-index: 2;}
+    .view_img_02 {
+        background-image: url("../../img/main2.png"); background-repeat: no-repeat;
+        background-position: 50% 50%; z-index: 1;} /* ----img */
+
+  .view_text {
+    width: 780px; height: 280px;
+    position: absolute; top: 220px; left: 390px; z-index: 3;
+    padding: 15px; box-sizing: border-box;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 30px;
+  }
+    .view_textline {
+      width: 750px; height: 250px;
+      border: 3px solid #ff0000;
+      border-radius: 30px; box-sizing: border-box;
+    }
+      .view_text_title {
+        width: 635px; height: 40px;
+        margin: auto; margin-top: 65px; 
+        font-family: NanumSquareRound, sans-serif;
+        font-size: 35px; text-align: center; line-height: 38px;
+        color: #f00; font-weight: 900;
+      }
+      .view_text_content {
+        width: 450px; height: 60px;
+        margin: auto; margin-top: 20px;
+        font-family: NanumSquareRound, sans-serif;
+        font-size: 23px; text-align: center; line-height: 150%;
+        color: #333; font-weight: 600;
+      } /* ----text */
+
+  .view_indicate {
+    width: 150px; height: 50px;
+    position: absolute; left: 725px; bottom: 60px;
+    margin: auto; z-index: 3;
+    padding: 7px 27px;
+    background-color: #fff;
+    border: 3px solid #f00; border-radius: 15px; 
+    box-sizing: border-box;
+  }
+      .view_indicate > button {
+        float: left; width: 30px; height: 30px;
+        margin: auto; margin-left: 30px;
+        background-image: url("../../img/view_slide_icon_01.png");
+        background-repeat: no-repeat; background-position: center;
+        background-size: contain;
+      }
+.view_indicate > button:hover {
+    background-image: url(../../img/view_slide_icon_02.png);
+    background-repeat: no-repeat; background-position: center;
+    background-size: contain;
+} 
+.view_indicate > button:nth-child(1) {
+    background-image: url("../../img/view_slide_icon_02.png");
+    margin-left: 0;} /* ----indicate */
+      
+/* ----------------------------------------------- */
+#reservationBox {
+  width: 100%; height: 520px;
+  padding: 70px 170px; box-sizing: border-box;
+  background-color: #fff;
+}
+
+  .reservation_content {width: 1260px; height: 240px;}
+    .reservation_content > div {
+      float: left; margin: auto; margin-top: 60px; margin-left: 20px;
+      width: 620px; height: 240px;
+      background-color: #fff; border: 2px solid #888;
+      border-radius: 32px; box-sizing: border-box;
+    }
+    .reservation_content > .reservation_individual {margin-left: 0;}
+      .reser_content_line {
+        float: left;
+        width: 100%; height: 30px;
+        background-color: #e00000;
+        border-radius: 30px 30px 0 0;
+      }
+      .reser_content_text {
+        float: left;
+        margin: auto; margin-top: 40px; margin-left: 60px;
+        width: 300px; height: 130px;
+        /* background-color: #abc; */
+      }
+        .reser_content_title {
+          width: 220px; height: 60px;
+          font-family: 'NanumSquareRound', sans-serif; color: #333;
+          font-weight: 900; font-size: 60px; line-height: 60px;
+          
+        }
+        .reser_content_button {
+          width: 300px; height: 60px;
+          margin: auto; margin-top: 20px;
+          background-color: #ccc;border-radius: 30px;
+          font-family:'NanumSquareRound', sans-serif; color: #fff; 
+          font-size: 36px; font-weight: 900;
+        }
+        .reser_content_button:hover,
+        .reser_content_button:focus {background-color: #555;}
+      .reser_content_icon {
+        float: right; width: 140px; height: 130px;
+        margin: auto; margin-top: 40px; margin-right: 60px;
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: contain;
+      }
+        .icon_01 {background-image: url("../../img/icon_individual.png")}
+        .icon_02 {background-image: url("../../img/icon_group.png")}
+
+/* ----------------------------------------------- */
+#experienceBox {
+  width: 100%; height: 650px;
+  padding: 70px 170px; box-sizing: border-box;
+  background-image: url("../../img/experience_bg.png");
+  background-repeat: no-repeat; background-position: 50% 50%;
+}
+  .experience_content {
+    width: 1260px; height: 370px;
+    margin: auto; margin-top: 60px;
+    /* background-color: #abc; */
+  }
+  .experience_content > ul {width: 100%; height: 100%;}
+  .experience_content > ul > li {
+    float: left; width: 300px; height: 370px; cursor: pointer;
+    margin: auto; margin-left: 20px; border-radius: 30px;
+    background-repeat: no-repeat; background-position: 50% 50%;
+  }
+.experience_content a {display: block; width: 100%; height: 100%;}
+
+  .experience_content > ul > li:nth-child(1) {
+      margin-left: 0; background-image: url("../../img/experience_box1.png");}
+  .experience_content > ul > li:nth-child(1):hover {
+      background-image: url("../../img/experience_box1_hover.png");}
+  .experience_content > ul > li:nth-child(2) {
+    background-image: url("../../img/experience_box2.png");
+}  
+  .experience_content > ul > li:nth-child(2):hover {
+      background-image: url("../../img/experience_box2_hover.png");
+}
+  .experience_content > ul > li:nth-child(3) {
+      background-image: url("../../img/experience_box3.png");
+}
+  .experience_content > ul > li:nth-child(3):hover {
+      background-image: url("../../img/experience_box3_hover.png");
+}
+  .experience_content > ul > li:nth-child(4) {
+      background-image: url("../../img/experience_box4.png");
+}
+  .experience_content > ul > li:nth-child(4):hover {
+      background-image: url("../../img/experience_box4_hover.png");
+}
+
+  .ex_content_title {
+    width: 140px; height: 60px; margin: auto; 
+    font-family: 'NanumSquareRound', sans-serif; color: #fff;
+    font-size: 30px; text-align: center; line-height: 370px; font-weight: 900;  
+  }
+/* ----------------------------------------------- */
+#noticeBox {width: 100%; height: 800px;}
+  .noticeBox_img_area {
+    float: left; width: 800px; height: 800px;
+    background-image: url("../../img/notice_bg.png"); background-size: cover;
+    background-repeat: no-repeat; background-position: 50% 50%;
+  }
+  .noticeBox_text_area {
+    float: right; width: 800px; height: 800px; 
+    padding: 70px 90px 70px 100px; box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  .notice_content {
+    width: 620px; height: 440px;
+    margin: auto; margin-top: 60px;
+  }
+    .notice_content > ul {
+      width: 100%; height: 100%;
+    }
+    .notice_content > ul > li {
+      width: 620px; height: 130px;
+      margin: auto; margin-bottom: 25px;
+    }
+    .notice_content > ul > li:nth-child(3) {margin-bottom: 0;}
+      .notice_content_icon {
+        float: left; width: 60px; height: 70px;
+        margin: auto; margin-right: 20px; margin-bottom: 20px;
+        background-image: url("../../img/icon_check.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+      }
+      .notice_content_title {
+        float: right; width: 540px; height: 70px;
+        margin: auto; margin-bottom: 20px;
+        font-family: 'NanumSquareRound', sans-serif; color: #333;
+        font-size: 21px; line-height: 90px; font-weight: 600;
+      }
+      .notice_content_text {
+        float: left; width: 620px; height: 40px;
+        font-family: 'NanumSquareRound', sans-serif; color: #555;
+        font-size: 18px; line-height: 25px; font-weight: 300;
+        text-indent: 80px;
+      }
+
+  .notice_plus {
+    width: 60px; height: 60px;
+    margin: auto; margin-top: 20px; margin-left: 280px;
+    background-image: url("../../img/icon_plus.png");
+    background-repeat: no-repeat; background-position: 50% 50%;
+  }
+
+/* ----------------------------------------------- */
+#epilogueBox {position: relative; width: 100%; height: 800px;}
+  .epilogueBox_img_area {
+    float: left; width: 800px; height: 800px;
+    padding: 70px 100px 70px 90px; box-sizing: border-box;
+    background-color: #fff;
+  }
+    .epilogue_photo {
+      width: 1030px; height: 510px;
+      position: absolute; left: 0; bottom: 70px;
+      /* background-color: #abc; */
+    }
+      .epilogue_button {
+        float: left;
+        width: 300px; height: 50px;
+        margin: auto; margin-left: 250px; margin-top: 110px;
+      }
+        .epiloug_next_btn {
+          float: left; width: 140px; height: 50px;
+          margin: auto; margin-right: 20px;
+          background-image: url("../../img/icon_left.png");
+          background-repeat: no-repeat; background-position: 50% 50%;
+        }
+        .epiloug_prev_btn{
+          float: left; width: 140px; height: 50px; 
+          background-image: url("../../img/icon_right.png");
+          background-repeat: no-repeat; background-position: 50% 50%;
+        }
+      .epilogue_photo_01 {
+        float: right; width: 460px; height: 510px;
+        margin: auto; margin-left: 20px;
+        background-image: url("../../img/epilogue_03.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+      }
+      .epilogue_photo_02 {
+        float: left; width: 230px; height: 330px;
+        margin: auto; margin-top: 20px;
+        background-image: url("../../img/epilogue_01.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+      }
+      .epilogue_photo_03 {
+        float: left; width: 300px; height: 330px;
+        margin: auto; margin-left: 20px; margin-top: 20px;
+        background-image: url("../../img/epilogue_02.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+      }
+    
+  .epilogueBox_text_area {
+    float: right; width: 800px; height: 800px;
+    background-image: url("../../img/epilouge_bg.png");
+    background-repeat: no-repeat; background-position: 50% 50%;
+  }
+    .epilogue_textbox {
+      position: absolute; top: 220px; right: 170px;
+      width: 380px; height: 230px;
+    }
+    .epilogue_text_title {
+      width: 380px; height: 50px; margin: auto; margin-bottom: 20px;
+      font-family: 'NanumSquareRound', sans-serif; color: #fff;
+      font-size: 44px; line-height: 44px; font-weight: 900;
+    }
+    .epilogue_text_content {
+      width: 380px; height: 120px; margin: auto; margin-bottom: 20px;
+      font-family: 'NanumSquareRound', sans-serif; color: #fff;
+      font-size: 24px; line-height: 30px; font-weight: 400;
+    }
+    .epilogue_text_date {
+      width: 380px; height: 20px;
+      font-family: 'NanumSquareRound', sans-serif; color: #fff;
+      font-size: 18px; line-height: 18px; font-weight: 100;
+    }
+
+

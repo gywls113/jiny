@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* strawberry_farm_sub3.css */
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* design */
+
+/* ----------------------------------------------- */
+#wrap { 
+  width: 1600px; height: 1820px;
+  margin: auto;
+}
+
+
+/* ----------------------------------------------- */
+#reservationBox {
+  width: 1600px; height: 1760px;
+  padding: 150px 170px 70px; box-sizing: border-box; 
+}
+
+  .reservation_info {
+    width: 1270px; height: 570px; 
+    padding: 40px 150px; box-sizing: border-box;
+    background-color: #ededed; border: 5px solid #ff0000;
+    border-radius: 30px;}
+    .reservation_info div {margin: auto; margin-bottom: 20px;}
+      .reservation_info div:nth-of-type(4) {margin-bottom: 0;}
+    .reser_info_title {
+        width: 340px; height: 70px; font-weight: 900;
+        font-family: 'NanumSquareRound',sans-serif;
+        text-align: center; font-size: 48px; line-height: 48px;
+}
+    .reser_info_txt01 {width: 100%; height: 160px;}
+    .reser_info_txt02 {width: 100%; height: 40px;}
+    .reser_info_txt03 {
+        width: 100%; height: 150px; font-weight: 100;
+        font-family: 'NanumSquareRound',sans-serif;
+        font-size: 24px; line-height: 31px;
+}
+
+    .reservation_info>div>div {float: left; margin: auto; margin-left: 20px;}
+    .reservation_info>div>div:nth-of-type(1) {margin-left: 0;}
+    .txt_content_icon {
+        width: 60px; height: 40px;
+        background-image: url("../../img/sub4/icon.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+}
+    .txt_content_title {
+        width: 140px; height: 40px;
+        font-family: 'NanumSquareRound',sans-serif;
+        font-size: 30px; line-height: 42px; font-weight: 700;
+}
+    .txt_content_text {
+        width: 720px; height: 100%;
+        font-family: 'NanumSquareRound',sans-serif;
+        font-size: 30px; line-height: 42px; font-weight: 400;
+}
+        .txt_content_text p {color : #e00000;}
+
+  .reservation_check {
+    width: 1260px; height: 880px;
+    margin: auto; margin-top: 100px;
+  }
+    .reser_check_titlearea {width: 100%; height: 80px;}
+      .reser_check_titlearea ul {width: 100%; height: 100%;}
+      .reser_check_titlearea ul li{
+        float: left; width: 630px; height: 100%; 
+        padding: 15px 200px; box-sizing: border-box;
+        font-family: 'NanumSquareRound',sans-serif; color: #333;
+        font-size: 48px; line-height: 48px; font-weight: 900;
+        text-align: center; background-color: #ffe9e9;
+        }
+    .reser_check_titlearea ul li:nth-child(1){
+    border-top-left-radius: 30px; background-color: #f00; color: #fff;
+    }
+    .reser_check_titlearea ul li:nth-child(2){
+    border-top-right-radius: 30px; 
+    }
+        .reser_check_titlearea ul li:hover {
+            background-color: #f00; color: #fff;}
+        .titlearea_title {width: 230px; height: 50px;}
+    .reser_check_contentarea {width: 100%; height: 800px;}
+      .check_individual {
+        float: left; width: 100%; height: 100%; z-index: 5;
+        background-color: #fff; border: 5px solid #ff0000;
+        border-bottom-left-radius:30px; border-bottom-right-radius:30px;
+        box-sizing: border-box;
+}
+        .check_group { display: none;
+        float: left; width: 100%; height: 100%; z-index: 4; background-color: #fdf;}  
+        .check_calender {
+          width: 1100px; height: 670px; margin: auto ; margin-top: 40px; background-image: url("../../img/sub4/calender.png");
+          background-repeat: no-repeat; background-position: 50% 50%;
+        } 
+        .check_text {width: 1100px; height: 40px;
+         margin: auto; margin-top: 20px;
+        font-family: 'NanumSquareRound',sans-serif; color: #333;
+        font-size: 24px; line-height: 24px; font-weight: 400;
+        }

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------- */
+#sub_titleBox {
+  width: 1600px; height: 200px;
+  padding: 50px 570px; box-sizing: border-box;
+  background-image: url("../../img/title_bg.png");
+  background-repeat: no-repeat; background-position: 50% 50%;
+}
+  .sub_tilte_textbox {
+    width: 460px; height: 100px; margin: auto;
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 900; font-size: 60px; line-height: 100px;
+    color: #fff; text-align: center;
+  }
