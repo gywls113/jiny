@@ -30,7 +30,7 @@
             break;
         }
     }
-    //console.log(actionIndex);
+    console.log(actionIndex);
     return actionIndex;
     }
     // =============================
