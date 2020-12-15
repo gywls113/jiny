@@ -30,7 +30,7 @@
     var indiArea = indiCon.children('ul');
     
    // 기본 세팅 
-    var myViewLen = 70; // 한번에 보일 갯수
+    var myViewLen = 20; // 한번에 보일 갯수
 
    // 인디케이터 생성하기
     var indiLen = Math.ceil(dataFile.length / myViewLen);
@@ -40,9 +40,35 @@
       indiArea.append(indiCode);
       indiLi = indiArea.children('li').eq(indiN);
       indiLi.find('a').text(indiN + 1);
+      
     }
+    // 인디케이터 보일 갯수 조정하기
+    var indiviewLen = 5; 
+    var iv = 0;
+    indiLi = indiArea.children('li');
+    var memoryN;
+    for(; iv < indiLen; iv += 1){
+      if(iv < indiviewLen){
+        memoryN = iv + 1;
+        continue;
+      }else{
+        indiLi.eq(iv).hide();
+      }
+    };
 
-
+    var nBtn = indiCon.find('.next_notice');
+    var pBtn = indiCon.find('.prev_notice');
+    
+    nBtn.on('click',function(e){
+      e.preventDefault();
+      var nbn = memoryN;
+      indiLi.hide();
+      for(; nbn < memoryN + indiviewLen; nbn += 1){
+        indiLi.eq(nbn).show();
+      };
+      memoryN = nbn;
+    })
+    
     // 내용 넣기
     var reSetting = function(n){
       var i = 0;
