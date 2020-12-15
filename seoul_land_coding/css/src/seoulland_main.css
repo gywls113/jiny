@@ -939,7 +939,7 @@ adress > p {text-align: left; color: #fff;line-height: 16px;}
 
     /* #viewBox */
     #viewBox {}
-
+  .view_indicator{bottom: 50px;}
     /* ========================================== */
 
     /* #promotionBox */
