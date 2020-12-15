@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------- */
+#headBox {
+  width: 100%; height: 160px;
+  position: relative;
+  background-color: #fff;
+}
+
+ /* ----logo */
+h1 {
+width: 250px; height: 80px;
+position: absolute; top: 70px; left: 170px;
+}
+h1 > a {display: block; width: 100%; height: 100%;
+    background-image: url("../../img/logo_image.png");
+    background-repeat: no-repeat; background-position: 0 50%;}
+
+/* ----user */
+.headBox_sns {
+    width: 220px; height: 30px;
+    position: absolute; top: 10px; left: 170px;
+}
+
+#headBox ol {
+    width: 720px; height: 60px;
+    position: absolute; top: 160px; right: 170px; z-index: 100;
+    background-color: #fff;
+}
+#headBox ol li {
+    float: left; width: 100%; height: 60px;
+}
+
+.headBox_sns > ul {width: 100%; height: 100%;}
+.headBox_sns > ul > li {
+    float: left;
+    width: 40px; height: 30px;
+    margin: auto; margin-right: 20px;
+}
+.headBox_sns > ul > li:nth-child(4) { margin-right: 0;}
+
+.headBox_sns > ul > li a {
+    display: block; width: 100%; height: 100%;
+    background-repeat: no-repeat; background-position: 50% 50%;}
+.headBox_sns > ul > li:nth-child(1) a {background-image: url("../../img/insta_logo.png");}
+.headBox_sns > ul > li:nth-child(2) a {background-image: url("../../img/facebook_logo.png");}
+.headBox_sns > ul > li:nth-child(3) a {background-image: url("../../img/twitter_logo.png");}
+.headBox_sns > ul > li:nth-child(4) a {background-image: url("../../img/youtube_logo.png");}/* ----sns */
+
+.headBox_user {
+    width: 160px; height: 30px;
+    position: absolute; right: 170px; top: 10px;
+}
+.headBox_user > ul {width: 100%; height: 100%;}
+.headBox_user > ul > li {
+    float: left;
+    width: 65px; height: 30px;
+    margin: auto; margin-right: 10px;
+}
+.headBox_user > ul > li:nth-child(2) {
+    width: 4px; background-color: #ddd;
+    margin: 0;
+}
+.headBox_user > ul > li:nth-child(3) {margin-right: 0;}
+
+.headBox_user > ul > li a {
+    display: block; width: 100%; height: 100%;
+    background-image: url("../../img/userinterface.png");
+    background-repeat: no-repeat;
+}
+.headBox_user > ul > li:nth-child(1) a {background-position: -20px 50%;}
+.headBox_user > ul > li:nth-child(3) a {background-position: -100px 50%; }
+
+/* ----menu */
+#navBox {
+    width: 742px; height: 60px;
+    position: absolute; right: 170px; bottom: 10px;}
+#navBox > ul {width: 100%; height: auto;}
+#navBox > ul > li {
+    float: left; width: 128px; height: 60px;
+    margin: auto; margin-right: 20px;
+    padding-bottom: 10px;
+} 
+#navBox > ul > li:nth-child(3) {width: 150px;}
+#navBox > ul > li:nth-child(5) {margin-right: 0;}
+
+#navBox > ul > li a {
+    font-family: NanumSquareRound, sans-serif; font-weight: 900;
+    font-size: 28px; text-align: center; line-height: 70px;}
+
+#navBox > ul > li a:hover,#navBox > ul > li a:focus {color: #f00;}
+
+/* ----sub_menu */
+#navBox ol { display: none;
+    width: auto; min-width: 280px; height: 60px; 
+    position: absolute; top:70px; left: 0;
+    padding: 15px 20px; box-sizing: border-box;
+    border-radius: 0 0 30px 30px;
+    background-color: #555;
+}
+
+#navBox>ul>li:nth-of-type(1) ol {width: 540px;}
+#navBox>ul>li:nth-of-type(2) ol {width: 540px; left: 148px;}
+#navBox>ul>li:nth-of-type(3) ol {width: 410px; left: 296px;}
+#navBox>ul>li:nth-of-type(4) ol {width: 280px; left: 288px;}
+#navBox>ul>li:nth-of-type(5) ol {width: 280px; left: 446px;}
+
+#navBox ol li {
+    float: left; margin:auto; margin-right: 20px;
+    width: 110px; height: 30px;
+    background-color: none;
+}
+
+#navBox ol li:last-of-type {margin-right: 0;} 
+
+#navBox ol li a {
+    display: block; width: auto; height: 30px;
+    text-align: center; line-height: 30px;
+    font-size: 24px; color: #fff;
+}
+
+#navBox ol li > a:focus {color: #f00;}
+
+
+/* ----headBox line */
+  .headBox_line {
+    width: 100%; height: 10px;
+    position: absolute; top: 50px;
+    background-color: #e00000;
+  }
