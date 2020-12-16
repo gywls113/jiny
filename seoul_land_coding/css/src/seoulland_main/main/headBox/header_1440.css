@@ -1,0 +1,12 @@
+/* header_1440.css */
+
+@media screen and (min-width:64.062rem) and (max-width:90rem) {
+  
+    /* #headBox */
+    .headbottom_wrap p {display: none;}
+    .line_02 {transform: translateY(-1.25rem);}
+    .line_03{transform: translateY(1.25rem);}
+  
+    /* ========================================== */
+  
+}

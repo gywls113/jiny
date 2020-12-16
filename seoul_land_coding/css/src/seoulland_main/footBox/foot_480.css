@@ -1,0 +1,16 @@
+/* foot_480.css */
+
+@media screen and (max-width:30rem){
+  
+   /* #footBox */
+    #footBox {min-width: 12.5rem; height: auto; 
+        padding: 6.25rem 1.25rem 7.5rem;}
+    .footer_adress {width: 100%; min-width: 12.5rem;}
+    .footer_adress h2 {float: none; margin-bottom: 2.5rem;
+        width: 12.5rem; height: 3.5rem;}
+    adress {float: none; width: 100%; height: auto;}
+    .app_down {width: 100%;}
+    .family_site_area {display: none;}
+  
+  /* ========================================== */
+}

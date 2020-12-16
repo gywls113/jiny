@@ -1,0 +1,15 @@
+/* information_1440.css */
+
+@media screen and (min-width:64.062rem) and (max-width:90rem) {
+  
+    /* #informationBox */
+    .info_full_box {height: 33.75rem;}
+    .info_full_box ul {height: 20.625rem;}
+    .info_full_box ul li {width: 30%; margin-left: 5%;
+        padding: 1.25rem;}
+    .info_full_box ul li:nth-child(4) {display: none;}
+    .info_full_box ul li div {height: 12.5rem;}
+  
+    /* ========================================== */
+  
+}

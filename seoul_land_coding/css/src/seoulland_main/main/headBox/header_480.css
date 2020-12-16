@@ -1,0 +1,54 @@
+/* header_480.css */
+
+@media screen and (max-width:30rem){
+  
+  /* #headBox */
+    #headBox {position: relative; min-width: 16.25rem; 
+        height: 6.875rem; min-height: 6.875rem;
+        background-color: #0f0915;}
+    .headBottom {padding: 3.75rem 1.25rem 1.25rem; min-width: 13.75rem;}
+    h1 {width: 6.875rem; min-width: 6.875rem; height: 1.875rem;}
+    .headbottom_wrap p {display: none;}
+    #navBox {width: 2.812rem;}
+    .menuBox {width: 1.875rem; height: 1.875rem;}
+    .searchBox {display: none;}
+    .headtop_wrap {min-width: 13.75rem;}
+    .sns_wrap {position: relative; width: 1.625rem;}
+    .sns_mobile_icon {position: absolute; top: 0; left: 0; z-index: 50;
+      display: block; width: 100%; height: 100%;}
+    .sns_mobile_icon button {width: 100%; height: 100%;
+        background-image: url("../../../../../img/main/headBox/share%20icon.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: contain;}
+    .snsBox {position: absolute; display: none; top:0; left: 0; z-index: 40; 
+          width: 91.6666666vw; min-width: 13.75rem; height: 100%; 
+          background-color: var(--color-darkred);}
+  
+    .snsBox li {width: 1.625rem; margin-left: .937rem;}
+    .snsBox li:first-child {margin-left: 2.5rem;}
+  
+  
+  
+  
+    .menu_btn i {width: 1.875rem; min-width: 1.875rem; height: .125rem;}
+    .line_02 {transform: translateY(-.625rem);}
+    .line_03{transform: translateY(.625rem);}
+    .menu_area_wrap {position: absolute; 
+        top: -3.75rem; left: 50%; transform: translateX(-50%);
+        width: 100vw; height: 93.75rem; min-height: 93.75rem;
+        padding:3.75rem 0 7.5rem; box-shadow: 0 0 .625rem #333;}
+    .red_logo {display: none;}
+    .menu_area {width: 100%; min-width: 13.75rem; 
+        max-width: 25rem; height: 78.75rem; margin-top: 6.25rem;}
+    .menu {float: none; width: 80%; height: 25%; margin: auto;}
+    .menu::after {top:18.125rem; left: 0;
+        width: 100%; height: .125rem;}
+    .menu:last-child::after {display: none;}
+    .menu dl {width: 100%; height: 100%;}
+    .menu dt {height: 15%; line-height: 1.875rem;}
+    .menu dt::before {display: none;}
+    .menu dd {height: 75%; margin-top: 10%;}
+
+    /* ========================================== */
+  
+}

@@ -1,0 +1,28 @@
+/* promotion_480.css */
+
+@media screen and (max-width:30rem){
+  
+  /* #promotionBox */
+    #promotionBox {height: 41.875rem; min-height: 41.875rem; 
+        padding: 6.25rem 1.25rem 7.5rem; margin-top: 3.125rem;}
+    .pro_full_wrap {width: 92.5vw; min-width: 13.75rem;}
+    .promotion_wrap {width: 80%; margin: auto; margin-top: 2.5rem; 
+        height: 14.375rem; min-height: 14.375rem; overflow: hidden;}
+    .promotion_wrap ul {width: 800%; height: 100%;}
+    .promotion_wrap ul li {width: 12.5%; height: 14.375rem;}
+    .promotion_plus {top: auto; bottom: 0; left: 50%; 
+        transform: translate(-50%); width: 13.75rem;}    
+    .pro_full_wrap > h2 {width: 13.75rem; height: 6.25rem; white-space: pre-line; }
+    .promotion_btn {display: block; position: absolute; z-index: 100; 
+        top: 14.687rem; left: 50%; transform: translate(-50%);
+        width: 100%; min-width: 15rem; height: 0;}
+    .promotion_btn button{width: 10%; height: 3.437rem;
+        background-repeat: no-repeat; background-size: contain;
+        background-position: 50% 50%;}
+    .promotion_next_btn {float: right; 
+        background-image: url("../../../../../img/main/promotionBox/nextbtn.png");}
+    .promotion_prev_btn {float: left; 
+        background-image: url("../../../../../img/main/promotionBox/prevbtn.png");}
+    /* ========================================== */
+  
+}

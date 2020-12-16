@@ -1,0 +1,11 @@
+/* promotion_1440.css */
+
+@media screen and (min-width:64.062rem) and (max-width:90rem) {
+  
+    /* #promotionBox */
+    .pro_full_wrap {height: 33.75rem;}
+    .promotion_wrap {height: 23.75rem; margin-top: 6.875rem;}
+    
+    /* ========================================== */
+  
+}

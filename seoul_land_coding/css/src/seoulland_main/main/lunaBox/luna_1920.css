@@ -1,0 +1,79 @@
+/* luna_1920.css */
+
+/* ========================================== */
+
+/* #lunaBox */
+#lunaBox {position: relative; background-size: cover; 
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-image: url("../../../../../img/main/lunaBox/luna_bg.png");}
+#lunaBox::before {content: ""; display: block; position: absolute; 
+    top: 0; left: 0; z-index: 1; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.4);}
+.luna_full_wrap {position: relative; z-index: 2;
+    width: 62.625vw; min-width: 56.25rem;
+    height: 39.375rem; margin: auto;}
+.luna_full_wrap > h2 {color: #fff;}
+.luna_btn_content_wrap {position: relative; 
+    width: 100%; height: 33.75rem;}
+
+/* #lunaBox - 전체 button */
+.luna_button {position: absolute; top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 40; width: 90%; height: 0;}
+.luna_button button {width: 3.75rem; height: 9.375rem;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain;}
+.luna_next_btn {float: right; 
+    background-image: url("../../../../../img/main/lunaBox/right_btn.png");}
+.luna_prev_btn {float: left; 
+    background-image: url("../../../../../img/main/lunaBox/left_btn.png");}
+
+/* #lunaBox - content */
+
+.luna_wrap {width: 100%; height: 100%;
+    margin: auto; margin-top: 2.5rem; box-sizing: border-box; 
+    overflow: hidden;}
+.luna_wrap ul {position: relative; 
+    width: 300%; height: 100%; min-height: 18.75rem}
+.luna_wrap ul:after,
+.luna_wrap ul::after{content:""; display:block; clear: both;}
+.luna_wrap ul li {position: relative; float: left; width: 33.333333%;
+     height: 100%; box-sizing: border-box; background-color: #fff; 
+     border: .125rem solid #333; border-radius: 1.25rem;}
+.luna_wrap ul li:nth-child(1) {width: 33.333334%}
+.luna_content_wrap {position: absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%); 
+    display: flex; justify-content: center;
+    width: 80%; height: auto; margin: auto;}
+
+/* content_area */
+.luna_content_area {
+    width: 13.54166666vw; min-width: 15.625rem; max-width: 30rem; 
+    height:auto; min-height: 13.125rem; 
+    padding: 3rem 0; box-sizing: border-box;}
+.luna_content_area dl {width: 100%; height:auto;}
+.luna_content_area dl dt {width: 100%; height: 4.375rem; 
+    font-size: 1.5rem; font-weight: 900; word-break: keep-all;
+    text-align: center; color: #333; line-height: 1.875rem;}
+.luna_content_area dl dd {width: 100%; height: auto; 
+    min-height: 7.5rem;
+    margin-top: 2.083333vw; font-size: 1rem; font-weight: 400;
+    text-align: center; color: #333; word-break: keep-all;
+    line-height: 1.25rem;}
+.luna_content_more {width: 100%; height: 1.875rem; margin-top: 1.875rem;
+    color: #333; font-size: 1.25rem; 
+    text-align: center; line-height: 1.875rem;
+    text-decoration: underline; font-weight: 600;}
+
+/* img_area */
+.luna_img_area {width: 25vw; max-width: 37.5rem; 
+    height:26.562rem; margin-left: 3.125rem;
+    background-repeat: no-repeat; background-size: cover;
+    background-position: 50% 50%;}
+
+.luna_mask_img {
+    background-image: url("../../../../../img/main/lunaBox/luna_img_04.jpg");}
+.luna_music_img {
+    background-image: url("../../../../../img/main/lunaBox/luna_img_01.png");}
+.luna_park_img {
+    background-image: url("../../../../../img/main/lunaBox/luna_img_08.jpg")}

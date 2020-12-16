@@ -1,0 +1,13 @@
+/* main_combine.css */
+
+@import url('./main_common.css');
+@import url('./headBox/header_combine.css');
+@import url('./localNavBox/localNav_combine.css');
+@import url('./viewBox/view_combine.css');
+@import url('./promotionBox/promotion_combine.css');
+@import url('./lunaBox/luna_combine.css');
+@import url('./attractionBox/attraction_combine.css');
+@import url('./informationBox/information_combine.css');
+
+
+

@@ -1,0 +1,30 @@
+/* view_480.css */
+
+@media screen and (max-width:30rem){
+  
+   /* #viewBox */
+    #viewBox {height: 79.16666666666667vw;}
+    .view_img_wrap ul li {background-size: cover;}
+    .view_img_01 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_01.jpg");}
+    .view_img_02 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_02.jpg");}
+    .view_img_03 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_03.png");}
+    .view_img_04 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_04.jpg");}
+    .view_img_05 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_05.jpg");}
+    
+    .view_indicator{position: absolute; bottom: -3.125rem; right: 50%;
+        transform: translate(50%); width:100%; height: 3.125rem;
+        padding: .937rem 0; background-color: #0f0915;
+        box-sizing: border-box;}
+    .view_indicator ul {width: 13.75rem; height: 1.875rem; margin: auto;}
+    .view_indicator li {width: 1.25rem; height: 1.25rem; 
+        border: .187rem solid #fff;}
+    .view_indicator li.view_action {width: 3.75rem; 
+        border: .187rem solid #fff;} 
+    /* ========================================== */
+  
+}

@@ -1,0 +1,16 @@
+/* promotion_1024.css */
+
+@media screen and (min-width:30.062rem) and (max-width:64rem) {
+  
+      /* #promotionBox */
+    #promotionBox {height: 270.833333vw; max-height: 81.875rem; 
+        padding: 6.25rem 0 7.5rem; margin-top: 3.125rem;}
+    .pro_full_wrap {width: 76.171875%; min-width: 28.75rem;}
+    .promotion_wrap ul {height: 100%;}
+    .promotion_wrap ul li {width: 50%; height: 14.375rem;
+        padding: 2.9296875% 1.953125%;}
+    .promotion_plus {left: 50%; transform: translate(-50%);}
+
+    /* ========================================== */
+  
+}

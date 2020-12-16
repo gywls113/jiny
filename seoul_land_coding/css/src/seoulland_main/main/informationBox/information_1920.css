@@ -1,0 +1,41 @@
+/* information_1920.css */
+
+/* ========================================== */
+
+/* #informationBox */
+#informationBox {width: 100%; height: 100vh; min-height: 60rem; 
+    background-color: #fff;}
+.info_full_box {width: 65.625vw; min-width: 56.25rem; 
+    height: 100%; margin: auto;}
+.info_full_box p {width: 100%; height: 1.875rem;
+      margin: auto; text-align: center; line-height: 1.875rem; color:#333; 
+     margin-top: 2.5rem; word-break: keep-all;}
+.info_more {width: 15rem; height: 2.5rem; margin: auto; margin-top: 1.25rem;
+    background-color: var(--color-orange); text-align: center;
+    border-radius: .625rem; margin-bottom: 1.875rem;
+    font-size: 1.25rem; font-weight: 600; color: #fff; line-height: 2.5rem;}
+.info_full_box ul {width: 100%; height: 26.25rem}
+.info_full_box ul li {float: left; width: 22%; 
+    height: 100%; padding: 1.875rem; box-sizing: border-box; 
+    margin-left: 4%; background-color: #fff;
+    border: .062rem solid #333;}
+.info_full_box ul li:hover {outline: .187rem solid #f70;}
+.info_full_box ul li a {outline: 0;}
+.info_full_box ul li:first-child {margin-left: 0}
+.info_full_box ul li div {width: 100%; height: 15rem;
+    margin-bottom: 1.875rem; background-position: 50% 50%;
+    background-repeat: no-repeat; background-size: contain;}
+.info_text {width: 100%; height: auto;}
+.info_text dt {width: 100%; height: 1.25rem; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; color: #333;
+    font-weight: 600; font-size: 1.25rem;
+    text-align: left; line-height: 1.25rem; margin-bottom: 1.25rem;}
+/* info_image */
+.info_img_01 {
+    background-image: url("../../../../../img/main/infoBox/info_img_01.png");}
+.info_img_02 {
+    background-image: url("../../../../../img/main/infoBox/info_img_02.png");}
+.info_img_03 {
+    background-image: url("../../../../../img/main/infoBox/info_img_03.png");}
+.info_img_04 {
+    background-image: url("../../../../../img/main/infoBox/info_img_04.png");}

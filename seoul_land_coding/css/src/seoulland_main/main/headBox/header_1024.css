@@ -1,0 +1,44 @@
+/* header_1024.css */
+
+@media screen and (min-width:30.062rem) and (max-width:64rem) {
+  
+   /* #headBox */
+    #headBox {position: relative; background-color: #0f0915;}
+    .headbottom_wrap p {display: none;}
+    .headBottom {padding: 3.75rem 3.75rem 1.25rem}
+    
+    .sns_wrap {position: relative; width: 1.625rem;}
+    
+    .sns_mobile_icon {position: absolute; top: 0; left: 0; z-index: 50;
+      display: block; width: 100%; height: 100%;}
+    .sns_mobile_icon button {width: 100%; height: 100%;
+        background-image: url("../../../../../img/main/headBox/share%20icon.png");
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: contain;}
+    
+    .snsBox {position: absolute; display: none; top:0; left: 0; z-index: 40; 
+          width: 76.171875vw; min-width: 18.75rem; height: 100%; 
+          background-color: var(--color-darkred);}
+    .snsBox li {width: 1.625rem; margin-left: 1.25rem;}
+    .snsBox li:first-child {margin-left: 3.75rem;}
+    .line_02 {transform: translateY(-1.25rem);}
+    .line_03{transform: translateY(1.25rem);}
+    .menu_area_wrap {position: absolute; top:-3.75rem; left: 50%; 
+        transform: translateX(-50%); width: 100vw;
+        height: 62.5rem; min-height: 62.5rem; padding:3.75rem 0 7.5rem;
+        box-shadow: 0 0 .625rem #333;}
+    .menu_area {width: 76.171875%; min-width: 28.75rem;
+    max-width: 56.5rem; height: 45rem; margin: auto; margin-top: 9.375rem;}
+    .red_logo {margin-left: 3.75rem;}
+    .menu {float: none; width: 100%; height: 25%}
+    .menu::after {top:11.25rem; left: 0; width: 100%; height: .125rem;}
+    .menu dl {padding: 1.25rem; box-sizing: border-box;}
+    .menu dt {float: left; width: 50%; height: 100%; line-height: 14.375rem;}
+    .menu dt::before {top:0; width: 3.75rem; height: 3.75rem;}
+    .menu dd {float: right; width: 50%; height: 100%; 
+        margin-top: 1.25rem; line-height: 2.187rem;}
+    .menu .menu_02_list {margin-top: 0;}
+    
+    /* ========================================== */
+  
+}

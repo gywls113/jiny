@@ -10,12 +10,13 @@
     var localOffset = localNav.offset().top; // 로컬네비가 얼마나 떨어져있는가
     var localBottom = localOffset + localHeight; // 인디케이터 전까지의 높이값
     
+    console.log(localBottom);
     //브라우저 상단에 떨어져있는 양 체크
     var viewIndiOffset = viewIndi.offset().top;
     //console.log(viewIndiOffset);
 
     var offsetRel = viewIndiOffset - localBottom; // 로컬네비와 인디케이터 사이의 갭
-        
+    console.log(offsetRel);
     //viewIndi.hide();
     
     //1. 스크롤시 $('#headBox')상단 고정

@@ -1,0 +1,6 @@
+/* localNav_combine.css */
+
+@import url('./localNav_1920.css');
+@import url('./localNav_1440.css');
+@import url('./localNav_1024.css');
+@import url('./localNav_480.css');

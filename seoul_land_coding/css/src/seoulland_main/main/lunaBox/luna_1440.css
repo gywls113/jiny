@@ -1,0 +1,13 @@
+/* luna_1440.css */
+
+@media screen and (min-width:64.062rem) and (max-width:90rem) {
+  
+    /* #lunaBox */
+    .luna_button {top: 16.020833vw; left:50%; top: 40%; width: 90%;}
+    .luna_button button {width: 3.75rem; height: 5.812rem;}
+    .luna_full_wrap {height: 33.75rem;}
+    .luna_btn_content_wrap {height: 28.125rem;}
+    
+    /* ========================================== */
+  
+}

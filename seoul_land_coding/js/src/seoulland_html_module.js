@@ -37,9 +37,11 @@
        }
        });
     viewBox.load('./seoulland_main/viewBox.html', function(){
-       if(nowW === deviceType[3]){ 
+      setTimeout(function(){
+          if(nowW === deviceType[3]){ 
           viewBox.append('<script src="../js/src/seoulland_main/viewBox_indicator_remove.js"></script>');
        }
+      },100); 
      });
     promotionBox.load('./seoulland_main/promotionBox.html', function(){
        if(nowW === deviceType[0]){ 
@@ -61,7 +63,6 @@
     informationBox.load('./seoulland_main/informationBox.html');
     footBox.load('./seoulland_main/footBox.html', function(){
       setTimeout(function(){
-        console.log(nowW + '000000', deviceType[4]);
         if(nowW === deviceType[4]){ 
         body.append('<script src="../js/src/seoulland_main/main_1920_scroll.js"></script>');
         }

@@ -1,0 +1,27 @@
+/* attraction_1024.css */
+
+@media screen and (min-width:30.062rem) and (max-width:64rem) {
+  
+   /* #attractionBox */
+    #attractionBox {height: 50rem; min-height: 50rem; 
+        padding: 0;}
+    .attraction_full_wrap {top: 6.25rem;
+        width: 76.171875%; min-width: 27.5rem; 
+        height: 36.25rem;}
+    .attraction_wrap {height: 30rem; min-height: 30rem}
+    .attraction_full_wrap > h2 {white-space: pre-line; 
+        width: 18.75rem; height: auto;}
+    .attraction_content {width: 70%;}
+    .attraction_list li {width: 100%}
+    .attraction_list li:nth-child(3),.attraction_list li:nth-child(6){
+    width: 100%;}
+    .attraction_list > li > a:hover {background-size: cover;}
+    .attraction_list > li > a::before {display: none;}
+    .center_line {display: none;}
+    .attraction_animation_03,.attraction_animation_04,
+    .attraction_animation_05 {display: none;}
+    
+    /* ========================================== */
+
+  
+}

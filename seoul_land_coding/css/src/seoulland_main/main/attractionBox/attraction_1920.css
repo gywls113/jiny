@@ -1,0 +1,170 @@
+/* attraction_1920.css */
+
+/* ========================================== */
+
+/* #attractionBox */
+#attractionBox {position: relative; overflow: hidden;}
+.attraction_full_wrap {position: absolute; top: 15rem; left: 50%;
+    transform: translateX(-50%); width: 65.625vw; min-width: 56.25rem;
+    height: 39.375rem; z-index: 30;}
+.attraction_wrap {position: relative; width: 100%; height: 33.75rem;
+    min-height: 9.375rem; margin-top: 2.5rem;}
+
+/* attraction_button */
+.attraction_button {position: absolute; top: 50%; left: 0; z-index: 650;
+     width: 100%; height: 0; }
+.attraction_button button {width: 3.75rem; height: 9.375rem;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: contain; transform: translateY(-50%)}
+.attraction_next_btn {float: right; 
+    background-image: url("../../../../../img/main/attractionBox/right_btn.png");}
+.attraction_prev_btn {float: left; 
+    background-image: url("../../../../../img/main/attractionBox/left_btn.png");}
+
+/* attraction_content */
+.attraction_content  {width: 80%; height: 100%;
+    border: .062rem solid #333; 
+    margin: auto; overflow: hidden; box-shadow: .25rem .187rem .312rem #ccc;}
+/* attraction_content - 글자영역*/
+.attraction_info {padding: 1.875rem 1.25rem; box-sizing: border-box;}
+.attraction_info dl {width: 100%; height: 80%;}
+.attraction_info dt {width: 100%; height: 1.875rem; 
+    font-size: 1.562rem; text-align: left;
+  font-weight: 900; line-height: 1.875rem; 
+    color: #333; margin-bottom: .625rem;}
+.attraction_info dd {width: 100%; height: auto; min-height: 1.25rem;
+  word-break: keep-all; white-space: normal;
+  font-size: 1rem; color: #333; line-height: 1.25rem; text-align: left;}
+.attraction_info div {width: 100%; height: 1.25rem; margin-top: .625rem;
+  font-size: 1.25rem; text-align: left; color: #333; font-weight: 600;
+  text-decoration: underline;}
+/* attraction_content - image영역 */
+.attraction_content > ul {position: relative; z-index: 50;
+    width: 500%; height: 100%;}
+.attraction_content > ul > li {position: absolute; top:0; left: 0;
+    float: left; width: 20%; height: 100%;}
+.attraction_content > ul > li.action {z-index: 100;}
+.attraction_list {width: 100%; height: 100%;}
+.attraction_list li {float: left;
+    width: 33.333333%; height: 50%; background-color: #fff;}
+.attraction_list li:nth-child(3),.attraction_list li:nth-child(6){
+    width: 33.333334%;}
+.attraction_list > li > a {position: relative;
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-size: cover; outline: 0; transition: all 300ms ease;}
+.attraction_list > li > a::before {content: " "; display: block;
+  position: absolute; top: 0; left: 0; opacity: 0; z-index: 50;
+  width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);}
+.attraction_list > li > a:hover::before {opacity: 1;}
+.attraction_list > li > a:hover {background-size: 150% auto;}
+.center_line {display: block; position: absolute; z-index:60; 
+    top: 50%; left: 0; width: 100%; height:0; 
+    text-align: center; color:#fff; font-weight: 600;
+    font-size: 1.562rem;}
+.center_line > .center_text{ display: block; 
+    width: 100%; height: auto; transform:translateY(-10%); 
+    transition: all 300ms ease; opacity:0;}
+.attraction_list > li > a:hover .center_text,
+.attraction_list > li > a:focus .center_text {
+  transform:translateY(-50%); opacity:1;}
+
+/* attraction_content - attraciton이미지삽입*/
+/*attraction_01*/
+.attraction_01_01 a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_02_01.jpg");}
+.attraction_01_02 a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_02_02.jpg");}
+.attraction_01_03 a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_02_03.jpg");}
+.attraction_01_04 a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_02_04.jpg");}
+.attraction_01_05 a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_02_05.jpg");}
+/*attraction_02*/
+.attraction_02_img_area li:nth-child(4) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_01_01.jpg");}
+.attraction_02_img_area li:nth-child(2) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_01_02.png");}
+/*attraction_03*/
+.attraction_03_img_area li:nth-child(2) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_03_01.png");}
+.attraction_03_img_area li:nth-child(3) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_03_02.png");}
+.attraction_03_img_area li:nth-child(4) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_03_03.png");}
+.attraction_03_img_area li:nth-child(5) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_03_04.jpg");}
+.attraction_03_img_area li:nth-child(6) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_03_05.jpg");}
+/*attraction_04*/
+.attraction_04_img_area li:nth-child(2) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_04_01.jpg");}
+.attraction_04_img_area li:nth-child(3) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_04_02.png");}
+.attraction_04_img_area li:nth-child(4) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_04_03.png");}
+.attraction_04_img_area li:nth-child(5) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_04_04.jpg");}
+.attraction_04_img_area li:nth-child(6) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_04_05.jpg");}
+/*attraction_05*/
+.attraction_05_img_area li:nth-child(2) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_05_01.png");}
+.attraction_05_img_area li:nth-child(4) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_05_02.png");}
+.attraction_05_img_area li:nth-child(6) a {
+    background-image: url("../../../../../img/main/attractionBox/attraction_05_03.jpg");}
+/*no_attraction*/
+.attraction_none_img {
+    background-image: url("../../../../../img/main/attractionBox/no_attraction.PNG");
+    background-size: contain; background-repeat: no-repeat;
+    background-position: 50% 100%;}
+
+/* #attractionBox - bg animation*/
+.wheel {position: absolute; top: 5.812rem; left: -27.75rem; 
+    width: 60.437rem; height: 73.375rem; opacity: 0.4;}
+
+@keyframes wheel_rot {
+    0% {transform: rotate(0)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes ballon_move_01 {
+    0%{ transform: translateX(0) rotate(-15deg); bottom: -6.25rem;}
+    30%{ transform: translateX(-2rem); opacity:1;}
+    65%{ transform: translateX(2rem) rotate(15deg); opacity:0.7;}
+    100% {transform: translateY(-10rem)}
+}
+
+@keyframes ballon_move_02 {
+  0%{ transform: translateX(0) rotate(-15deg); bottom: -6.25rem;}
+  30%{ transform: translateX(-2rem); opacity:1;}
+  65%{ transform: translateX(2rem) rotate(15deg); opacity:0.7;}
+  100% {transform: translateX(-4rem) rotate(0); bottom: 100%; opacity: 0.1;}
+}
+
+.attraction_animation_01 {position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 39.375rem; background-size: contain;
+  background-repeat: no-repeat; background-position: 50% 50%;
+  background-image: url("../../../../../img/main/attractionBox/big_wheel_01.png");}
+.attraction_animation_02 {position: absolute; top: 0; left: 0;
+  z-index: 1; width: 60.437rem; height: 59.625rem; background-size: contain;
+  background-repeat: no-repeat; background-position: 50% 50%;
+  background-image: url("../../../../../img/main/attractionBox/big_wheel_02.png");
+  animation: wheel_rot 100s infinite linear;}
+.attraction_animation_03 {position: absolute; bottom:0; left: 34.375rem;
+  width: 2.625rem; height: 4.625rem; background-size: contain; 
+  z-index: 3; opacity: 0.5;
+  background-repeat: no-repeat; background-position: 50% 50%;
+  background-image: url("../../../../../img/main/attractionBox/ballon_03.png");
+  animation: ballon_move_02 10s infinite ease-out;}
+.attraction_animation_04 {position: absolute; bottom: 0; right: 15.625rem;
+  width: 4.875rem; height: 6.687rem; background-size: contain; opacity: 0.4;
+  background-repeat: no-repeat; background-position: 50% 50%;
+  background-image: url("../../../../../img/main/attractionBox/ballon_04.png");
+  animation: ballon_move_02 10s infinite ease-in;}
+.attraction_animation_05 {position: absolute; bottom: -6.25rem; right: 12.5rem; 
+  width: 2rem; height: 5.562rem;  background-size: contain; opacity: 0.4;
+  background-repeat: no-repeat; background-position: 50% 50%;
+  background-image: url("../../../../../img/main/attractionBox/ballon_01.png");
+  animation: ballon_move_02 15s infinite ease-out;}

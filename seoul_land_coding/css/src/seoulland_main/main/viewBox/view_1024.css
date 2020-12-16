@@ -1,0 +1,28 @@
+/* view_1024.css */
+
+@media screen and (min-width:30.062rem) and (max-width:64rem) {
+  
+  /* #viewBox */
+    #viewBox {height: 86.9140625vw;}
+    .view_img_wrap ul li {background-size: cover;}
+    .view_img_01 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_01.jpg");}
+    .view_img_02 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_02.jpg");}
+    .view_img_03 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_03.png");}
+    .view_img_04 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_04.jpg");}
+    .view_img_05 {
+    background-image: url("../../../../../img/main/viewBox/mobile_main_ing_05.jpg");}
+    
+    .view_indicator{position: absolute; bottom: -3.125rem; right: 50%;
+        transform: translate(50%); width:100%; height: 3.125rem;
+        padding: .625rem 0; background-color: #0f0915;
+        box-sizing: border-box;}
+    .view_indicator ul {width: 18.75rem; height: 1.875rem; margin: auto;}
+    
+    /* ========================================== */
+
+  
+}

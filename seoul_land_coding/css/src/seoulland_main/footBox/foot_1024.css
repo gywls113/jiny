@@ -1,0 +1,14 @@
+/* foot_1024.css */
+
+@media screen and (min-width:30.062rem) and (max-width:64rem) {
+  
+  /* #footBox */
+    #footBox {min-width: 12.5rem; height: auto; 
+        padding: 6.25rem 1.25rem 7.5rem;}
+    .footer_adress {width: 100%; min-width: 12.5rem;}
+    .footer_adress h2 {float: none; margin-bottom: 2.5rem;}
+    adress {float: none; width: 100%; height: auto;}
+  
+  /* ========================================== */
+  
+}

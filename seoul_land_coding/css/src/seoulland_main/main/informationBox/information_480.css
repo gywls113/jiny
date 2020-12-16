@@ -1,0 +1,28 @@
+/* information_480.css */
+
+/* mobile*/
+@media screen and (max-width:30rem){
+  
+  /* #informationBox */
+    #informationBox {height: auto; min-height: 50.937rem; 
+        padding: 6.25rem 1.25rem 7.5rem;}
+    .info_full_box {position: relative; width: 100%; min-width: 12.5rem; 
+        max-width: 27.5rem; padding-bottom: 5rem;}
+    .info_full_box > h2 {white-space: pre-line; 
+        width: 13.75rem; height: auto;}
+    .info_full_box p {height: auto; margin-bottom: 2.5rem;}
+    .info_more {position: absolute; bottom:0; left: 50%; 
+        transform: translate(-50%); margin: 0;}
+    .info_full_box ul {width: 100%; height: auto;}
+    .info_full_box ul li {float: none; width: 100%; height: auto; 
+        padding: 1.25rem; margin-left: 0; margin-bottom: 1.25rem;}
+    .info_full_box ul li div {width: 9.375rem; height: 9.375rem; margin: auto;
+        margin-bottom: 1.25rem;}
+    .info_text {width: 100%;}
+    .info_text dt {text-align: center;}
+    .info_text dd {text-align: center;}
+    
+    /* ========================================== */
+
+  
+}

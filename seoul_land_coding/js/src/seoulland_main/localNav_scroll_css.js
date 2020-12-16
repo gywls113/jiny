@@ -25,6 +25,7 @@
           localLi.find('a').css({'transform':'none'});
           localI.css({height:'30px',borderRadius:'100%',border:"3px solid #888",boxSizing:'border-Box', 'margin':0});
           qna.css({display:'none'});
+        
 //            localI.hover(
 //              function(){
 //               localLi.css({transform: 'none',fontSize: 16+'px',color:'#333', borderBottom: '3px solid var(--color-red)'}); 
@@ -35,6 +36,7 @@
               $(this).siblings().removeClass('on');
               $(this).css({fontSize:'1rem'});
               $(this).siblings().css({fontSize:0});
+              localNavWrap.removeClass('action');
   //            $(this).siblings().removeStyle();
   //            $(this).css({
   //              fontSize: 16+'px',color:'#333', 
@@ -56,7 +58,7 @@
           localI.removeAttr('style');
           qna.removeAttr('style');
           localLi.find('a').removeAttr('style');
-
+          localNavWrap.addClass('action');
       }
         
     }); //=====win.scroll fin

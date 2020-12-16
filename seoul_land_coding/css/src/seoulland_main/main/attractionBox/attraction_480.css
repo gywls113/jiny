@@ -1,0 +1,35 @@
+/* attraction_480.css */
+
+@media screen and (max-width:30rem){
+  
+  /* #attractionBox */
+    #attractionBox {height: 54.062rem; min-height: 54.062rem; 
+        padding: 6.25rem 1.25rem 7.5rem;} 
+    .attraction_wrap {height: 34.375rem;}
+    .attraction_full_wrap {top: 6.25rem; 
+        width: 90.833333%; min-width: 13.75rem;
+        height: auto; min-height: 18.75rem;}
+    .attraction_full_wrap > h2 {white-space: pre-line; 
+        width: 13.75rem; height: auto;}
+    .attraction_content {width: 80%; box-shadow: .25rem .187rem .312rem #ccc;}
+    .attraction_button button {width: 1.25rem; height: 6.25rem;}
+    .attraction_info dt {height: auto; word-break: keep-all;
+        text-align: center; margin-bottom: 1.25rem;}
+    .attraction_info dd {text-align: center;}
+    .attraction_info div {margin-top: 1.25rem; text-align: center;
+        word-break: keep-all;}
+    .attraction_list li {width: 100%; }
+    .attraction_list li:nth-child(3),.attraction_list li:nth-child(6){
+    width: 100%;}
+    .attraction_list > li > a:hover {background-size: cover;}
+    .attraction_list > li > a::before {display: none;}
+    .attraction_list > li > a {}
+    .center_line {display: none;}
+    .wheel {display: none;}
+    .attraction_animation_03 {left: 3.125rem;}
+    .attraction_animation_04 {right: 4.375rem;}
+    .attraction_animation_05 {right: 8.75rem;}
+    
+    /* ========================================== */
+  
+}

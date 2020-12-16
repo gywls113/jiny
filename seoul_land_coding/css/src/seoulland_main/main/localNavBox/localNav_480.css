@@ -1,0 +1,10 @@
+/* localNav_480.css */
+
+@media screen and (max-width:30rem){
+  
+   /* #localNavBox */
+    #localNavBox {display: none;}
+
+    /* ========================================== */
+  
+}

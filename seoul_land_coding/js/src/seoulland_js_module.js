@@ -11,7 +11,7 @@ var resultDevice;
         {type:'mobile', size:480},
         {type:'tablet', size:1024},
         {type:'laptop', size:1440},
-        {type:'pc', size:1920},
+        {type:'pc', size:1919},
         {type:'pcfull'}
     ];
     

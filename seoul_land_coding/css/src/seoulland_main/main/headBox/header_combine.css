@@ -1,0 +1,6 @@
+/* header_combine.css */
+
+@import url('./header_1920.css');
+@import url('./header_1440.css');
+@import url('./header_1024.css');
+@import url('./header_480.css');
