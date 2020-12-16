@@ -23,7 +23,7 @@
         width: 100%; transform: translate(0, 0);}
     .luna_content_area {float: none;
         width: 100%; min-width: 0; 
-        max-width: 28.75rem; height: auto; margin: auto;}
+        max-width: 28.75rem; height: auto; margin: 0 auto;}
     .luna_content_area dl dt {height: auto; min-height: 4.375rem;}
     .luna_content_area dl dd {margin-top: 1.25rem; line-height: 1.875rem;}
     .luna_img_area {float: none;

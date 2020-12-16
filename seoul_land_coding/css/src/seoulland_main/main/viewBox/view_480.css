@@ -3,7 +3,7 @@
 @media screen and (max-width:30rem){
   
    /* #viewBox */
-    #viewBox {height: 79.16666666666667vw;}
+    #viewBox {height: 79.16666666666667vw; min-height: 200px;}
     .view_img_wrap ul li {background-size: cover;}
     .view_img_01 {
     background-image: url("../../../../../img/main/viewBox/mobile_main_ing_01.jpg");}

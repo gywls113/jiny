@@ -3,7 +3,7 @@
 @media screen and (min-width:64.062rem) and (max-width:90rem) {
   
     /* #localNavBox */
-    #localNavBox {position: absolute;}
+    #localNavBox {min-height: 50rem; position: absolute; padding: 12.5rem 5.625rem 13.75rem 0;}
 
     /* ========================================== */
   
