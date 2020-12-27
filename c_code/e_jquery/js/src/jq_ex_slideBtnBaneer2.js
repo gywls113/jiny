@@ -1,86 +1,67 @@
-// jq_ex_slideBtnBaneer2.js
+// jq_ex_parallax2.js
 
 (function($){
-    var slide = $('.slide_02');
-    var slideBtnPart = slide.find('.slide_btn');
-    var slideBtn = slideBtnPart.children('button');
-    
-    var indexSlide = slide.find('.index_slide');
-    var slideLi = indexSlide.find('li');
-    var liLen = slideLi.length;
-    
-    var indexN = 0;
-    var permission = true;
-    var timed = 500;
-    
-    slideLi.not($('.action')).hide();
-    /* 위에꺼랑 같은내용
-    slideLi.hide();
-    indexSlide.find('.action').show();
-    */
-    
-    //'action'이라는 클라스이름이 몇번째 있는지 확인
-    var actionIndex, actionCheck;
-    var MyAactionIndex = function(){
-        var i = 0 , actionCheck;
-        for(; i<liLen; i+=1){
-        actionCheck = slideLi.eq(i).hasClass('action');
-        if(actionCheck){
-            actionIndex = i;
-            break;
-        }
-    }
-    console.log(actionIndex);
-    return actionIndex;
-    }
-    // =============================
+  var win = $(window);
+  var winH = win.outerHeight();
 
-    var SlideAction = function(){
-        slideLi.eq(indexN).show();
-        slideLi.eq(actionIndex).fadeOut(timed,function(){
-            slideLi.eq(indexN).addClass('action');
-            slideLi.eq(indexN).siblings().removeClass('action');
-           
-            setTimeout(function(){
-                permission = true;
-            },timed);
-        });
-    }; //SlideAction()
-    
-    // =============================
-    
-    slideBtn.on('click',function(e){
-        e.preventDefault();
-        MyAactionIndex();
-        
-        if(permission){
-        permission = false;
-        
-        var it = $(this).attr('class');
-        
-        if(it === 'next'){
-            indexN += 1;
-            if(indexN >= liLen){
-                indexN = 0;
-            }
-            //slideLi.eq(indexN).show();
-            //slideLi.eq(actionIndex).fadeOut(function(){
-            //    slideLi.eq(indexN).addClass('action');
-            //    slideLi.eq(indexN).siblings().removeClass('action');
-            //});
-            SlideAction();
+  var headBox = $('#headBox');
+  var h1 = headBox.find('h1');
+  var frontImg = headBox.find('.front_image');
+  var backImg = headBox.find('.back_image');
 
-        }else if(it === 'prev'){
-            indexN -= 1;
-        
-            SlideAction();
-            if(indexN <= -1){
-                indexN = liLen -1;
-            }   
-        } //(if === 'prev') End
-        
-        console.log(indexN);
+  var setN = 1.5;
+
+
+  // 브라우저 스크롤시 수행
+  win.on('scroll', function(){
+    var winSt = $(this).scrollTop();
+    var per = winSt / winH;
+    var scaleR = 1+per;
+    var opacityR, airPer, logoPer;
+
+  // 4. logo 사라지게 만들기 
+  // 5. logo사라지는 동안 앞에 투명막 생기게하기
+  var logoR = 0.5;
+   if(per >= logoR){
+    logoPer = (1 + logoR) - per;
+     console.log( logoR + per );    
+    h1.css({opacity: logoPer, transform:'scale('+ (logoR + per) + ')' });
+
+    headBox.addClass('default');
+
+   }else{
+     headBox.removeClass('default');
+   }
+
+  // 1. frontImg가 점점 커지게( transform:scale() );
+  // 2. 점점 사라지게
+  opacityR = setN + 1 - per; 
+
+    if(scaleR <= setN){
+      // console.log('scale: ', 1 + per);
+      frontImg.css({transform:'scale(' + scaleR + ')'});
+    }else if(scaleR >= setN + 1){      
+      // console.log('opacity: ', opacityR+1);         
+      frontImg.css({opacity: opacityR});
     }
-    }); // slideBtn.on('click') End
-    
+
+  // 6. frontImg 의 투명도가 0이되면 headBox를 사라지게 만들기
+  if(opacityR < 0){
+    // console.log('사라진위치: ', win.scrollTop() );
+    headBox.hide();
+  }else{
+    headBox.show();
+  }
+
+  // 3. 비행기 나타나면서 올라가기
+    if(scaleR > setN){
+      airPer = (scaleR - setN) * 100;
+      // console.log( airPer );
+      backImg.css({backgroundPositionY: airPer + '%'})
+    }
+
+  }); // win.on('scroll')
+
+
+
 })(jQuery);

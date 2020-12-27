@@ -22,10 +22,11 @@
   // 4. logo 사라지게 만들기 
   // 5. logo사라지는 동안 앞에 투명막 생기게하기
   var logoR = 0.5;
+  opacityR = setN + 1 - per;   
    if(per >= logoR){
     logoPer = (1 + logoR) - per;
      console.log( logoR + per );    
-    h1.css({opacity: logoPer, transform:'scale('+ (logoR + per) + ')' });
+    h1.css({opacity: opacityR});
 
     headBox.addClass('default');
 

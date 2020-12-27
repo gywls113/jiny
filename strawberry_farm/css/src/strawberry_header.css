@@ -45,7 +45,7 @@ h1 > a {display: block; width: 100%; height: 100%;
 .headBox_sns > ul > li:nth-child(4) { margin-right: 0;}
 
 .headBox_sns > ul > li a {
-    display: block; width: 100%; height: 100%;
+    display: block; width: 100%; height: 100%; background-size: contain;
     background-repeat: no-repeat; background-position: 50% 50%;}
 .headBox_sns > ul > li:nth-child(1) a {background-image: url("../../img/insta_logo.png");}
 .headBox_sns > ul > li:nth-child(2) a {background-image: url("../../img/facebook_logo.png");}

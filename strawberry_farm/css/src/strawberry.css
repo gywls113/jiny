@@ -70,7 +70,7 @@
     width: 780px; height: 280px;
     position: absolute; top: 220px; left: 390px; z-index: 3;
     padding: 15px; box-sizing: border-box;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
     border-radius: 30px;
   }
     .view_textline {
@@ -154,7 +154,7 @@
         .reser_content_button {
           width: 300px; height: 60px;
           margin: auto; margin-top: 20px;
-          background-color: #ccc;border-radius: 30px;
+          background-color: #919191;border-radius: 30px;
           font-family:'NanumSquareRound', sans-serif; color: #fff; 
           font-size: 36px; font-weight: 900;
         }
