@@ -1,0 +1,54 @@
+  
+<!DOCTYPE html>
+<!-- jq_ex_map.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+<!-- font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!-- css -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+  <link rel="stylesheet" href="../css/src/jq_ex_map.css">
+
+<!-- favicon -->
+
+<title>jq_ex_rwd_menu</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <h1><a href="./">지도 만들기</a></h1>
+  <div class="part">
+    <h2>찾아오시는 길</h2>
+    <div class="map_area">
+      <div class="map_img" id="map"></div>
+      <div class="store">
+        <h3>매장명</h3>
+        <ul>
+          <li class="action"><a href="#" data-x="37.264207825193964" data-y="127.03055782585137">
+          수원점</a></li>
+          <li><a href="#" data-x="37.20394116040396" data-y="127.0366747402891">
+          화성점</a></li>
+          <li><a href="#" data-x="37.37178785352033" data-y="126.95225962621585">
+          안양점</a></li>
+          <li><a href="#" data-x="37.31782367355959" data-y="126.84981918138999">
+          안산점</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=90e07ee864e8dd7a766ba0892fb4102d"></script>
+<!--  보안코드는 숨기는게 좋으나 지금은 숨길 수 있는 방법을 모르니 우선 이렇게 사용하기  -->
+  <script src="../js/src/jq_ex_map.js"></script>
+</body>
+</html>
