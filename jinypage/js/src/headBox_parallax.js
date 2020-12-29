@@ -1,51 +1,91 @@
 // headBox_parallaxb.js
 
 (function($){
+  $('html,body').animate({scrollTop:0})
   var win = $(window);
   var winH = win.outerHeight();
 
   var headBox = $('#headBox');
   var h1 = headBox.find('h1');
+  var webDArea = headBox.find('.webdesign_area');
   var frontImg = headBox.find('.front_image');
   var backImg = headBox.find('.back_image');
+  
+  var scaleN = 1.7;
 
-  var setN = 1.5;
 
-
-  // 브라우저 스크롤시 수행
-  win.on('scroll', function(){
-    var winSt = $(this).scrollTop();
-    var per = winSt / winH;
-    var scaleR = 1+per;
-    var opacityR, airPer, logoPer;
-
-  // 4. logo 사라지게 만들기 
-  var logoR = 0.5;
-  opacityR = setN + 1 - per; 
-   if(per >= logoR){
-    logoPer = (1 + logoR) - per;
-    //console.log( logoR + per );    
-    h1.css({opacity: logoPer});
-   }
+  win.on('scroll',function(e){
     
-  // 1. frontImg가 점점 커지게( transform:scale() );
-  // 2. 점점 사라지게
-
-    if(scaleR <= setN){
-      // console.log('scale: ', 1 + per);
-      frontImg.css({transform:'scale(' + scaleR + ')'});
+    var winSt = $(this).scrollTop();
+    var per = winSt/winH;
+    var scaleR = 1+per;
+    var opacityR;
+    //console.log(scaleR);
+    opacityR = scaleN + 1 - per;
+    
+    // webdesign_area 나타나기
+    var h1_Op = h1.css({opacity:0});
+    var h1_op_offset = h1_Op.offset().top;
+    //console.log(h1_op_offset);
+    
+//    if(h1_op_offset>2900){
+//      webDArea.css({opacity:opacityR});
+//    }else if(h1_op_offset<2900){
+//      webDArea.stop().hide();
+//    }
+    
+    // logo사라지기 
+    var logoR = 0; 
+    var logoPer;
+//    console.log(per)
+    h1.css({opacity:2 - per});
+    var h1Opacity = parseFloat(h1.css('opacity')); 
+    
+    if(h1Opacity <= 0 && h1Opacity > -1){
+      webDArea.css({opacity:-(2 - per)});
+    }else if(h1Opacity <= -1){
+      webDArea.css({opacity:2 - per});
+    }else{
+      webDArea.css({opacity:0});
     }
-  // 6. frontImg 의 투명도가 0이되면 headBox를 사라지게 만들기
-  if(opacityR < 0){
-    // console.log('사라진위치: ', win.scrollTop() );
-    headBox.hide();
-  }else{
-    headBox.show();
-  }
+    //console.log(h1Opacity);
+//    if(per>=logoR){
+//      logoPer = 1 + (logoR-per);
+////      console.log(logoPer);
+//    }
+    
+    
+    // fron_img 커졌다가 사라지게 하기
+    if(scaleR <= scaleN){
+      //console.log('scale:',scaleR);
+      frontImg.css({transform:'scale(' + scaleR + ')'});
+    }else if(scaleR >= scaleN + 1){
+      //console.log('opacity:',opacityR);
+      frontImg.css({opacity: opacityR});
+    };
+      
+    // black opacity 주기
+    var op =  scaleR - scaleN ;    
+    if(scaleR>scaleN){        
+      backImg.css({backgroundColor:'rgba(0,0,0,'+ op +')'});
+    };
+    
+    if(op >= 3){
+      headBox.fadeOut();
+    }else{
+      headBox.fadeIn();
+    }
+    
 
-
-  }); // win.on('scroll')
-
-
-
+    
+    
+  }); // win.scroll
+  
 })(jQuery);
+
+
+
+
+
+
+
