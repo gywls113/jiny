@@ -70,7 +70,7 @@
       backImg.css({backgroundColor:'rgba(0,0,0,'+ op +')'});
     };
     
-    if(op >= 3){
+    if(op >= 2.5){
       headBox.fadeOut();
     }else{
       headBox.fadeIn();

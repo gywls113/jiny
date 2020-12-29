@@ -77,18 +77,20 @@ h1 {position: absolute; left: 0; right: 0; top: 0; bottom:0;
 /* ======================================= */
 
 #aboutmeBox {width: 100%; max-width: 1440px;
-   height: 800px; margin: auto; margin-top: 1000px; 
+  height: 800px; margin: auto; margin-top: 1000px;
+  padding-bottom: 100px; box-sizing: border-box;
   background-color: #020202;}
 #aboutmeBox ul {width: 100%; height: 100%;}
-#aboutmeBox li {position: relative; z-index: 0; overflow: hidden;
-  float: left; width: 33.333333%; height: 80%;
+#aboutmeBox li {position: relative; z-index: 0; 
+  overflow: hidden;
+  float: left; width: 33.333333%; height: 100%;
   outline: none; transition: all 300ms ease;}
 #aboutmeBox li:hover {transform: scale(1.1); 
   z-index: 50; outline: 3px solid #ffffb3;}
 #aboutmeBox li:after, #aboutmeBox li::after {
   content: " "; display: block; 
   position: absolute; top: 0; left: 0;
-  width: 100%; height: 800px; z-index: 100;
+  width: 100%; height: inherit; z-index: 100;
   background-color: rgba(0,0,0,0.3);}
 #aboutmeBox li:hover:after, #aboutmeBox li:hover::after {
   display: none;}
@@ -105,7 +107,8 @@ h1 {position: absolute; left: 0; right: 0; top: 0; bottom:0;
 #aboutmeBox li:nth-child(3) a {
   background-image: url(../../img/star3.jpg);}
 
-#aboutmeBox li span {display: block; width: 100%; height: 50px;
+#aboutmeBox li span {display: block; 
+  width: 100%; height: 50px;
   color: #fff; font-size: 2rem; font-weight: bold;
   text-align: center; line-height: 50px;
   text-transform: uppercase;}
@@ -121,46 +124,75 @@ h1 {position: absolute; left: 0; right: 0; top: 0; bottom:0;
 .works_title {position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%); z-index: 10;
   width: 100px; height: 50px;
-  color: #fff; font-size: 2rem; font-weight: bold;
+  color: #fff; font-size: 3rem; font-weight: bold;
   text-align: center; line-height: 50px;
   text-transform: uppercase;}
 
 /* ======================================= */
 
-#portfolioBox {width: 100%; height: 800px;
-  padding-top: 100px; }
-.portfolio_list {width: 90%; height: 90%; margin: auto;}
-.portfolio_list li {float: left; width: 25%; height: 50%;
-  outline: 2px solid #aaa;}
-.portfolio_list li:hover a {outline: 3px solid #ffffb3;}
-.portfolio_list .more_area:hover a {outline:none;}
+#portfolioBox {width: 100%; max-width: 1440px;
+  height: 800px; margin: auto; margin-top: 100px;
+  background-color: #020202;}
+#portfolioBox ul {width: 100%; height: 100%;}
+#portfolioBox li {float: left; width: 45%; height: 100%;}
+.strawberry_farm {margin-right: 10%;}
 
-.no_data {width: 80px; height: 80px; margin: auto;
-  margin-top: 100px; background-repeat: no-repeat;
-  background-size: contain; background-position: 50% 50%;
-  background-image: url("../../img/no_data.svg");}
-.portfolio_list li span {display: block;
-  width: 200px; height: 50px;
-  margin: auto; margin-top: 30px;
-  color: #fff; text-align: center; line-height: 50px;
-  font-size: 1.5rem; font-weight: 600;
-  text-transform: uppercase;}
+.port_img {width: 100%; height: 600px;
+  border: 2px solid #aaa; box-sizing: border-box;
+  background-repeat: no-repeat; background-size: cover;
+  background-position: 50% 50%; margin-bottom: 30px;}
+.strawberry_farm .port_img {
+  background-image: url("../../img/strawberry_farm.png");}
+.seoulland .port_img {
+  background-image: url("../../img/seoulland.jpg");}
 
+.port_context {width: 100%; height: 80px; margin: auto;}
+.port_context dt {width: 100%; height: 50px;
+  font-size: 2rem; font-weight: 900; color: #fff;
+  text-align: left; line-height: 50px;}
+.port_context dd {width: 100%; height: 20px;
+  margin-top: 10px; font-size: 1rem; font-weight: 400;
+  color: #fff; line-height: 20px;}
 
-.more_btn {width: 200px; height: 80px; 
-  margin: auto; margin-top: 140px;
-  border: 3px solid #fff; color: #fff; text-align: center;
-  line-height: 80px; text-transform: uppercase;
-  font-weight: 600; font-size: 2rem;
-  transition: all 300ms ease;}
-.more_btn:hover {outline: 3px solid #ffffb3;
-  transform: rotateX(360deg);}
+.port_go {width: 100%; height: 60px; margin-top: 30px;}
+.port_go div {float: left; width: 45%; height: 100%;
+  border: 2px solid #aaa; box-sizing: border-box;}
+.port_go div a {width: 100%; height: 100%; display: block;
+  font-size: 1.5rem; font-weight: bold; color: #fff;
+  text-align: center; line-height: 60px;}
+.go_homepage {margin-right: 10%;}
+
+.port_go div:hover a {background-color: #fff; color: #020202;}
 
 /* ======================================= */
 
-#contactBox {width: 100%; height: auto; min-height: 500px;
-  background-color: #666;}
+.blink_area2 {width: 100%; height: 500px; 
+  background-color: #020202;}
 
+/* ======================================= */
+
+#contactBox {width: 100%; height: 650px;
+  background-color: #020202;}
+.contact_title {width: 80%; height: 100px;
+  border-bottom: 2px solid #aaa; margin: auto; 
+  text-align: center; line-height: 100px;
+  font-size: 3rem; font-weight: 900;color: #fff;
+  text-transform: capitalize; }
+.contact_message {width: 80%; height: 30px; margin: auto; 
+  margin-top: 30px; text-align: center; line-height: 30px;
+  font-size: 1rem; font-weight: 100; color: #fff;}
+.contact_list {width: 380px; height: auto; margin: auto;
+  margin-top: 50px; font-size: 1.5rem; font-weight: 400;
+  text-align: left; line-height: 80px; color: #fff;}
+.contact_list li:nth-child(2):hover {color: #ffffb3;}
+.resume {width: 380px; height: 50px; margin: auto;
+  margin-top: 30px; border: 2px solid #aaa;
+  box-sizing: border-box; color: #fff; font-size: 1.5rem;
+  font-weight: 400; text-align: center; line-height: 50px;}
+.resume:hover {background-color: #fff; color: #020202;}
+.copyright {width: 80%; height: 50px; margin: auto;
+  margin-top: 80px; text-align: center; line-height: 30px;
+  color: #fff; font-size: 1rem; font-weight: 100;}
 /* ==========================================
 =============================================
 ========================================== */
