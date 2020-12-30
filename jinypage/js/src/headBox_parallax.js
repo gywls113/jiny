@@ -11,8 +11,7 @@
   var frontImg = headBox.find('.front_image');
   var backImg = headBox.find('.back_image');
   var scrollLine = headBox.find('.scroll_line');
-  var blink = $('.blink_area');
-  var scrollLine = blink.children('.scroll_line');
+  var mousescroll = headBox.find('.mouse_scroll');
   var scaleN = 1.7;
 
 
@@ -41,6 +40,7 @@
     var logoPer;
 //    console.log(per)
     h1.css({opacity:2 - per});
+    mousescroll.css({opacity:2 - per});
     var h1Opacity = parseFloat(h1.css('opacity')); 
     
     if(h1Opacity <= 0 && h1Opacity > -1){
