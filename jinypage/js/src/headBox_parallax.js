@@ -10,7 +10,9 @@
   var webDArea = headBox.find('.webdesign_area');
   var frontImg = headBox.find('.front_image');
   var backImg = headBox.find('.back_image');
-  
+  var scrollLine = headBox.find('.scroll_line');
+  var blink = $('.blink_area');
+  var scrollLine = blink.children('.scroll_line');
   var scaleN = 1.7;
 
 
@@ -70,16 +72,15 @@
       backImg.css({backgroundColor:'rgba(0,0,0,'+ op +')'});
     };
     
-    if(op >= 2.5){
+    if(op >= 2.3){
       headBox.fadeOut();
     }else{
       headBox.fadeIn();
     }
     
-
-    
     
   }); // win.scroll
+
   
 })(jQuery);
 

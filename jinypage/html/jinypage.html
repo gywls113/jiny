@@ -36,6 +36,10 @@
         <span class="hidden_context">배경이미지 02</span>
       </div>
     </div>
+    
+    <div class="mouse_scroll">
+      <span class="hidden_context">마우스 스크롤 아이콘</span>
+    </div>
   </header>
   
   <nav id="navBox">
@@ -50,15 +54,74 @@
     </ul>
   </nav>    
   
-  <div class="blink_area"></div>
+  <div class="blink_area"><div class="scroll_line"></div></div>
   
   <article id="aboutmeBox">
     <h2 class="hidden_context">about me</h2>
     <ul class="clearfix">
-      <li><a href="#"><span>about me</span></a></li>
-      <li><a href="#"><span>experience</span></a></li>
-      <li><a href="#"><span>skills</span></a></li>
+      <li class="about_me"><button type="button"><span>about me</span></button></li>
+      <li class="experience"><button type="button"><span>experience</span></button></li>
+      <li class="skills"><button type="button"><span>skills</span></button></li>
     </ul>
+    
+    <div class="a_modal about_modal">
+      <div class="modal_content">
+        <p class="modal_title">about me</p>         
+        <div class="close_btn">
+          <button type="button"><span class="hidden_context">닫기버튼</span></button>
+        </div>
+        <div class="modal_img about_img"><span class="hidden_context">이미지</span></div>
+        <div class="about_text">
+          <p class="about_name"><span>강효진</span> web designer</p>
+          <p class="about_info">1996.01.13<br />
+            MBTI : INFJ / 선의의 옹호자, 예언자형</p>
+          <p class="about_contact"><b>Address</b> : 경기도 수원시 권선구<br />
+            <b>E - Mail</b> : rkdgywls0113@naver.com<br />
+            <b>Git address</b> : https://github.com/jiny<br />
+            <b>Homepage</b> : https://gywls113.github.io/jiny/jinypage</p>
+          <div class="about_hobby">
+            <p><b>Hobby</b></p>
+            <ul class="clearfix">
+              <li>
+                <div class="hobby_icon drawing"></div>
+                <dl>
+                  <dt>Drawing</dt>
+                  <dd>아크릴물감을 이용한 그림그리기</dd>
+                </dl>
+              </li>
+              <li>
+                <div class="hobby_icon film"></div>
+                <dl>
+                  <dt>Film Camera</dt>
+                  <dd>필름카메라로 사진찍기</dd>
+                </dl>
+              </li>
+              <li>
+                <div class="hobby_icon video"></div>
+                <dl>
+                  <dt>Make Video</dt>
+                  <dd>영상 촬영 및 편집하기</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="a_modal experience_modal">
+      <div class="modal_content">
+        <div class="close_btn">
+          <button type="button"><span class="hidden_context">닫기버튼</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="a_modal skills_modal">
+      <div class="modal_content">
+        <div class="close_btn">
+          <button type="button"><span class="hidden_context">닫기버튼</span></button>
+        </div>
+      </div>
+    </div>
   </article>
   
   <article id="workBox">
@@ -105,7 +168,7 @@
     </ul>
   </article>
   
-  <div class="blink_area2"></div> 
+  <div class="blink_area2"><div class="scroll_line"></div></div> 
   
   <footer id="contactBox">
     <h2 class="hidden_context">contact</h2>
@@ -126,6 +189,7 @@
 <script src="../js/base/jquery-ui.js"></script>
 <script src="../js/src/headBox_parallax.js"></script>
 <script src="../js/src/work_landing.js"></script>
+<script src="../js/src/a_modal.js"></script>
 
 </body>
 </html>
