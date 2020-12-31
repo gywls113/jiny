@@ -7,7 +7,7 @@ var baseColor = "#fff";
 ctx.lineWidth = 15;
 ctx.lineCap = 'round';
 ctx.strokeStyle = baseColor;
-ctx.font = "40px sans-serif";
+ctx.font = "24px sans-serif";
 ctx.textAlign = 'center';
 ctx.fillStyle = baseColor;
 // var moveInterval2;
@@ -25,8 +25,8 @@ ctx.fillStyle = baseColor;
 // };
 // SetGo2();
 	var MyGraph = function(x, y, p, s){		
-		var posX = x * 250 - 100;
-		var posY = y * 250 - 100;
+		var posX = x * 300 - 120;
+		var posY = y * 250 - 140;
 		var percent = p ; 
 		var skill = s || 'program';
 		// var 
@@ -36,9 +36,9 @@ ctx.fillStyle = baseColor;
 		var CircleGraph = function(){
 			animationCircle = function(percent){
 
-				var lineWidth = 15;
-				var r    = 100;
-				var rect = (r + lineWidth) * 2 + 10;
+				var lineWidth = 10;
+				var r    = 80;
+				var rect = (r + lineWidth) * 2 + 20;
 				ctx.lineWidth = lineWidth;
 			
 			var myP = function(percent){
@@ -54,7 +54,7 @@ ctx.fillStyle = baseColor;
 			ctx.stroke();		
 			ctx.textAlign = 'center';
 			ctx.fillStyle = baseColor;
-			ctx.font = "normal 35px sans-serif";
+			ctx.font = "normal 20px sans-serif";
 			ctx.fillText(skill, posX, posY-15);
 			ctx.font = "bold 40px sans-serif";
 			ctx.fillText(percent+ '%', posX, posY + 40);
@@ -97,18 +97,25 @@ var MyBar = function(x, y, p, t){
 }
 
 
-MyGraph(1,1, 90, 'HTML');
-MyGraph(2,1, 95, 'CSS');
-MyGraph(3,1, 95, 'SCSS');
-MyGraph(1,2, 85, 'Js');
-MyGraph(2,2, 85, 'jQuery');
+
 // MyGraph(1,3, 70, 'Photoshop');
 // MyGraph(2,3, 70, 'Illustrator');
 // MyGraph(3,3, 70, 'Indesign');
-MyBar(100,560, 70, 'Photoshop');
-MyBar(500,560, 95, 'Illustator');
-MyBar(100,680, 90, 'Indesign');
 
+
+var skillModal = $('.skills');
+
+skillModal.on('click',function(){
+ MyGraph(1,1, 80, 'HTML');
+MyGraph(2,1, 80, 'CSS');
+MyGraph(3,1, 50, 'jQuery');
+MyGraph(4,1, 70, 'Git');
+MyGraph(1,2, 80, 'PHOTOSHOP');
+MyGraph(2,2, 80, 'ILLUSTRATOR');
+MyGraph(3,2, 80, 'AFTER EFFECT');
+MyGraph(4,2, 50, 'OFFICE');
+ //MyBar();
+});
 
 // animation - setInterval
 /*
